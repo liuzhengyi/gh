@@ -270,10 +270,10 @@ FLOAT: right;	WIDTH: 310px; FONT-FAMILY: "Microsoft YaHei","黑体"; COLOR: #fff
 }
 
 .worldFocus {
-	POSITION: relative; WIDTH: 510px; MARGIN-BOTTOM: 0px; HEIGHT: 330px; OVERFLOW: hidden
+	POSITION: relative; WIDTH: 750px; MARGIN-BOTTOM: 0px; HEIGHT: 330px; OVERFLOW: hidden
 }
 #worldFocus_Box {
-	POSITION: absolute; WIDTH: 510px; HEIGHT: 330px; OVERFLOW: hidden; TOP: 0px
+	POSITION: absolute; WIDTH: 750px; HEIGHT: 330px; OVERFLOW: hidden; TOP: 0px
 }
 #worldFocus_Box UL#show_pic {
 	POSITION: absolute; WIDTH: 3900px; HEIGHT: 330px

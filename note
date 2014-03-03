@@ -43,19 +43,18 @@ status, create_time, update_time
 
 === article table ===
 Id Userid
-Title
-Subtitle
-Content
-Language
-Remark
-Status
+标题    Title
+副标题  Subtitle
+内容    Content (HTML格式?)
+语言    Language
+备注    Remark,Status,create_time, update_time
 
-City table 
+=== City table  ===
 Cityid
-City name
-Country
-Region
-Remark
+城市名称City name
+国家    Country
+区域    Region
+Remark Status create_time, update_time
 
 User table
 Userid
