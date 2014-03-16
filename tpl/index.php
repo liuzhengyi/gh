@@ -1,4 +1,5 @@
 <?php include('./tpl/uiparts/header.php'); ?>
+</head>
 <body>
     <div id="SFmenu" style="position: absolute; z-index: 100;">
     </div>
@@ -101,7 +102,7 @@
             </div>
             <!--购房俱乐部 begin-->
             <div class="worldOslogin">
-                <h2><img src="./index_files/club.png" width="170" height="70"></h2>
+                <h2><img src="./image/ui/club.png" width="170" height="70"></h2>
                 <p id="pcardno">
                     <a href="#" id="world_B05_08" class="btnstyle">会员注册</a>
                 </p>
@@ -274,4 +275,8 @@
 		
 </div>
 <!--合作伙伴 end-->
+
 <?php include('./tpl/uiparts/footer.php'); ?>
+
+</body>
+</html>

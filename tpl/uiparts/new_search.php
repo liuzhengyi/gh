@@ -5,21 +5,21 @@
    
     <div class="top" style="margin-top: 20px; margin-bottom: 20px;">
         <div class="toplogo" id="dsy_B01_29">
-          <a href="http://glohouse.net/index.asp" id="world_B04_20" target="_blank"> <img src="./index_files/logo.gif" alt=""></a>
+          <a href="<?php echo $_cfg_siteRoot;?>index.php" id="world_B04_20" target="_blank"> <img src="./image/ui/logo.gif" alt=""></a>
         </div>
        
         <div class="topright">
             <div class="toprightnav">
             </div>
             <div class="toprightform">
-                 <form target="_blank" id="form_newhouse" name="form_newhouse" onsubmit="SFSF.house.submitForm();" action="http://glohouse.net/SearchResult.asp" method="post" class="search20090622080118from" accept-charset="gbk">
+                 <form target="_blank" id="form_newhouse" name="form_newhouse" onsubmit="SFSF.house.submitForm();" action="<?php echo $_cfg_siteRoot;?>house_list.php" method="post" class="search20090622080118from" accept-charset="gbk">
                     <div class="tr01">
                         <span id="world_B04_29">
                             <input type="text" maxlength="40" onmousedown="javascript:getId();" onfocus="SFUI.toggleHint(this);this.className=&#39;inputstyle_on&#39;;this.onmouseout=&#39;&#39;" value="   请输入关键字(楼盘名/地名/开发商等)" class="inputstyle_out" id="input_keyw0" autocomplete="off" style="color: rgb(150, 150, 150);">
                             <span class="inpbj" id="span1" onclick="javascript:Id();"></span>
                         </span>
                         <span id="world_B04_30">
-                            <input type="image" src="./index_files/schh111.gif" style="width: auto; height: auto; margin-left: 3px;">
+                            <input type="image" src="./image/ui/schh111.gif" style="width: auto; height: auto; margin-left: 3px;">
                         </span>
                     </div>
                     <div class="tr02">

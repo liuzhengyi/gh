@@ -1,11 +1,10 @@
 <?php
 /**
- * index of the site
+ * house list of the site, response for house search
  * author:  gipsaliu@gmail.com
- * since:   2014-03-11
+ * since:   2014-03-16
  *
  * @TODO
- *  increase view_count
  *
  */
 
@@ -15,11 +14,7 @@ require_once("./common.php");
 require_once($_cfg_dbConfFile);
 
 // get and check params
-if ( empty($_GET['id'])) {
-    $url    = $_cfg_siteRoot. 'house_list.php';
-    header("Location:". $url);
-    exit();
-}
+$_GET['id'] = 3;
 
 $id = $_GET['id'];
 

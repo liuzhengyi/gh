@@ -22,5 +22,3 @@ object[type$="x-shockwave-flash"]:not([classid]),object[type$="futuresplash"]:no
 <script type="text/javascript" src="./js/jquery-1.8.1.min.js"></script>
 <script type="text/javascript" src="./js/origion_js_top.js"></script>
 
-</head>
-

@@ -48,6 +48,18 @@ function get_region_name( $Region_id ) {
  * since: 2014-03-14
  *
  */
+function get_img_url( $Urls, $Delimiter=';' ) {
+    $urls = split($Delimiter, $Urls);
+    return $urls;
+}
+
+/** 
+ * 由分号分隔的图片url串中取出一个单独的url地址
+ * 默认取第一个，默认分隔符为';'
+ * gipsaliu@gmail.com
+ * since: 2014-03-14
+ *
+ */
 function get_single_img_url( $Urls, $Index=0, $Delimiter=';' ) {
     $urls = split($Delimiter, $Urls);
     return $urls[$Index];
@@ -110,6 +122,26 @@ function get_article_type_desc( $Type=1 ) {
             break;
         default:
             $desc = 'unknown article type';
+            break;
+    }
+
+    return $desc;
+}
+
+/**
+ *  获取房产物业类型描述
+ *
+ */
+function get_house_type_desc( $Type=1 ) {
+    switch ( $Type ) {
+        case 1:
+            $desc = '公寓';
+            break;
+        case 2:
+            $desc = '别墅';
+            break;
+        default:
+            $desc = 'unknown house type';
             break;
     }
 

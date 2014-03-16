@@ -81,7 +81,7 @@ CREATE TABLE `house` (                              -- 房产表
 	house_id INT UNSIGNED AUTO_INCREMENT NOT NULL,  -- 房产ID
 	city_id INT UNSIGNED NOT NULL,                  -- 所属城市ID
 	name VARCHAR(300) NOT NULL,                     -- 房产名称
-	type TINYINT NOT NULL,	                        -- 物业类型(公寓, 别墅)
+	type TINYINT NOT NULL,	                        -- 物业类型(1 公寓, 2 别墅)
 	layout_area VARCHAR(300) NOT NULL,              -- 户型面积
 	price_desc VARCHAR(300) NOT NULL,               -- 价格描述 如"18万美元"
 	price_level TINYINT UNSIGNED NOT NULL,          -- 人民币价位级别 1 一百万以内 2 一到两百万之间 3 两到三百万之间 依次类推
