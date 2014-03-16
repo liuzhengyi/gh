@@ -1,67 +1,41 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
-<!-- saved from url=(0041)http://glohouse.net/list_d.asp?newsid=371 -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./js/SFSF_www_dev_test.js"></script><script type="text/javascript" src="./js/SFSF_WWW.js"></script>
-<title>海外频道—中国首家海外房产门户网</title>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./house_files/SFSF_www_dev_test.js"></script><script type="text/javascript" src="./house_files/SFSF_WWW.js"></script>
+<title>环球之家—中国首家海外房产门户网</title>
 
 <meta name="keywords" content="海外房产网,海外置业网,海外购房,海外房价">
-<meta name="description" content="海外频道为您提供一站式海外购房服务，全方位海外房产市场信息、海外房产房价走势、海外房产信息查询，我们有海外购房流程咨询、海外买房手续办理、海外移民办理、海外旅游签证、海外留学咨询等方面的专业合作机构">
+<meta name="description" content="环球之家为您提供一站式海外购房服务，全方位海外房产市场信息、海外房产房价走势、海外房产信息查询，我们有海外购房流程咨询、海外买房手续办理、海外移民办理、海外旅游签证、海外留学咨询等方面的专业合作机构">
 
 
     <link href="./css/css.css" rel="stylesheet" type="text/css">
-    <link href="./css/detailcss.css" rel="stylesheet" type="text/css">
+    <link lack="lack" href="./house_files/detailcss.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./css/worldIndex.css">
-    <script type="text/javascript" src="./js/js_new.js"></script><style type="text/css"></style>
-<script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
- <script type="text/javascript">
-         var jq = jQuery.noConflict();
-        function loadScript(B, D) { var A = document.createElement("script"), C = document.documentElement.firstChild; A.type = "text/javascript"; if (A.readyState) { A.onreadystatechange = function() { if (A.readyState == "loaded" || A.readyState == "complete") { A.onreadystatechange = null; D() } } } else { A.onload = function() { D() } } A.src = B; C.insertBefore(A, C.firstChild) };
-    </script>
-<style>#yiegipvwfpnmidxcnqvmllxwwmiywobfgfflxr{border:solid 2px #fff !important;box-sizing:content-box !important;color:#fff !important;display:block !important;height:auto !important;margin:0 !important;opacity:0.9 !important;padding:7px 10px !important;position:fixed !important;visibility:visible !important;width:auto !important;z-index:2147483647 !important;-webkit-border-radius:5px !important;-webkit-box-shadow:0px 0px 20px #000 !important;-webkit-box-sizing:content-box !important;}.yiegipvwfpnmidxcnqvmllxwwmiywobfgfflxr-blocked{color:#777 !important;display:inline !important;text-decoration:line-through !important;}#yiegipvwfpnmidxcnqvmllxwwmiywobfgfflxr br{display:block !important;}#yiegipvwfpnmidxcnqvmllxwwmiywobfgfflxr span{background:transparent !important;}#yiegipvwfpnmidxcnqvmllxwwmiywobfgfflxr div{border:0 !important;margin:0 !important;padding:0 !important;width:auto !important;letter-spacing:normal !important;font:13px Arial,Helvetica !important;text-align:left !important;text-shadow:none !important;text-transform:none !important;word-spacing:normal !important;}#yiegipvwfpnmidxcnqvmllxwwmiywobfgfflxr a{font-weight:normal !important;background:none !important;text-decoration:underline !important;color:#fff !important;}@media print{#yiegipvwfpnmidxcnqvmllxwwmiywobfgfflxr{display:none !important;}}</style><style class="f382e786ea2ad4c262392beeb002438">object[type$="x-shockwave-flash"]:not([classid]),object[type$="futuresplash"]:not([classid]),embed[type$="x-shockwave-flash"],embed[type$="futuresplash"]{display:none !important}</style></head>
+<link rel="stylesheet" type="text/css" href="./css/origion_css_top_house.css">
+    <script lack="lack" type="text/javascript" src="./house_files/js_new.js"></script>
+<script type="text/javascript" src="./js/jquery-1.8.1.min.js"></script>
+ <script type="text/javascript" src='./js/origion_js_top.js'></script>
+
+</head>
 <body><div id="SFmenu" style="position: absolute; z-index: 100;"></div>
  <!--新搜索20120413 begin-->
     <script type="text/javascript">
         loadScript("js/SFSF_WWW.js", function() { loadScript("js/SFSF_www_dev_test.js?v=1", function() { setTimeout(function() { SFSF.init(); }, 0) }) });
     </script>
-    <style>
-        .toprightnav .new1
-        {
-            position: relative;
-            margin-right: 10px;
-        }
-        .toprightnav .new2
-        {
-            width: 24px;
-            position: absolute;
-            top: -5px;
-            right: -13px;
-            color: #c00;
-        }
-        .toprightform .tr01 span
-        {
-            float: left;
-            overflow: hidden;
-        }
-       .
-    </style>
    
     <div class="top" style="margin-top: 20px; margin-bottom: 20px;">
         <div class="toplogo" id="dsy_B01_29">
           <a href="http://glohouse.net/index.asp" id="world_B04_20" target="_blank">
-          <img src="./sale_detail_files/logo.gif" alt=""></a>
+          <img src="./house_files/logo.gif" alt=""></a>
         </div>
        
         <div class="topright">
-            <div class="toprightnav">
-                
-               
-            </div>
+            <div class="toprightnav"> </div>
             <div class="toprightform">
                  <form target="_blank" id="form_newhouse" name="form_newhouse" onsubmit="SFSF.house.submitForm();" action="http://glohouse.net/SearchResult.asp" method="post" class="search20090622080118from" accept-charset="gbk">
                 <div class="tr01">
                     <span id="world_B04_29">
                         <input type="text" maxlength="40" onmousedown="javascript:getId();" onfocus="SFUI.toggleHint(this);this.className=&#39;inputstyle_on&#39;;this.onmouseout=&#39;&#39;" value="   请输入关键字(楼盘名/地名/开发商等)" class="inputstyle_out" id="input_keyw0" autocomplete="off" style="color: rgb(150, 150, 150);">
                         <span class="inpbj" id="span1" onclick="javascript:Id();"></span></span><span id="world_B04_30">
-                        <input type="image" src="./sale_detail_files/schh111.gif" style="width: auto; height: auto; margin-left: 3px;"></span>
+                        <input type="image" src="./house_files/schh111.gif" style="width: auto; height: auto; margin-left: 3px;"></span>
                 </div>
                 <div class="tr02">
                     <input type="hidden" id="strCity" name="strCity" value="海外">
@@ -94,7 +68,7 @@
       <span style="font-family: vijaya, Arial, Helvetica, sans-serif">For Sale</span></a>
 <a id="world_B04_36" href="http://glohouse.net/rent.asp" target="_blank">海外租房<br>
       <span style="font-family: vijaya, Arial, Helvetica, sans-serif">To Rent</span></a>
-<a id="world_B04_37" href="http://glohouse.net/club.asp" target="_blank">海外频道俱乐部<br>
+<a id="world_B04_37" href="http://glohouse.net/club.asp" target="_blank">环球之家俱乐部<br>
       <span style="font-family: vijaya, Arial, Helvetica, sans-serif">GloHouse Club</span></a>
 
 
@@ -112,7 +86,7 @@
 <!--广告2 end-->
 <!--面包屑 begin-->
 <div class="oscrumb">
-	<div class="s1">您的位置：<a href="http://glohouse.net/index.asp" target="_blank">首页</a> &gt;<a href="http://glohouse.net/list.asp" target="_blank">海外购房</a> &gt; <a href="http://glohouse.net/list.asp?lx=l&l=1">欧洲置业</a>  &gt; <a href="http://glohouse.net/list.asp?lx=c&country=5">法国</a> &gt; 巴黎16区公寓</div>
+	<div class="s1">您的位置：<a href="http://glohouse.net/index.asp" target="_blank">首页</a> &gt;<a href="http://glohouse.net/list.asp" target="_blank">海外购房</a> &gt; <a href="http://glohouse.net/list.asp?lx=l&l=2">北美置业</a>  &gt; <a href="http://glohouse.net/list.asp?lx=c&country=12">美国</a> &gt; 底特律独立别墅</div>
 	<div class="s2"></div>
 	<div class="clear"></div>
 </div>
@@ -120,15 +94,15 @@
 <!--楼盘名及导航区域 begin-->
 <div class="ostitlebanner">
 	<div class="ostitlebanner01">
-		<div class="s1">巴黎16区公寓</div>
+		<div class="s1">底特律独立别墅</div>
 		<div class="s2">在售</div>
 		<div class="s3"></div>
-		<div class="s4">2013年7月4日 更新 </div>
+		<div class="s4">2013年4月17日 更新 </div>
 		<div class="clear"></div>
 	</div>
 	<div class="ossubmenu">
-		<div class="s1"><a href="http://glohouse.net/list_d.asp?newsid=371#">基本信息</a></div>
-		<div class="s3">访问人数：<span>461</span></div>
+		<div class="s1"><a href="http://glohouse.net/list_d.asp?newsid=353#">基本信息</a></div>
+		<div class="s3">访问人数：<span>1256</span></div>
 		<div class="clear"></div>
 	</div>
 </div>
@@ -147,36 +121,36 @@
                             <tbody><tr>
                                 <td width="79" valign="top">
                                     <strong>物业类别</strong>：                                </td>
-                                <td width="251"></td>
+                                <td width="251">独立别墅</td>
                             </tr>
                             <tr>
                                 <td valign="top">
                                     <strong>国家/城市</strong>：                                </td>
                                 <td>
-                                    法国/巴黎                                </td>
+                                    美国/底特律                                </td>
                             </tr>
                             <tr>
                               <td valign="top"><strong>户</strong><strong>型面积</strong>： </td>
-                              <td>2房85平米</td>
+                              <td>3卧 室内: 89平米, 土地:422平米</td>
                             </tr>
                             <tr>
                                 <td valign="top">
                                     <strong>售</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>价</strong>：                                </td>
                                 <td>
                                   <span class="zit01">
-                                        96万欧元</span></td>
+                                        $11,000美金</span></td>
                             </tr>
                             <tr>
                                 <td valign="top">
                                     <strong>项目位置：</strong>                                </td>
                                 <td>
-                                    巴黎16区                            </td>
+                                    18954 EDINBOROUGH RD                            </td>
                             </tr>
                             <tr>
                                 <td valign="top">
                                     <strong>装修状况：</strong>                                </td>
                                 <td>
-                                  精装修   </td>
+                                  需要翻修, 预计$13,500美金   </td>
                             </tr>
                             <tr>
                                 <td valign="top">
@@ -186,7 +160,7 @@
                             </tr>
                             <tr>
                               <td valign="top"><strong>项目简介：</strong></td>
-                              <td valign="top"></td>
+                              <td valign="top">该项目位于美国汽车之城底特律，净投资回报每年15%</td>
                             </tr>
                           
                         </tbody></table>
@@ -204,35 +178,14 @@
                   
 <div class="jiaodian"> 
  	
-	<div class="jiaodian01" id="li00"><img src="./sale_detail_files/2013070441203841.jpg" alt="巴黎16区公寓 " width="360" height="240"></div>
-	
-	
-	<div class="jiaodian01  noneBox" id="li01"><img src="./sale_detail_files/2013070441215637.jpg" alt="巴黎16区公寓 " width="360" height="240"></div>
-	
-	
-	<div class="jiaodian01  noneBox" id="li02"><img src="./sale_detail_files/2013070441222217.jpg" alt="巴黎16区公寓 " width="360" height="240"></div>
-	
-	
-	<div class="jiaodian01  noneBox" id="li03"><img src="./sale_detail_files/2013070441232373.jpg" alt="巴黎16区公寓 " width="360" height="240"></div>
+	<div class="jiaodian01" id="li00"><img src="./house_files/2013041747939989.jpg" alt="底特律独立别墅 " width="360" height="240"></div>
 	
 				
-	<h2 id="h00">巴黎16区公寓</h2>  
-	 				
-	<h2 id="h01" class="noneBox">巴黎16区公寓</h2>  
-	 				
-	<h2 id="h02" class="noneBox">巴黎16区公寓</h2>  
-	 				
-	<h2 id="h03" class="noneBox">巴黎16区公寓</h2>  
+	<h2 id="h00">底特律独立别墅</h2>  
 	  
 	<div class="jiaodian02">
 	                	
-	<div class="td1" onmouseover="show_menu(0)" id="f00"><img src="./sale_detail_files/2013070441203841.jpg" alt="巴黎16区公寓 " width="80" height="60"></div>
- 	
-	<div class="td" onmouseover="show_menu(1)" id="f01"><img src="./sale_detail_files/2013070441215637.jpg" alt="巴黎16区公寓 " width="80" height="60"></div>
- 	
-	<div class="td" onmouseover="show_menu(2)" id="f02"><img src="./sale_detail_files/2013070441222217.jpg" alt="巴黎16区公寓 " width="80" height="60"></div>
- 	
-	<div class="td" onmouseover="show_menu(3)" id="f03"><img src="./sale_detail_files/2013070441232373.jpg" alt="巴黎16区公寓 " width="80" height="60"></div>
+	<div class="td1" onmouseover="show_menu(0)" id="f00"><img src="./house_files/2013041747939989.jpg" alt="底特律独立别墅 " width="80" height="60"></div>
   	
 	
 	
@@ -255,7 +208,7 @@
                         
                     </div>
                     <div class="osjiesnr" id="ai010">
-                        <p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="p0"><span style="FONT-FAMILY: &#39;宋体&#39;; FONT-SIZE: 10.5pt; mso-spacerun: &#39;yes&#39;">公寓位于一栋高端典雅的奥斯曼风格建筑的<font face="Calibri">7</font><font face="宋体">层（最后一层）。居住面积为</font><font face="Calibri">85</font><font face="宋体">平米的两居室，可直接俯瞰</font><font face="Calibri">Ranelagh</font><font face="宋体">公园。穹顶建筑下的宽敞空间，别具一格。室内结构：</font><font face="Calibri">2</font><font face="宋体">个视野极佳的大阳台，足够放下一套桌椅用来欣赏风景，晒太阳。公寓装修典雅精致，是作为临时住所的绝佳之选。可以再调整出一间卧室。可租赁的停车场。建筑年代为</font><font face="Calibri">1900</font><font face="宋体">年。</font></span></p><!--EndFragment-->
+                        该项目位于美国汽车之城底特律，净投资回报每年15%
                     </div>
                    
                     
@@ -272,7 +225,7 @@
         
                 <!--海外最新楼盘 begin-->
                 <div class="osr240">
-                    <div class="osr240title"><a href="http://glohouse.net/list_d.asp?newsid=371#" target="_blank"><strong>热门关注排行</strong></a></div>
+                    <div class="osr240title"><a href="http://glohouse.net/list_d.asp?newsid=353#" target="_blank"><strong>热门关注排行</strong></a></div>
                     <div class="formdata">
                         <dl>
                             <dt><span class="wid168"><strong>热门楼盘</strong></span> <span class="wid60a"><strong>国家\城市</strong></span>
@@ -316,15 +269,15 @@
                             </dd>
   
                             <dd>
-                                <span class="wid168"><a href="http://glohouse.net/list_d.asp?newsid=47">
-                                    悉尼VSQ公寓, Zetland</a></span> <span class="wid60a">
-                                        澳大利亚</span>
+                                <span class="wid168"><a href="./house_files/house.html">
+                                    底特律独立别墅</a></span> <span class="wid60a">
+                                        美国</span>
                             </dd>
   
                             <dd>
-                                <span class="wid168"><a href="http://glohouse.net/list_d.asp?newsid=353">
-                                    底特律独立别墅</a></span> <span class="wid60a">
-                                        美国</span>
+                                <span class="wid168"><a href="http://glohouse.net/list_d.asp?newsid=47">
+                                    悉尼VSQ公寓, Zetland</a></span> <span class="wid60a">
+                                        澳大利亚</span>
                             </dd>
   
                             <dd>
@@ -347,12 +300,12 @@
                 <!--海外最新楼盘 end-->
                 <div class="osr240ad">
                   
-	  <a href="http://www.omegatravel.net/" target="_blank"><img src="./sale_detail_files/201332720141129828.jpg" width="240"></a>
+	  <a href="http://www.omegatravel.net/" target="_blank"><img src="./house_files/201332720141129828.jpg" width="240"></a>
 	  
                 </div>
                 <div class="osr240ad">
                       
-	  <a href="http://www.mandarinvoyages.com/cn/index.php" target="_blank"><img src="./sale_detail_files/2013328154520083.jpg" width="240"></a>
+	  <a href="http://www.mandarinvoyages.com/cn/index.php" target="_blank"><img src="./house_files/2013328154520083.jpg" width="240"></a>
 	   
                 </div> 
             </div>
@@ -381,9 +334,9 @@
 
 
 	 <div class="verdana"><a href="http://glohouse.net/aboutus.asp">关于我们</a>‖<a href="http://glohouse.net/contactus.asp">联系我们</a>‖<a href="http://glohouse.net/20130312005.asp">招聘信息</a>‖
-<script language="JavaScript" src="./sale_detail_files/stat.php"></script><script src="./sale_detail_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=5100648" target="_blank" title="站长统计">站长统计</a>
- <br>海外频道 版权所有；非经允许，请勿转载&nbsp;&nbsp; <a href="http://www.miibeian.gov.cn/" target="_blank"><font face="Verdana">沪ICP备13011883号</font><br></a>Copyright @ 2013 Glohouse.net All rights reserved.</div>
-<div class="verdana"><img style="WIDTH: 100px; HEIGHT: 59px" height="148" src="./sale_detail_files/2013314181011146.jpg" width="250" border="0"></div>	
+<script language="JavaScript" src="./house_files/stat.php"></script><script src="./house_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=5100648" target="_blank" title="站长统计">站长统计</a>
+ <br>环球之家 版权所有；非经允许，请勿转载&nbsp;&nbsp; <a href="http://www.miibeian.gov.cn/" target="_blank"><font face="Verdana">沪ICP备13011883号</font><br></a>Copyright @ 2013 Glohouse.net All rights reserved.</div>
+<div class="verdana"><img style="WIDTH: 100px; HEIGHT: 59px" height="148" src="./house_files/2013314181011146.jpg" width="250" border="0"></div>	
 	   
 	   
 	   <br>
