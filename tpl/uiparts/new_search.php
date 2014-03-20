@@ -5,7 +5,7 @@
    
     <div class="top" style="margin-top: 20px; margin-bottom: 20px;">
         <div class="toplogo" id="dsy_B01_29">
-          <a href="<?php echo $_cfg_siteRoot;?>index.php" id="world_B04_20" target="_blank"> <img src="./image/ui/logo.gif" alt=""></a>
+          <a href="<?php echo $_cfg_siteRoot;?>index.php" id="world_B04_20" target="_blank"> <img src="./image/ui/newlogo.png" alt="<?php echo $_cfg_logo_alt; ?>" width="260" style="padding-top: 13px;" ></a>
         </div>
        
         <div class="topright">

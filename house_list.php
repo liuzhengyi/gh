@@ -1,10 +1,8 @@
 <?php
 /**
- * house list of the site, response for house search
+ * index of the site
  * author:  gipsaliu@gmail.com
- * since:   2014-03-16
- *
- * @TODO
+ * since:   2014-03-11
  *
  */
 
@@ -13,41 +11,114 @@ include_once('./config.php');
 require_once("./common.php");
 require_once($_cfg_dbConfFile);
 
-// get and check params
-$_GET['id'] = 3;
+// params
+$coid       = (empty($_GET['coid'])) ? '': intval($_GET['coid']);
+$pl         = (empty($_GET['pl'])) ? '': intval($_GET['pl']);
+$type       = (empty($_GET['type'])) ? '': intval($_GET['type']);
 
-$id = $_GET['id'];
+$page       = (empty($_GET['page'])) ? 1: intval($_GET['page']);
 
-// db
+if ( empty($_GET['coid']) ) {
+    $coid       = '';
+    $coid_sql   = '';
+} else {
+    $coid   = intval($_GET['coid']);
+    $coid_sql   = ' and country.country_id = :coid ';
+}
+if ( empty($_GET['pl']) ) {
+    $pl         = '';
+    $pl_sql     = '';
+} else {
+    $pl         = intval($_GET['pl']);
+    $pl_sql     = ' and house.price_level = :pl ';
+}
+if ( empty($_GET['type']) ) {
+    $type       = '';
+    $type_sql   = '';
+} else {
+    $type       = intval($_GET['type']);
+    $type_sql     = ' and house.type = :type ';
+}
+
 $dbh        = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
 
-// house
-$sql    = ' select
-                house.*,
-                city.name ciname,
-                country.country_id coid, country.name coname,
-                country.region region
-            from
-                house, city, country
-            where
-                house.city_id = city.city_id
-                and
-                city.country_id = country.country_id
-                and
-                house.house_id = :id
-            ';
+// ad data
+$sql        = "select * from ad";
+$sth        = $dbh->prepare($sql);
+$sth->execute();
+$data       = $sth->fetchAll(PDO::FETCH_ASSOC);
+$ad_data    = group_array_key($data, 'ad_type');
+
+// country
+$sql            = "select * from country ";
+$sth            = $dbh->prepare($sql);
+$sth->execute();
+$country_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+// house count
+$sql    = 'select count(1) count from house, city, country where house.city_id = city.city_id and city.country_id = country.country_id '. $coid_sql. $type_sql. $pl_sql;
 $sth    = $dbh->prepare($sql);
 
-$sth->bindValue(':id', $id, PDO::PARAM_INT);
-$sth->execute();
-$house_data   = $sth->fetch(PDO::FETCH_ASSOC);
+if ( $coid ) { $sth->bindValue(':coid', $coid, PDO::PARAM_INT); }
+if ( $type ) { $sth->bindValue(':type', $type, PDO::PARAM_INT); }
+if ( $pl ) { $sth->bindValue(':pl', $pl, PDO::PARAM_INT); }
 
-$house_data['images'] = get_img_url($house_data['image_urls']);
+$sth->execute();
+$house_count_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+if ( empty($house_count_data) ) {
+
+    // 无数据
+    $house_data = '';
+
+} else {
+
+    $house_count    = (empty($house_count_data)) ? 0 : $house_count_data[0]['count'];
+    $page_size      = empty($_cfg_page_size_house)? 10: $_cfg_page_size_house;
+    $max_page       = ceil($house_count / $page_size);
+
+    $page           = ( $page < 1 ) ? 1 : $page;
+    $page           = ( $page > $max_page ) ? $max_page : $page;
+
+    $record_start   = ($page - 1) * $page_size;
+
+    // house
+    $sql    = ' select
+                    house_id id, house.name name,
+                    house.price_level level, house.image_urls,
+                    house.position, house.decoration_state, 
+                    house.price_desc,
+                    city.name ciname,
+                    country.country_id coid, country.name coname,
+                    country.region region
+                from
+                    house, city, country
+                where
+                    house.city_id = city.city_id
+                    and
+                    city.country_id = country.country_id
+                    '.
+                    $coid_sql.
+                    $type_sql.
+                    $pl_sql.
+                    ' limit '. $record_start. ', '. $page_size;
+
+    $sth    = $dbh->prepare($sql);
+
+    if ( $coid ) { $sth->bindValue(':coid', $coid, PDO::PARAM_INT); }
+    if ( $type ) { $sth->bindValue(':type', $type, PDO::PARAM_INT); }
+    if ( $pl ) { $sth->bindValue(':pl', $pl, PDO::PARAM_INT); }
+
+    $sth->execute();
+    $house_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+}
 
 
 // hot house
 $sql            = ' select
                         house_id id, house.name name, house.view_count vc,
+                        price_desc,
                         city.city_id ciid, city.name ciname,
                         country.country_id coid, country.name coname,
                         country.region region
@@ -63,6 +134,7 @@ $sth            = $dbh->prepare($sql);
 $sth->execute();
 $hot_house_data = $sth->fetchAll(PDO::FETCH_ASSOC);
 
+
 // friend links 
 $sql        = ' select
                     *
@@ -74,15 +146,10 @@ $sth        = $dbh->prepare($sql);
 $sth->execute();
 $link_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-// ad data
-$sql        = "select * from ad";
-$sth        = $dbh->prepare($sql);
-$sth->execute();
-$data       = $sth->fetchAll(PDO::FETCH_ASSOC);
-$ad_data    = group_array_key($data, 'ad_type');
-
 
 $sth    = NULL;
 $dbh    = NULL;
-include('./tpl/house.php');
+
+$title  = $_cfg_logo_alt. '-文章列表';
+include('./tpl/house_list.php');
 ?>

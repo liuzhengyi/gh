@@ -30,4 +30,11 @@ $_cfg_siteRoot = "http://gh/";
 // 数据库配置文件位置
 $_cfg_dbConfFile = $_cfg_webRoot."dbConf.php";
 
+// 页面变量配置
+$_cfg_logo_alt    = '平安好房-海外频道';
+
+// 分页配置
+$_cfg_page_size_house   = 3;
+$_cfg_page_size_article = 3;
+
 ?>
