@@ -15,6 +15,7 @@ require_once($_cfg_dbConfFile);
 $coid       = (empty($_GET['coid'])) ? '': intval($_GET['coid']);
 $pl         = (empty($_GET['pl'])) ? '': intval($_GET['pl']);
 $type       = (empty($_GET['type'])) ? '': intval($_GET['type']);
+$region     = (empty($_GET['region'])) ? '': intval($_GET['region']);
 
 $page       = (empty($_GET['page'])) ? 1: intval($_GET['page']);
 
@@ -25,6 +26,7 @@ if ( empty($_GET['coid']) ) {
     $coid   = intval($_GET['coid']);
     $coid_sql   = ' and country.country_id = :coid ';
 }
+
 if ( empty($_GET['pl']) ) {
     $pl         = '';
     $pl_sql     = '';
@@ -32,12 +34,21 @@ if ( empty($_GET['pl']) ) {
     $pl         = intval($_GET['pl']);
     $pl_sql     = ' and house.price_level = :pl ';
 }
+
 if ( empty($_GET['type']) ) {
     $type       = '';
     $type_sql   = '';
 } else {
     $type       = intval($_GET['type']);
     $type_sql     = ' and house.type = :type ';
+}
+
+if ( empty($_GET['region']) ) {
+    $region       = '';
+    $region_sql   = '';
+} else {
+    $region       = intval($_GET['region']);
+    $region_sql     = ' and country.region = :region ';
 }
 
 $dbh        = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
@@ -59,9 +70,10 @@ $country_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
 $sql    = 'select count(1) count from house, city, country where house.city_id = city.city_id and city.country_id = country.country_id '. $coid_sql. $type_sql. $pl_sql;
 $sth    = $dbh->prepare($sql);
 
-if ( $coid ) { $sth->bindValue(':coid', $coid, PDO::PARAM_INT); }
-if ( $type ) { $sth->bindValue(':type', $type, PDO::PARAM_INT); }
-if ( $pl ) { $sth->bindValue(':pl', $pl, PDO::PARAM_INT); }
+if ( $coid )    { $sth->bindValue(':coid', $coid, PDO::PARAM_INT); }
+if ( $type )    { $sth->bindValue(':type', $type, PDO::PARAM_INT); }
+if ( $pl )      { $sth->bindValue(':pl', $pl, PDO::PARAM_INT); }
+if ( $region )  { $sth->bindValue(':region', $region, PDO::PARAM_INT); }
 
 $sth->execute();
 $house_count_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -101,6 +113,7 @@ if ( empty($house_count_data) ) {
                     $coid_sql.
                     $type_sql.
                     $pl_sql.
+                    $region_sql.
                     ' limit '. $record_start. ', '. $page_size;
 
     $sth    = $dbh->prepare($sql);
@@ -108,6 +121,7 @@ if ( empty($house_count_data) ) {
     if ( $coid ) { $sth->bindValue(':coid', $coid, PDO::PARAM_INT); }
     if ( $type ) { $sth->bindValue(':type', $type, PDO::PARAM_INT); }
     if ( $pl ) { $sth->bindValue(':pl', $pl, PDO::PARAM_INT); }
+    if ( $region ) { $sth->bindValue(':region', $region, PDO::PARAM_INT); }
 
     $sth->execute();
     $house_data   = $sth->fetchAll(PDO::FETCH_ASSOC);

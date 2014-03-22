@@ -89,9 +89,20 @@ $sth        = $dbh->prepare($sql);
 $sth->bindValue(':id', $id);
 $sth->execute();
 
-
+// close DB
 $sth    = NULL;
 $dbh    = NULL;
+
+// crumbs start
+$cmb['file']        = $_SERVER['SCRIPT_NAME'];
+$cmb['region']      = $house_data['region'];
+$cmb['coid']        = $house_data['coid'];
+$cmb['coname']      = $house_data['coname'];
+$cmb['name']        = $house_data['name'];
+
+$crumbs = get_crumbs($cmb);
+// crumbs end
+
 
 $title  = $_cfg_logo_alt. '-房产详情';
 include('./tpl/house.php');

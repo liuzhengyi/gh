@@ -10,15 +10,8 @@
 
 <!--第二栏 begin-->
 <div class="worldbox">
-        <div class="breadcrumb"><strong>您的位置：</strong><a href="http://glohouse.net/index.asp">首页</a>
-		
-		
-		
-	  &gt;  <a href="http://glohouse.net/article.asp?lm=30">海外租房贴士</a>   &gt; <a href="http://glohouse.net/article.asp?lm=33">美国</a> &gt; <em>全部</em> 
-
-		
-        </div>
-    </div>
+<?php echo $crumbs; ?>
+</div>
 
 <div class="worldbox">
 <!--第一栏 begin-->
@@ -44,9 +37,9 @@
                     <div class="blkContainerSblkCon blkContainerSblkCon_14" id="divContent">
                         <div class="quote">提要：在美国与在中国有一点是相同的，那就是在衣食住行中，住的消费所占的比重最大，要解决住的问题，一是买(buy)，二是租(rent)，三是转租(sublease)。单身的一般与别人合租，有家庭的单独租房，极少数夫妻俩都有收入的，而且准备在美国长期待下去的也买了房子。下面是在美国租房的一些经历和需要注意事项。
                         </div>
-                        <pre>
-                        <?php echo $article_data['content']; ?>
-                        </pre>
+                        <div align="left">
+                        <?php echo nl2br($article_data['content']); ?>
+                        </div>
 <p class="related"><strong>&nbsp;延伸阅读</strong>
 </p><ul>
 
@@ -100,7 +93,7 @@
                     <?php
                     $index = 1;
                     foreach ( $hot_article_data as $hot_article ) {
-                        $link_url   = $_cfg_siteRoot. 'artilce.php?id='. $hot_article['id'];
+                        $link_url   = $_cfg_siteRoot. 'article.php?id='. $hot_article['id'];
                         $class  = ( 1 == $index ) ? 'icon1' : 'icon2';
                         echo    '<li><strong class="'. $class. '">'. $index. '</strong><cite>'.
                                 '<a href="'.  $link_url.

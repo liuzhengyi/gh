@@ -90,7 +90,7 @@ $sql            = ' select
                         house_id id, house.name name, house.view_count vc,
                         price_desc,
                         city.city_id ciid, city.name ciname,
-                        country.country_id cid, country.name coname,
+                        country.country_id coid, country.name coname,
                         country.region region
                     from
                         house, city, country
@@ -123,8 +123,27 @@ $sth->bindValue(':id', $id);
 $sth->execute();
 $relate_article_data    = $sth->fetchAll(PDO::FETCH_ASSOC);
 
+// article_cate
+$sql        = ' select cate_id, cate_name from article_cate';
+$sth        = $dbh->prepare($sql);
+$sth->execute();
+$cate_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
+$cate_data  = set_array_key($cate_data, 'cate_id');
 
+
+// close DB
 $sth    = NULL;
 $dbh    = NULL;
+
+
+// crumbs start
+$cmb['file']        = $_SERVER['SCRIPT_NAME'];
+$cmb['caid']    = $article_data['cate_id'];
+$cmb['caname']  = $cate_data[$cmb['caid']]['cate_name'];
+$crumbs = get_crumbs($cmb);
+// crumbs end
+
+
+$title  = $_cfg_logo_alt. '-房产详情';
 include('./tpl/article.php');
 ?>

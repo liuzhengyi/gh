@@ -14,13 +14,8 @@
 
 <!--第二栏 begin-->
 <div class="worldbox">
-
-        <div class="breadcrumb"><strong>您的位置：</strong><a href="http://glohouse.net/index.asp">首页</a>
-	  &gt; <a href="./article_list_files/article_list.html">海外租房贴士</a> &gt; <em>全部</em> 
-				
-
-	</div>    
-    </div>
+<?php echo $crumbs; ?>
+</div>
 
 <div class="worldbox">
 <!--第一栏 begin-->
@@ -61,7 +56,7 @@
 <div class="pager">
 		
 <?php
-$base_url   = $_cfg_siteRoot. 'article_list.php?cid='. $cid. '&page=';
+$base_url   = $_cfg_siteRoot. 'article_list.php?caid='. $caid. '&page=';
 if ( $page > 1 ) {
     echo '<a href="'. $base_url. ($page-1). '">上一页</a>';
 }

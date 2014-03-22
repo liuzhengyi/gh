@@ -83,19 +83,19 @@
                     <?php
                         foreach ( $country_data as $country ) {
                             echo    '<a href="'. $_cfg_siteRoot.
-                                    'sale_list.php" id="world_B05_12">'.
+                                    'house_list.php" id="world_B05_12">'.
                                     $country['name'].
                                     '</a>';
                         }
                     ?>
-                    <a href="<?php echo $_cfg_siteRoot;?>sale_list.php" id="world_B05_12"> 更多&gt;&gt; </a>
+                    <a href="<?php echo $_cfg_siteRoot;?>house_list.php" id="world_B05_12"> 更多&gt;&gt; </a>
                     <br>
                     <br>
                     <strong>物业总价（RMB）</strong>
                     <br>
                     <?php
                     for ( $level = 1; $level < 7; ++$level ) {
-                        echo '<a href="'. $_cfg_siteRoot. 'sale_list.php?pl='. $level. '">'. get_price_desc($level). '</a>';
+                        echo '<a href="'. $_cfg_siteRoot. 'house_list.php?pl='. $level. '">'. get_price_desc($level). '</a>';
                     }
                     ?>
                 </div>
@@ -141,7 +141,7 @@
                     <div class="worldTitle">
                         <h2><?php echo get_region_name($region);?>置业</h2>
                         <span class="more">
-                        <a href="<?php echo $_cfg_siteRoot;?>sale_list.php?rid=<?php echo $region;?>" target="_blank" id="world_B06_01">更多&gt;&gt;</a>
+                        <a href="<?php echo $_cfg_siteRoot;?>house_list.php?rid=<?php echo $region;?>" target="_blank" id="world_B06_01">更多&gt;&gt;</a>
                         </span>
                     </div>
 
@@ -150,7 +150,7 @@
                         <?php $house = array_pop($houses); ?>
                             <li class="<?php echo ( 1 == $index ) ? 'last': ''; ?>">
                                 <div class="picbox">
-                                    <a id="world_B06_02" href="<?php echo $_cfg_siteRoot;?>sale_list.php?id=<?php echo $house['id'];?>" target="_blank">
+                                    <a id="world_B06_02" href="<?php echo $_cfg_siteRoot;?>house_list.php?id=<?php echo $house['id'];?>" target="_blank">
                                         <img src="<?php echo get_single_img_url($house['image_urls']);?>" alt="<?php echo $house['name'];?>" />
                                     </a>
                                     <div class="floatDiv">

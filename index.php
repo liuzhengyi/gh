@@ -101,5 +101,8 @@ $link_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
 
 $sth    = NULL;
 $dbh    = NULL;
+
+$title  = $_cfg_logo_alt;
+
 include('./tpl/index.php');
 ?>

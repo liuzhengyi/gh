@@ -12,8 +12,8 @@
  **/
 
 // debug or not
+// define( "DEBUG", FALSE);
 define( "DEBUG", TRUE);
-//define( "DEBUG", FALSE);
 
 if(DEBUG) {
 	ini_set("display_errors", 1);

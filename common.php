@@ -16,6 +16,32 @@ function group_array_key( $Array, $Key='id' ) {
     return $array;
 }
 
+
+/**
+ * 将二维数组的第二维的某个键值提升为第一位的键名
+ * gipsaliu@gmail.com
+ * since: 2014-03-14
+ * 
+ */
+function set_array_key( $Array, $Key='id' ) {
+    $res_array = array();
+    foreach( $Array as $element ) {
+        $res_array[$element[$Key]] = $element;
+    }
+
+    return $res_array;
+}
+
+function test_set_array_key() {
+    $test_arr = array(
+        'a' => array('id'=> 2, 'name'=>'name2'),
+        'b' => array('id'=> 3, 'name'=>'name3'),
+        'c' => array('id'=> 4, 'name'=>'name4'),
+        'd' => array('id'=> 6, 'name'=>'name6'),
+    );
+    var_dump(set_array_key( $test_arr));
+}
+
 /**
  * 由region_id 得到 region_name
  * gipsaliu@gmail.com
@@ -67,17 +93,17 @@ function get_single_img_url( $Urls, $Index=0, $Delimiter=';' ) {
 
 function get_house_list_by_region( $Rid ) {
     global $_cfg_siteRoot;
-    return $_cfg_siteRoot. 'sale_list.php?rid='. $Rid;
+    return $_cfg_siteRoot. 'house_list.php?rid='. $Rid;
 }
 
 function get_house_list_by_country( $Coid ) {
     global $_cfg_siteRoot;
-    return $_cfg_siteRoot. 'sale_list.php?coid='. $Coid;
+    return $_cfg_siteRoot. 'house_list.php?coid='. $Coid;
 }
 
 function get_house_by_id( $Id ) {
     global $_cfg_siteRoot;
-    return $_cfg_siteRoot. 'sale_detail.php?id='. $Id;
+    return $_cfg_siteRoot. 'house.php?id='. $Id;
 }
 
 function get_price_desc( $Level ) {
@@ -146,6 +172,87 @@ function get_house_type_desc( $Type=1 ) {
     }
 
     return $desc;
+}
+
+/**
+ *  获取当前位置
+ *
+ */
+function get_crumbs( $Params ) {
+    global $_cfg_siteRoot;
+    $params = array();
+
+    $params['l0']['name'] = '首页';
+    $params['l0']['link'] = $_cfg_siteRoot;
+
+    switch ( $Params['file'] ) {
+        case '/house.php':
+        case '/house_list.php':
+
+            $params['l1']['name'] = '海外购房';
+            $params['l1']['link'] = $_cfg_siteRoot. 'house_list.php';
+
+            // region > country > house_name
+            $params['l2']['name'] = get_region_name( $Params['region'] ). '置业业';
+            $params['l2']['link'] = $params['l1']['link']. '?region='. $Params['region'];
+
+            if ( !$Params['coname'] ) {
+
+                $params['l3']['name'] = '全部';
+                $params['l3']['link'] = $params['l2']['link'];
+
+            } else {
+
+                $params['l3']['name'] = $Params['coname'];
+                $params['l3']['link'] = $params['l1']['link']. '?coid='. $Params['coid'];
+
+                if ( !$Params['name'] ) {
+
+                    $params['l4']['name'] = '全部';
+                    $params['l4']['link'] = $params['l3']['link'];
+
+                } else {
+
+                    $params['l4']['name'] = $Params['name'];
+                    $params['l4']['link'] = '#';
+
+                }
+            }
+
+            break;
+
+        case '/article.php':
+        case '/article_list.php':
+            // cate > 
+            $params['l1']['name'] = '海外租房贴士';
+            $params['l1']['link'] = $_cfg_siteRoot. 'article_list.php';
+            if ( empty($Params['caid']) ) {
+
+                $params['l2']['name'] = '全部';
+                $params['l2']['link'] = $params['l1']['link'];
+
+            } else {
+
+                $params['l2']['name'] = $Params['caname'];
+                $params['l2']['link'] = $params['l1']['link']. '?caid='. $Params['caid'];
+
+            }
+
+            break;
+
+        default:
+            $params['l1'] = '平安好房-海外频道';
+            break;
+    }
+
+    $crumbs = '<div class="oscrumb"><div class="s1">您的位置：';
+    foreach ( $params as $part ) {
+        $crumbs .= '<a href="'. $part['link']. '" target="_blank">'. $part['name']. '</a> &gt; ';
+    }
+
+    $crumbs = substr( $crumbs, 0, strrpos( $crumbs, '&' ) - strlen($crumbs) );
+    $crumbs .= '</div><div class="s2"></div><div class="clear"></div>';
+    return $crumbs;
 }
 
 ?>

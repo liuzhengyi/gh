@@ -12,25 +12,23 @@ require_once("./common.php");
 require_once($_cfg_dbConfFile);
 
 // params
-$cid        = (empty($_GET['cid'])) ? '': intval($_GET['cid']);
+$caid        = (empty($_GET['caid'])) ? '': intval($_GET['caid']);
 
 $page       = (empty($_GET['page'])) ? 1: intval($_GET['page']);
 
-if ( empty($_GET['cid']) ) {
-    $cid       = '';
-    $cid_sql   = '';
+if ( empty($caid) ) {
+    $caid_sql   = '';
 } else {
-    $cid   = intval($_GET['cid']);
-    $cid_sql   = ' and article.cate_id = :cid ';
+    $caid_sql   = ' and article.cate_id = :caid ';
 }
 
-$dbh        = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
+$dbh    = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
 
 // article count
-$sql    = 'select count(1) count from article  where 1 = 1 '. $cid_sql;
+$sql    = 'select count(1) count from article  where 1 = 1 '. $caid_sql;
 $sth    = $dbh->prepare($sql);
 
-if ( $cid ) { $sth->bindValue(':cid', $cid, PDO::PARAM_INT); }
+if ( $caid ) { $sth->bindValue(':caid', $caid, PDO::PARAM_INT); }
 
 $sth->execute();
 $article_count_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -56,18 +54,19 @@ if ( empty($article_count_data) ) {
                     article.article_id id, article.abstract,
                     article.title, article.update_time,
                     article.view_count vc,
-                    article_cate.cate_name cname
+                    article_cate.cate_name caname,
+                    article_cate.cate_id caid
                 from
                     article, article_cate 
                 where
                     article.cate_id = article_cate.cate_id
                     '.
-                    $cid_sql.
+                    $caid_sql.
                     ' limit '. $record_start. ', '. $page_size;
 
     $sth    = $dbh->prepare($sql);
 
-    if ( $cid ) { $sth->bindValue(':cid', $cid, PDO::PARAM_INT); }
+    if ( $caid ) { $sth->bindValue(':caid', $caid, PDO::PARAM_INT); }
 
     $sth->execute();
     $article_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -82,7 +81,7 @@ $sql            = ' select
                         house_id id, house.name name, house.view_count vc,
                         price_desc,
                         city.city_id ciid, city.name ciname,
-                        country.country_id cid, country.name coname,
+                        country.country_id coid, country.name coname,
                         country.region region
                     from
                         house, city, country
@@ -118,9 +117,27 @@ $sth        = $dbh->prepare($sql);
 $sth->execute();
 $link_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
 
+// article_cate
+$sql        = ' select cate_id, cate_name from article_cate';
+$sth        = $dbh->prepare($sql);
+$sth->execute();
+$cate_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
+$cate_data  = set_array_key($cate_data, 'cate_id');
+// var_dump($cate_data); exit();
 
 $sth    = NULL;
 $dbh    = NULL;
+
+
+// crumbs start
+$cmb['file']        = $_SERVER['SCRIPT_NAME'];
+if ( !empty($caid) ) {
+    $cmb['caid']    = $caid;
+    $cmb['caname']  = $cate_data[$caid]['cate_name'];
+}
+$crumbs = get_crumbs($cmb);
+// crumbs end
+
 
 $title  = $_cfg_logo_alt. '-文章列表';
 include('./tpl/article_list.php');
