@@ -26,8 +26,10 @@ A.lzy_navi_current {
 }
 
 DIV#lzy_navi_header_container {
-/*    margin-left: 155px; */
-    margin-left: 11%;
+    height: 50px;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 A.lzy_navi_header_ele {
