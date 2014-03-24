@@ -113,13 +113,14 @@ A:hover {
 	PADDING-LEFT: 5px; FLOAT: right
 }
 .ostitlebanner {
-	BORDER-BOTTOM: #0a91e6 0px solid; BORDER-LEFT: #e6e6e6 1px solid; WIDTH: 958px; HEIGHT: 85px; MARGIN-LEFT: auto; BORDER-TOP: #e6e6e6 1px solid; MARGIN-RIGHT: auto; BORDER-RIGHT: #e6e6e6 1px solid
+	BORDER-BOTTOM: #0a91e6 0px solid; BORDER-LEFT: #e6e6e6 1px solid; WIDTH: 958px; HEIGHT: 85px; MARGIN-LEFT: auto; BORDER-TOP: #e6e6e6 1px solid; MARGIN-RIGHT: auto; BORDER-RIGHT: #e6e6e6 1px solid;
+    margin-top: 15px;
 }
 .ostitlebanner01 {
 	PADDING-BOTTOM: 0px; MARGIN-TOP: 15px; PADDING-LEFT: 8px; WIDTH: 942px; PADDING-RIGHT: 8px; HEIGHT: 27px; PADDING-TOP: 0px
 }
 .ostitlebanner01 .s1 {
-	LINE-HEIGHT: 27px; FONT-FAMILY: "??????","Microsoft YaHei","????"; FLOAT: left; COLOR: #cc0000; FONT-SIZE: 22px; FONT-WEIGHT: bold
+	LINE-HEIGHT: 27px; FONT-FAMILY: "??????","Microsoft YaHei","????"; FLOAT: left; COLOR: #555; FONT-SIZE: 22px; FONT-WEIGHT: bold;
 }
 .ostitlebanner01 .s1 A {
 	FONT-FAMILY: "??????","Microsoft YaHei","????"; COLOR: #cc0000; FONT-SIZE: 22px; FONT-WEIGHT: bold

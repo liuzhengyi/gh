@@ -1,27 +1,26 @@
 <?php include('./tpl/uiparts/header.php'); ?>
-<link rel="stylesheet" type="text/css" href="./article_files/News_2012.css">
+<link rel="stylesheet" type="text/css" href="./css/News_2012.css">
 <body>
 <div id="SFmenu" style="position: absolute; z-index: 100;"></div>
-<!--新搜索20120413 begin-->
+<!--搜索begin-->
 <?php include('./tpl/uiparts/new_search.php'); ?>
+<!--搜索end-->
+
 <!--导航 begin-->
 <?php include('./tpl/uiparts/navi_header.php'); ?>
 <!--导航 end-->
 
-<!--第二栏 begin-->
+<!-- 面包屑 -->
 <div class="worldbox">
 <?php echo $crumbs; ?>
 </div>
 
 <div class="worldbox">
-<!--第一栏 begin-->
 <div class="row" id="listNav">
        
 </div>
 </div>
-<!--第2栏 begin-->	
 
-<!--第一栏 begin-->
 <div class="worldbox">
 <div class="clearfix news_con">
         <div id="MainTexBox" class="grid17 first">
@@ -35,37 +34,30 @@
                         </span><span id="pub_date">发布时间：<?php echo $article_data['create_time'];?></span></div>
                     </div>
                     <div class="blkContainerSblkCon blkContainerSblkCon_14" id="divContent">
-                        <div class="quote">提要：在美国与在中国有一点是相同的，那就是在衣食住行中，住的消费所占的比重最大，要解决住的问题，一是买(buy)，二是租(rent)，三是转租(sublease)。单身的一般与别人合租，有家庭的单独租房，极少数夫妻俩都有收入的，而且准备在美国长期待下去的也买了房子。下面是在美国租房的一些经历和需要注意事项。
-                        </div>
+                        <div class="quote">提要：<?php echo $article_data['abstract'];?></div>
+                        <p></p>
                         <div align="left">
                         <?php echo nl2br($article_data['content']); ?>
                         </div>
-<p class="related"><strong>&nbsp;延伸阅读</strong>
-</p><ul>
-
-
-
-<li><a href="http://glohouse.net/detail.asp?newsid=132" target="_blank">在美国申请校内学生公寓</a></li>
-
-
- 
-
-
-<li><a href="http://glohouse.net/detail.asp?newsid=131" target="_blank">美国租房要做到快、准、细</a></li>
-
-</ul>
-<p></p><p></p>
+                        <p class="related"><strong>&nbsp;延伸阅读</strong></p>
+                        <ul>
+                        <?php
+                        // 延伸阅读
+                        foreach ( $extended_article_data as $e_article ) {
+                            $url = $_cfg_siteRoot. 'article.php?id='. $e_article['id'];
+                            echo '<li><a href="'. $url. '" target="_blank" >'. $e_article['title']. '</a></li>';
+                        }
+                        ?>
+                        </ul>
+                        <p></p>
                     </div>
 
                     <div class="HSpace_15">
                     </div>
-                    <!-- 功能按钮 start -->
-          </div>
+                </div>
+            </div>
 
-        
-        </div>
-
-        <div class="grid280" id="hotNews">
+            <div class="grid280" id="hotNews">
 
               <div class="title_g clearfix">热门楼盘关注排行</div>
               <div class="topic_rank clearfix">
@@ -87,9 +79,9 @@
                 </ul>
               </div>
 
-               <div class="title_g clearfix">本周热点资讯排行</div>
+              <div class="title_g clearfix">本周热点资讯排行</div>
                  <div class="topic_rank clearfix">
-                   <ul>
+                    <ul>
                     <?php
                     $index = 1;
                     foreach ( $hot_article_data as $hot_article ) {
@@ -106,10 +98,7 @@
 				   
                   </ul>
                 </div>
-            
         </div>
-            
-
     </div>
 </div>
 

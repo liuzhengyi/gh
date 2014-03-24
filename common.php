@@ -1,4 +1,10 @@
 <?php
+/**
+ * 用到的函数封装
+ * gipsaliu@gmail.com
+ * since: 2014-03-14
+ * 
+ */
 
 /**
  * 按照二维数组的第二维的某个键名$key将数组分组
@@ -32,6 +38,12 @@ function set_array_key( $Array, $Key='id' ) {
     return $res_array;
 }
 
+/**
+ * 测试 set_array_key
+ * gipsaliu@gmail.com
+ * since: 2014-03-14
+ * 
+ */
 function test_set_array_key() {
     $test_arr = array(
         'a' => array('id'=> 2, 'name'=>'name2'),
@@ -46,7 +58,6 @@ function test_set_array_key() {
  * 由region_id 得到 region_name
  * gipsaliu@gmail.com
  * since: 2014-03-14
- * 
  */
 function get_region_name( $Region_id ) {
     switch ($Region_id) {
@@ -91,21 +102,41 @@ function get_single_img_url( $Urls, $Index=0, $Delimiter=';' ) {
     return $urls[$Index];
 }
 
+/**
+ * 由region_id 得到 房产列表链接地址
+ * gipsaliu@gmail.com
+ * since: 2014-03-14
+ */
 function get_house_list_by_region( $Rid ) {
     global $_cfg_siteRoot;
     return $_cfg_siteRoot. 'house_list.php?rid='. $Rid;
 }
 
+/**
+ * 由country_id 得到 房产列表链接地址
+ * gipsaliu@gmail.com
+ * since: 2014-03-14
+ */
 function get_house_list_by_country( $Coid ) {
     global $_cfg_siteRoot;
     return $_cfg_siteRoot. 'house_list.php?coid='. $Coid;
 }
 
+/**
+ * 由house_id 得到 房产详情链接地址
+ * gipsaliu@gmail.com
+ * since: 2014-03-14
+ */
 function get_house_by_id( $Id ) {
     global $_cfg_siteRoot;
     return $_cfg_siteRoot. 'house.php?id='. $Id;
 }
 
+/**
+ * 由price_level 得到 价格的描述
+ * gipsaliu@gmail.com
+ * since: 2014-03-14
+ */
 function get_price_desc( $Level ) {
     $desc   = '';
     switch ( $Level ) {
@@ -175,14 +206,14 @@ function get_house_type_desc( $Type=1 ) {
 }
 
 /**
- *  获取当前位置
+ *  获取当前位置 拼出面包屑字符串
  *
  */
 function get_crumbs( $Params ) {
     global $_cfg_siteRoot;
     $params = array();
 
-    $params['l0']['name'] = '首页';
+    $params['l0']['name'] = '平安好房-海外频道';
     $params['l0']['link'] = $_cfg_siteRoot;
 
     switch ( $Params['file'] ) {
@@ -193,29 +224,34 @@ function get_crumbs( $Params ) {
             $params['l1']['link'] = $_cfg_siteRoot. 'house_list.php';
 
             // region > country > house_name
-            $params['l2']['name'] = get_region_name( $Params['region'] ). '置业业';
-            $params['l2']['link'] = $params['l1']['link']. '?region='. $Params['region'];
-
-            if ( !$Params['coname'] ) {
-
-                $params['l3']['name'] = '全部';
-                $params['l3']['link'] = $params['l2']['link'];
-
+            if ( empty($Params['region'])) {
+                $params['l2']['name'] = '全部';
+                $params['l2']['link'] = $params['l1']['link'];
             } else {
+                $params['l2']['name'] = get_region_name( $Params['region'] ). '置业';
+                $params['l2']['link'] = $params['l1']['link']. '?region='. $Params['region'];
 
-                $params['l3']['name'] = $Params['coname'];
-                $params['l3']['link'] = $params['l1']['link']. '?coid='. $Params['coid'];
+                if ( empty($Params['coname']) ) {
 
-                if ( !$Params['name'] ) {
-
-                    $params['l4']['name'] = '全部';
-                    $params['l4']['link'] = $params['l3']['link'];
+                    $params['l3']['name'] = '全部';
+                    $params['l3']['link'] = $params['l2']['link'];
 
                 } else {
 
-                    $params['l4']['name'] = $Params['name'];
-                    $params['l4']['link'] = '#';
+                    $params['l3']['name'] = $Params['coname'];
+                    $params['l3']['link'] = $params['l1']['link']. '?coid='. $Params['coid'];
 
+                    if ( empty($Params['name']) ) {
+
+                        $params['l4']['name'] = '全部';
+                        $params['l4']['link'] = $params['l3']['link'];
+
+                    } else {
+
+                        $params['l4']['name'] = $Params['name'];
+                        $params['l4']['link'] = '#';
+
+                    }
                 }
             }
 
@@ -224,7 +260,7 @@ function get_crumbs( $Params ) {
         case '/article.php':
         case '/article_list.php':
             // cate > 
-            $params['l1']['name'] = '海外租房贴士';
+            $params['l1']['name'] = '租房资讯';
             $params['l1']['link'] = $_cfg_siteRoot. 'article_list.php';
             if ( empty($Params['caid']) ) {
 
@@ -245,7 +281,7 @@ function get_crumbs( $Params ) {
             break;
     }
 
-    $crumbs = '<div class="oscrumb"><div class="s1">您的位置：';
+    $crumbs = '<div class="oscrumb"><div class="s1">';
     foreach ( $params as $part ) {
         $crumbs .= '<a href="'. $part['link']. '" target="_blank">'. $part['name']. '</a> &gt; ';
     }

@@ -1,23 +1,3 @@
-        var srax = document.getElementById("strPrice0_a");
-        srax.onfocus = function() { if (this.value == this.defaultValue) this.value = '' };
-        srax.onblur = function() { if (/^\s*$/.test(this.value)) { this.value = this.defaultValue; this.style.color = '#333' } }
-        srax.onkeydown = function() { this.style.color = '#333' }
-
-        var s = document.getElementById("input_keyw0");
-        s.onfocus = function() { if (this.value == this.defaultValue) this.value = '' };
-        s.onblur = function() { if (/^\s*$/.test(this.value)) { this.value = this.defaultValue; this.style.color = '#888' } }
-        s.onkeydown = function() { this.style.color = '#333' }
-
-        var sr = document.getElementById("strDistrict0_a");
-        sr.onfocus = function() { if (this.value == this.defaultValue) this.value = '' };
-        sr.onblur = function() { if (/^\s*$/.test(this.value)) { this.value = this.defaultValue; this.style.color = '#333' } }
-        sr.onkeydown = function() { this.style.color = '#333' }
-
-        var sra = document.getElementById("strPurpose0_a");
-        sra.onfocus = function() { if (this.value == this.defaultValue) this.value = '' };
-        sra.onblur = function() { if (/^\s*$/.test(this.value)) { this.value = this.defaultValue; this.style.color = '#333' } }
-        sra.onkeydown = function() { this.style.color = '#333' }
-
         function getId() {
             document.getElementById("span1").style.display = "none";
         }

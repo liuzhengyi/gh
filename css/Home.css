@@ -776,7 +776,8 @@
 	width: 85px; float: left; display: inline-block;
 }
 #search_list .n3 dd a {
-	color: rgb(102, 102, 102); margin-right: 10px;
+/*	color: rgb(102, 102, 102); margin-right: 10px; */
+	color: rgb(10, 142, 229); margin-right: 10px;
 }
 #search_list .n3 dd .select {
 	color: rgb(102, 153, 0);
@@ -887,7 +888,8 @@
 	height: 23px; overflow: hidden;
 }
 #search_list .loop .sub {
-	font: 16px/22px Microsoft YaHei; color: rgb(51, 51, 51); margin-right: 5px; font-size-adjust: none; font-stretch: normal;
+/*	font: 16px/22px Microsoft YaHei; color: rgb(51, 51, 51); margin-right: 5px; font-size-adjust: none; font-stretch: normal; */
+	font: 16px/22px Microsoft YaHei; color: rgb(10, 142, 229); margin-right: 5px; font-size-adjust: none; font-stretch: normal;
 }
 #search_list .loop .sub:hover {
 	color: rgb(51, 102, 0);
@@ -953,7 +955,8 @@
 	
 }
 #search_list .loop .price em {
-	 font: 12px/12px Microsoft YaHei; color: rgb(230, 0, 18); font-size-adjust: none; font-stretch: normal;
+/*	 font: 12px/12px Microsoft YaHei; color: rgb(230, 0, 18); font-size-adjust: none; font-stretch: normal; */
+	 font: 12px/12px Microsoft YaHei; color: rgb(252, 36, 18); font-size-adjust: none; font-stretch: normal;
 }
 #search_list .loop .area {
 	margin-top: 8px;
@@ -1010,7 +1013,7 @@
 	width: 85px; text-align: right;
 }
 #view_rank span b {
-	color: rgb(230, 0, 18); font-weight: 100;
+	color: rgb(252, 36, 18); font-weight: 100;
 }
 #view_rank dt {
 	height: 24px; color: rgb(102, 153, 0); line-height: 24px; overflow: hidden; font-weight: bold;

@@ -104,6 +104,8 @@ $crumbs = get_crumbs($cmb);
 // crumbs end
 
 
-$title  = $_cfg_logo_alt. '-房产详情';
+$title      = $_cfg_logo_alt. '-房产详情';
+$navi_cur   = 'house';
+
 include('./tpl/house.php');
 ?>

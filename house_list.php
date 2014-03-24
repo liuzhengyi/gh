@@ -19,35 +19,27 @@ $region     = (empty($_GET['region'])) ? '': intval($_GET['region']);
 
 $page       = (empty($_GET['page'])) ? 1: intval($_GET['page']);
 
-if ( empty($_GET['coid']) ) {
-    $coid       = '';
+if ( empty($coid) ) {
     $coid_sql   = '';
 } else {
-    $coid   = intval($_GET['coid']);
     $coid_sql   = ' and country.country_id = :coid ';
 }
 
-if ( empty($_GET['pl']) ) {
-    $pl         = '';
+if ( empty($pl) ) {
     $pl_sql     = '';
 } else {
-    $pl         = intval($_GET['pl']);
     $pl_sql     = ' and house.price_level = :pl ';
 }
 
-if ( empty($_GET['type']) ) {
-    $type       = '';
+if ( empty($type) ) {
     $type_sql   = '';
 } else {
-    $type       = intval($_GET['type']);
     $type_sql     = ' and house.type = :type ';
 }
 
-if ( empty($_GET['region']) ) {
-    $region       = '';
+if ( empty($region) ) {
     $region_sql   = '';
 } else {
-    $region       = intval($_GET['region']);
     $region_sql     = ' and country.region = :region ';
 }
 
@@ -61,10 +53,11 @@ $data       = $sth->fetchAll(PDO::FETCH_ASSOC);
 $ad_data    = group_array_key($data, 'ad_type');
 
 // country
-$sql            = "select * from country ";
+$sql            = "select country_id, name from country ";
 $sth            = $dbh->prepare($sql);
 $sth->execute();
 $country_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
+$country_data   = set_array_key($country_data, 'country_id');
 
 // house count
 $sql    = 'select count(1) count from house, city, country where house.city_id = city.city_id and city.country_id = country.country_id '. $coid_sql. $type_sql. $pl_sql;
@@ -164,6 +157,18 @@ $link_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
 $sth    = NULL;
 $dbh    = NULL;
 
-$title  = $_cfg_logo_alt. '-文章列表';
+
+// crumbs start
+$cmb['file']    = $_SERVER['SCRIPT_NAME'];
+$cmb['region']  = $region;
+$cmb['coname']  = $country_data[$coid]['name'];
+$cmb['coid']    = $coid;
+$crumbs = get_crumbs($cmb);
+// crumbs end
+
+
+$title      = $_cfg_logo_alt. '-文章列表';
+$navi_cur   = 'house';
+
 include('./tpl/house_list.php');
 ?>

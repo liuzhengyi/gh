@@ -24,7 +24,8 @@ h6.h6_title a {
 	background: rgb(249, 249, 249); padding: 20px; border: 1px solid rgb(236, 236, 236); text-align: center; line-height: 20px; font-size: 14px; margin-top: 20px;
 }
 #listNav {
-	height: 1px; line-height: 1px; border-top-color: rgb(77, 77, 77); border-bottom-color: rgb(201, 201, 201); border-top-width: 2px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; background-color: rgb(250, 250, 250);
+	height: 1px; line-height: 1px; border-top-color: #FA3E0A; border-bottom-color: #E02000; border-top-width: 2px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; background-color: rgb(250, 250, 250);
+    margin-top: 10px;
 }
 .ie6 #listNav {
 	overflow: hidden;

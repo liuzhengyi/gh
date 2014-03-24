@@ -23,9 +23,6 @@ $id = intval($_GET['id']);
 // db
 $dbh        = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
 
-// get article data
-$sql    = 'select * from article';
-
 // article
 $sql    = ' select
                 *
@@ -40,7 +37,19 @@ $sth->bindValue(':id', $id, PDO::PARAM_INT);
 $sth->execute();
 $article_data   = $sth->fetch(PDO::FETCH_ASSOC);
 
-//var_dump($article_data); exit();
+// extended article
+$sql    = ' select
+                article_id id, title 
+            from
+                article
+            where
+                article.cate_id = :caid
+            ';
+$sth    = $dbh->prepare($sql);
+
+$sth->bindValue(':caid', $article_data['cate_id'], PDO::PARAM_INT);
+$sth->execute();
+$extended_article_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
 
 // hot house
 $sql            = ' select
@@ -144,6 +153,8 @@ $crumbs = get_crumbs($cmb);
 // crumbs end
 
 
-$title  = $_cfg_logo_alt. '-房产详情';
+$title      = $_cfg_logo_alt. '-房产详情';
+$navi_cur   = 'article';
+
 include('./tpl/article.php');
 ?>

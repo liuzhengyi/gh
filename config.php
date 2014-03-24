@@ -12,8 +12,8 @@
  **/
 
 // debug or not
-// define( "DEBUG", FALSE);
-define( "DEBUG", TRUE);
+define( "DEBUG", FALSE);
+// define( "DEBUG", TRUE);
 
 if(DEBUG) {
 	ini_set("display_errors", 1);
@@ -31,10 +31,13 @@ $_cfg_siteRoot = "http://gh/";
 $_cfg_dbConfFile = $_cfg_webRoot."dbConf.php";
 
 // 页面变量配置
+// logo image's alt
 $_cfg_logo_alt    = '平安好房-海外频道';
 
 // 分页配置
+// 房产列表每页条数
 $_cfg_page_size_house   = 3;
+// 文章列表每页条数
 $_cfg_page_size_article = 3;
 
 ?>

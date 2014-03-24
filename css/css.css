@@ -96,7 +96,8 @@ H6 {
 	BACKGROUND: url(../images/searchnew11061501.gif) no-repeat center 50%; COLOR: #333; FONT-WEIGHT: bold
 }
 .toprightform {
-	Z-INDEX: 99; PADDING-BOTTOM: 0px; PADDING-LEFT: 6px; WIDTH: 643px; PADDING-RIGHT: 6px; BACKGROUND: url(../images/searchnew110615.gif) no-repeat; HEIGHT: 65px; PADDING-TOP: 7px
+/*	Z-INDEX: 99; PADDING-BOTTOM: 0px; PADDING-LEFT: 6px; WIDTH: 643px; PADDING-RIGHT: 6px; BACKGROUND: url(../images/searchnew110615.gif) no-repeat; HEIGHT: 65px; PADDING-TOP: 7px */
+	Z-INDEX: 99; PADDING-BOTTOM: 0px; PADDING-LEFT: 6px; WIDTH: 643px; PADDING-RIGHT: 6px; HEIGHT: 65px; PADDING-TOP: 7px
 }
 .toprightform FORM {
 	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
@@ -272,7 +273,7 @@ aside {
 	margin: 0px 4px 0px 0px; height: 13px; line-height: 13px; overflow: hidden; font-family: Arial; display: inline-block;
 }
 .pager .current {
-	background: rgb(58, 58, 58); padding: 3px 5px; border: 1px solid rgb(58, 58, 58); color: rgb(255, 255, 255); font-weight: 600;
+	background: rgb(245, 60, 14); padding: 3px 5px; border: 1px solid rgb(245, 60, 14); color: rgb(255, 255, 255); font-weight: 600;
 }
 .pager a {
 	margin: 0px 4px 0px 0px; padding: 3px 0px; border: 1px solid rgb(255, 255, 255); height: 13px; color: rgb(75, 75, 75); line-height: 13px; overflow: hidden; font-weight: 300; text-decoration: none; display: inline-block;
@@ -455,7 +456,7 @@ aside {
 	LINE-HEIGHT: 24px; PADDING-LEFT: 5px; WIDTH: 83px; DISPLAY: block; BACKGROUND: #d0e1f5; HEIGHT: 24px; TEXT-DECORATION: none
 }
 #input_keyw0 {
-	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 33px; PADDING-LEFT: 6px; WIDTH: 520px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 33px; COLOR: #888; MARGIN-LEFT: 0px; FONT-SIZE: 14px; OVERFLOW: hidden; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 33px; PADDING-LEFT: 6px; WIDTH: 520px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 33px; COLOR: #888; MARGIN-LEFT: 0px; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px
 }
 
 @media Unknown    
@@ -465,19 +466,27 @@ aside {
 }
     }
 .inputstyle_out {
-	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 33px; PADDING-LEFT: 6px; WIDTH: 520px; PADDING-RIGHT: 6px; BACKGROUND: url(../images/searchnew110615.gif) no-repeat 0px -85px; FLOAT: left; HEIGHT: 33px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px; _background-attachment: fixed
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 43px; PADDING-LEFT: 6px; WIDTH: 510px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 43px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px; _background-attachment: fixed;
+    border: 3px solid #F96900;
+    margin-top: 15px;
 }
 .inputstyle_on {
-	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 33px; PADDING-LEFT: 6px; WIDTH: 520px; PADDING-RIGHT: 6px; BACKGROUND: url(../images/searchnew110615.gif) no-repeat 0px -85px; FLOAT: left; HEIGHT: 33px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px; _background-attachment: fixed
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 43px; PADDING-LEFT: 6px; WIDTH: 510px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 43px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px; _background-attachment: fixed;
+    border: 3px solid #F96900;
+    margin-top: 15px;
 }
 .inputstyle_move {
-	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 33px; PADDING-LEFT: 6px; WIDTH: 520px; PADDING-RIGHT: 6px; BACKGROUND: url(../images/searchnew110615.gif) no-repeat 0px -85px; FLOAT: left; HEIGHT: 33px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px; _background-attachment: fixed
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 43px; PADDING-LEFT: 6px; WIDTH: 510px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 43px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px; _background-attachment: fixed;
+    border: 3px solid #F96900;
+    margin-top: 15px;
 }
 .inputstyle_off {
-	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 33px; PADDING-LEFT: 6px; WIDTH: 520px; PADDING-RIGHT: 6px; BACKGROUND: url(../images/searchnew110615.gif) no-repeat 0px -85px; FLOAT: left; HEIGHT: 33px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px; _background-attachment: fixed
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 43px; PADDING-LEFT: 6px; WIDTH: 510px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 43px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px; _background-attachment: fixed;
+    border: 3px solid #F96900;
+    margin-top: 15px;
 }
 .inputstyle_on {
-	BACKGROUND: url(../images/searchnew110615.gif) no-repeat 0px -267px; _background-attachment: fixed
+	 _background-attachment: fixed
 }
 .inputstyle_move {
 	BACKGROUND: url(../images/searchnew110615.gif) no-repeat 0px -267px; _background-attachment: fixed

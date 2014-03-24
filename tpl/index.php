@@ -82,10 +82,8 @@
                     <br>
                     <?php
                         foreach ( $country_data as $country ) {
-                            echo    '<a href="'. $_cfg_siteRoot.
-                                    'house_list.php" id="world_B05_12">'.
-                                    $country['name'].
-                                    '</a>';
+                            $link_url = $_cfg_siteRoot. 'house_list.php?coid='. $country['country_id'];
+                            echo    '<a href="'. $link_url. '" id="world_B05_12">'.  $country['name'].  '</a>';
                         }
                     ?>
                     <a href="<?php echo $_cfg_siteRoot;?>house_list.php" id="world_B05_12"> 更多&gt;&gt; </a>
@@ -141,7 +139,7 @@
                     <div class="worldTitle">
                         <h2><?php echo get_region_name($region);?>置业</h2>
                         <span class="more">
-                        <a href="<?php echo $_cfg_siteRoot;?>house_list.php?rid=<?php echo $region;?>" target="_blank" id="world_B06_01">更多&gt;&gt;</a>
+                        <a href="<?php echo $_cfg_siteRoot;?>house_list.php?region=<?php echo $region;?>" target="_blank" id="world_B06_01">更多&gt;&gt;</a>
                         </span>
                     </div>
 
@@ -258,23 +256,6 @@
     </div>
     <div class="clear"> </div>
 </div>
-
-<!--合作伙伴 begin-->
-<div class="friendLink" id="world_B06_41">
-        <h2>友情链接 </h2>
-		
-        <ul class="piclink clearfix">
-        <?php
-        foreach ( $link_data as $link ) {
-            echo '<li><a href="'. $link['url']. '" target="_blank"><img src="'. $link['image_url']. '" alt="'. $link['title']. '"></a></li>';
-        }
-        ?>
-        </ul>
-		
-        <ul class="worklink clearfix"> </ul>
-		
-</div>
-<!--合作伙伴 end-->
 
 <?php include('./tpl/uiparts/footer.php'); ?>
 

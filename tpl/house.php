@@ -15,11 +15,10 @@
     <?php include('./tpl/uiparts/navi_header.php'); ?>
     <!--导航 end-->
 
+
 <!--面包屑 begin-->
-<div class="oscrumb">
-	<div class="s1">您的位置：<a href="#" target="_blank">首页</a> &gt;<a href="#" target="_blank">海外购房</a> &gt; <a href="#">北美置业</a>  &gt; <a href="#">美国</a> &gt; <a href="#">底特律独立别墅</a></div>
-	<div class="s2"></div>
-	<div class="clear"></div>
+<div class="worldbox">
+<?php echo $crumbs; ?>
 </div>
 <!--面包屑end-->
 

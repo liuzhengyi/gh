@@ -13,9 +13,10 @@
 
 <!--第1栏 begin-->
 <div class="worldbox">
-<div class="breadcrumb"><strong>您的位置：</strong><a href="<?php echo $_cfg_siteRoot. 'index.php'?>">首页</a> &gt; <a href="<?php echo $_cfg_siteRoot. 'house_list.php'?>">海外购房</a> &gt;
-  <em>全部</em>
-	</div>
+    <div class="worldbox">
+        <?php echo $crumbs; ?>
+    </div>
+</div>
 
 </div>
 

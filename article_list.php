@@ -139,6 +139,9 @@ $crumbs = get_crumbs($cmb);
 // crumbs end
 
 
-$title  = $_cfg_logo_alt. '-文章列表';
+$title      = $_cfg_logo_alt. '-文章列表';
+$navi_cur   = 'article';
+
+
 include('./tpl/article_list.php');
 ?>
