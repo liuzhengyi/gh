@@ -13,11 +13,44 @@ require_once($_cfg_dbConfFile);
 
 $dbh        = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
 
-// ad data
-$sql        = "select * from ad";
-$sth        = $dbh->prepare($sql);
-$sth->execute();
-$ad_data       = $sth->fetchAll(PDO::FETCH_ASSOC);
+$content    = empty( $_GET['content'] ) ? '' : trim( $_GET['content'] );
 
-include('./tpl/admin/admin.php');
+switch ( $content ) {
+
+    case 'house':
+        // house data
+        $sql        = "select * from house";
+        $sth        = $dbh->prepare($sql);
+        $sth->execute();
+        $house_data = $sth->fetchAll(PDO::FETCH_ASSOC);
+        include('./tpl/admin/admin_house.php');
+
+        break;
+
+    case 'article':
+        // article data
+        $sql            = "select * from article";
+        $sth            = $dbh->prepare($sql);
+        $sth->execute();
+        $article_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
+        include('./tpl/admin/admin_article.php');
+
+        break;
+
+    case 'adver':
+
+        // ad data
+        $sql        = "select * from ad";
+        $sth        = $dbh->prepare($sql);
+        $sth->execute();
+        $ad_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
+        include('./tpl/admin/admin_adver.php');
+
+        break;
+
+    default:
+        include('./tpl/admin/admin.php');
+        break;
+
+}
 ?>
