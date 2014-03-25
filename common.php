@@ -277,7 +277,8 @@ function get_crumbs( $Params ) {
             break;
 
         default:
-            $params['l1'] = '平安好房-海外频道';
+            $params['l1']['name'] = '平安好房-海外频道';
+            $params['l1']['link'] = $_cfg_siteRoot;
             break;
     }
 
