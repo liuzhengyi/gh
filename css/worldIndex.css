@@ -345,13 +345,14 @@ UL.worldNews1 LI P {
 	LINE-HEIGHT: 24px; WIDTH: 278px; HEIGHT: 24px; OVERFLOW: hidden
 }
 .worldHotsearch {
-	BORDER-BOTTOM: #ececec 1px solid; BORDER-LEFT: #ececec 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; WIDTH: 188px; PADDING-RIGHT: 0px; HEIGHT: 205px; MARGIN-BOTTOM: 10px; OVERFLOW: hidden; BORDER-TOP: #ececec 1px solid; BORDER-RIGHT: #ececec 1px solid; PADDING-TOP: 10px
+	BORDER-BOTTOM: #ececec 1px solid; BORDER-LEFT: #ececec 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; WIDTH: 188px; PADDING-RIGHT: 0px; HEIGHT: 318px; MARGIN-BOTTOM: 10px; OVERFLOW: hidden; BORDER-TOP: #ececec 1px solid; BORDER-RIGHT: #ececec 1px solid; PADDING-TOP: 10px;
+    font-size: 1.2em;
 }
 .worldHotsearch H2 {
 	LINE-HEIGHT: 24px; FONT-SIZE: 14px; FONT-WEIGHT: bold
 }
 .worldHotsearch .hotlinks {
-	WIDTH: 188px; HEIGHT: 205px; OVERFLOW: hidden
+	WIDTH: 188px; HEIGHT: 318px; OVERFLOW: hidden
 }
 .worldHotsearch A {
 	PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; MARGIN-TOP: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: inline-block;  HEIGHT: 18px; OVERFLOW: hidden; MARGIN-RIGHT: 9px; PADDING-TOP: 0px

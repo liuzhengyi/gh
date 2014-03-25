@@ -1,0 +1,16 @@
+/* admin ad */
+
+DIV#main-container th#ad-image {
+width: 80px;
+}
+
+TABLE {
+    border-collapse: collapse;
+}
+TABLE#ad-manage {
+    border: 1px solid black;
+}
+TABLE TR {
+    height: 80px;
+}
+

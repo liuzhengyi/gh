@@ -291,4 +291,35 @@ function get_crumbs( $Params ) {
     return $crumbs;
 }
 
+/**
+ * 由ad_type 得到 广告的类型信息
+ * gipsaliu@gmail.com
+ * since: 2014-03-25
+ */
+function get_ad_type_desc( $Type ) {
+
+    $desc = '';
+
+    switch ( $Type ) {
+        case 1:
+            $desc = '首页顶部banner';
+            break;
+        case 2:
+            $desc = '首页上部轮播';
+            break;
+        case 3:
+            $desc = '轮播右侧小方块';
+            break;
+        case 4:
+            $desc = '轮播下方banner';
+            break;
+
+        default:
+            $desc = '';
+            break;
+    }
+
+    return $desc;
+}
+
 ?>
