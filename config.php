@@ -21,6 +21,19 @@ if(DEBUG) {
 	ini_set("display_errors", 0);
 }
 
+/*
+// on hi-vips
+// 本地主机名称
+$_cfg_hostName = 'h2';
+// 服务器上的网站根目录
+$_cfg_webRoot = "/var/www/gh/";
+// 网站的http根目录
+$_cfg_siteRoot = "http://63.223.64.106/gh/";
+// 数据库配置文件位置
+$_cfg_dbConfFile = $_cfg_webRoot."dbConf.php";
+*/
+
+// on local
 // 本地主机名称
 $_cfg_hostName = 'gh';
 // 服务器上的网站根目录
