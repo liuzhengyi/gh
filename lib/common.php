@@ -359,7 +359,8 @@ function output_json_error( $Status, $Content ) {
  * since: 2014-03-29
  */
 function get_admin_image( $Url ) {
-    return '/uploads/'. $Url;
+    global $_cfg_siteRootAdmin;
+    return $_cfg_siteRootAdmin. 'uploads/'. $Url;
 }
 
 ?>

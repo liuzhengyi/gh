@@ -31,8 +31,6 @@ $_cfg_webRootAdmin = "/var/www/gh/admin/";
 // 网站的http根目录
 $_cfg_siteRoot = "http://63.223.64.106/gh/public/";
 $_cfg_siteRootAdmin = "http://63.223.64.106/gh/admin/";
-// 数据库配置文件位置
-$_cfg_dbConfFile = $_cfg_webRoot."dbConf.php";
 */
 
 // on local
@@ -44,10 +42,16 @@ $_cfg_webRootAdmin = "/var/www/proj/gh/admin/";
 // 网站的http根目录
 $_cfg_siteRoot = "http://gh/";
 $_cfg_siteRootAdmin = "http://gha/";
+
+
+
 // 数据库配置文件位置
 $_cfg_dbConfFile = $_cfg_webRoot."/../dbConf.php";
+
+
 // 图片目录
 $_cfg_base_path     = $_cfg_webRoot. '/image/';
+
 
 // 页面变量配置
 // logo image's alt
