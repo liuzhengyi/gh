@@ -18,7 +18,7 @@
     <tbody>
         <?php
         foreach ( $article_data as $article ) {
-            $edit_url = '/edit.php?content=article&id='. $article['article_id'];
+            $edit_url = $_cfg_siteRootAdmin. 'edit.php?content=article&id='. $article['article_id'];
 
             echo '<tr>';
             echo '<td>'. $article['article_id']. '</td>';

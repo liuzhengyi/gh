@@ -11,7 +11,6 @@
 
 <div class="container">
     <div id="head" class="header">
-    <!-- <h1><a href="<?php echo $_cfg_siteRoot. 'admin.php'; ?>">平安好房-海外频道-管理后台</a></h1> -->
     <h1>平安好房-海外频道-管理后台</h1>
 
         <div id="navi-side-left">
