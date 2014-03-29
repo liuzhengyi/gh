@@ -1,0 +1,26 @@
+/* admin ad */
+HTML {
+    background-color: #def;
+}
+
+DIV#main-container th#ad-image {
+width: 80px;
+}
+
+TABLE {
+    border-collapse: collapse;
+}
+TABLE#ad-manage {
+    border: 1px solid black;
+}
+TABLE TR {
+    height: 80px;
+}
+
+TABLE TD {
+    padding: 10px 10px 10px 10px;
+}
+
+/* edit ad */
+FORM .form-field-name {
+}

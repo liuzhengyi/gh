@@ -1,0 +1,857 @@
+
+BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 12px "宋体", Arial; BACKGROUND: #fff; COLOR: #333; PADDING-TOP: 0px
+}
+DIV {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+IMG {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+DL {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+DT {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+LI {
+	LIST-STYLE-TYPE: none
+}
+H1 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 13px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+TEXTAREA {
+	FONT-SIZE: 12px
+}
+INPUT {
+	FONT-SIZE: 12px
+}
+SELECT {
+	FONT-SIZE: 12px
+}
+A {
+	OUTLINE-STYLE: none; COLOR: #333; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #c00; TEXT-DECORATION: underline
+}
+.middle * {
+	VERTICAL-ALIGN: middle
+}
+IMG {
+	VERTICAL-ALIGN: top
+}
+.clear {
+	CLEAR: both; FONT-SIZE: 0px; OVERFLOW: hidden
+}
+.clearfix {
+	ZOOM: 1
+}
+.clearfix:after {
+	DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; CLEAR: both; CONTENT: "."
+}
+.fl {
+	FLOAT: left
+}
+.fr {
+	FLOAT: right
+}
+.redC {
+	COLOR: #c00
+}
+.redC_2 {
+ COLOR: #c00;FLOAT: right
+}
+.blue1 A {
+	COLOR: #164fa0
+}
+.blue1 A:hover {
+	COLOR: #c00
+}
+
+.DivCss20091020WZiColor333 {
+	COLOR: #333; FONT-SIZE: 12px
+}
+.DivCss20091020WZiColor333 A:link {
+	COLOR: #333; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.DivCss20091020WZiColor333 A:visited {
+	COLOR: #333; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.DivCss20091020WZiColor333 A:hover {
+	COLOR: #f00; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+.DivCss20091020WZiColor333 A:active {
+	COLOR: #f00; FONT-SIZE: 12px
+}
+
+.soufunsearch110615 {
+	MARGIN: 0px auto; WIDTH: 960px; HEIGHT: 97px
+}
+
+
+.worldNav_fen {
+	 LINE-HEIGHT: 40px; MARGIN: 0px auto 10px; padding-left: 20px; WIDTH: 940px; background: url("../images/menu_bg.jpg") repeat-x 0px 0px; HEIGHT: 40px; CLEAR: both; OVERFLOW: hidden
+}
+
+
+.worldNav_fen_x {
+	 FLOAT: left; LINE-HEIGHT: 15px; WIDTH: 510px; TEXT-ALIGN: center;  HEIGHT: 40px; CLEAR: both; OVERFLOW: hidden
+}
+.worldNav_fen_x A {
+	 PADDING-LEFT: 25px;  HEIGHT: 40px;PADDING-RIGHT: 25px; DISPLAY: inline-block; FONT-FAMILY: "Microsoft YaHei","黑体"; COLOR: #fff; FONT-SIZE: 15px; PADDING-TOP: 7px
+}
+.worldNav_fen_x A.on {
+	 HEIGHT: 40px; background: url("../images/menu_bg2_on.png") repeat-x 0px 0px; COLOR: #37A0D9; 
+}
+.worldNav_fen_x A:hover {
+	 HEIGHT: 40px;background: url("../images/menu_bg2_on.png") repeat-x 0px 0px;  COLOR: #37A0D9; TEXT-DECORATION: none
+}
+
+
+
+
+
+.worldNav_fen_y   {
+FLOAT: right;	WIDTH: 310px; FONT-FAMILY: "Microsoft YaHei","黑体"; COLOR: #fff; FONT-SIZE: 18px; PADDING-BOTTOM: 0px;TEXT-ALIGN: right; PADDING-LEFT: 0px; PADDING-RIGHT: 16px; PADDING-TOP: 0px
+}
+
+.worldNav_fen_Y A:hover {
+	BACKGROUND: none transparent scroll repeat 0% 0%; TEXT-DECORATION: underline
+}
+
+.worldNav_fen2 {
+	BORDER-BOTTOM: #cfd9e3 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; LINE-HEIGHT: 33px; MARGIN: -10px auto 10px; PADDING-LEFT: 5px; WIDTH: 950px; PADDING-RIGHT: 5px; BACKGROUND: #e6f2fd; HEIGHT: 33px; CLEAR: both; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.worldNav_fen2 A {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT-FAMILY: "Microsoft YaHei","黑体"; FONT-SIZE: 14px; PADDING-TOP: 0px
+}
+
+
+.worldTitle {
+	BORDER-BOTTOM: #ececec 2px solid; POSITION: relative; LINE-HEIGHT: 40px; HEIGHT: 40px
+}
+.worldTitle .more {
+	FLOAT: right
+}
+.worldTitle H2 {
+	BORDER-BOTTOM: #1552ac 2px solid; FONT-FAMILY: "Microsoft YaHei","黑体"; MARGIN-BOTTOM: -2px; FLOAT: left; HEIGHT: 40px; FONT-SIZE: 18px
+}
+.worldAd {
+	MARGIN: 0px auto; WIDTH: 960px; OVERFLOW: hidden
+}
+.worldAd2 {
+	MARGIN: 0px auto 10px; WIDTH: 960px; OVERFLOW: hidden
+}
+.worldAdright {
+	MARGIN: 0px auto 10px; WIDTH: 190px; OVERFLOW: hidden
+}
+.worldNav {
+	BORDER-BOTTOM: #89c3e6 3px solid; BORDER-LEFT: #89c3e6 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 36px; MARGIN: 0px auto 10px; PADDING-LEFT: 10px; WIDTH: 938px; PADDING-RIGHT: 10px; HEIGHT: 36px; CLEAR: both; BORDER-TOP: #89c3e6 1px solid; BORDER-RIGHT: #89c3e6 1px solid; PADDING-TOP: 0px
+}
+.worldNav A {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 15px; COLOR: #0a4b9d; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.worldNav A:hover {
+	COLOR: #c00
+}
+.worldNav .fristOne {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 12px; PADDING-RIGHT: 42px; PADDING-TOP: 0px
+}
+.worldNav .navJG {
+	PADDING-RIGHT: 15px; COLOR: #89c3e6
+}
+.worldNav A.adzs {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; MARGIN: 7px 0px 0px; PADDING-LEFT: 0px; WIDTH: 66px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/WnavzsBg.gif) no-repeat; HEIGHT: 22px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+.worldNav A.adzs:hover {
+	TEXT-DECORATION: none
+}
+.worldTtBox {
+	BORDER-BOTTOM: #ececec 1px solid; POSITION: relative; BORDER-LEFT: #ececec 1px solid; MARGIN: 0px auto 10px; WIDTH: 958px; BORDER-TOP: #ececec 1px solid; BORDER-RIGHT: #ececec 1px solid
+}
+.worldTtBox H1 {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 60px; FONT-FAMILY: "Microsoft YaHei","黑体"; FONT-SIZE: 54px; FONT-WEIGHT: bold; PADDING-TOP: 12px
+}
+.worldTtBox H1 A {
+	COLOR: #313131
+}
+.worldTtBox H1 A:hover {
+	COLOR: #c00; TEXT-DECORATION: none
+}
+.worldTtBox P {
+	TEXT-ALIGN: center; LINE-HEIGHT: 36px; COLOR: #666; FONT-SIZE: 14px
+}
+.worldTtBox P A {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; COLOR: #666; PADDING-TOP: 0px
+}
+.worldTtBox P A:hover {
+	COLOR: #c00
+}
+.worldTtBox .TtIcon {
+	POSITION: absolute; WIDTH: 54px; DISPLAY: inline-block; BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/TtIcon.png) no-repeat; HEIGHT: 55px; TOP: -1px; LEFT: -2px
+}
+.worldbox {
+	MARGIN: 0px auto 15px; WIDTH: 960px;  CLEAR: both
+}
+
+.worldboxwenzi {
+	MARGIN: 0px auto 15px; WIDTH: 960px; LINE-HEIGHT: 25px; CLEAR: both
+}
+
+.worldboxwenzi H1 {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 60px; FONT-FAMILY: "Microsoft YaHei","黑体"; FONT-SIZE: 36px; FONT-WEIGHT: bold; PADDING-TOP: 12px
+}
+
+
+.worldbox2 {
+	MARGIN: 15px auto 15px; WIDTH: 960px; CLEAR: both
+}
+.worldleft {
+	WIDTH: 750px; FLOAT: left
+}
+.worldleft2 {
+	WIDTH: 730px; FLOAT: left
+}
+
+.worldleft3 {
+	WIDTH: 720px; PADDING-BOTTOM: 10px; FLOAT: right
+}
+
+.worldleft4 {
+	WIDTH: 665px; PADDING-BOTTOM: 10px; FLOAT: right
+}
+
+
+
+.worldright {
+	WIDTH: 200px; FLOAT: right
+}
+
+.worldright2 {
+	WIDTH: 295px; FLOAT: left
+}
+
+.worldright4 {
+	WIDTH: 295px; FLOAT: left
+}
+
+.worldFocus {
+	POSITION: relative; WIDTH: 750px; MARGIN-BOTTOM: 0px; HEIGHT: 330px; OVERFLOW: hidden
+}
+#worldFocus_Box {
+	POSITION: absolute; WIDTH: 750px; HEIGHT: 330px; OVERFLOW: hidden; TOP: 0px
+}
+#worldFocus_Box UL#show_pic {
+	POSITION: absolute; WIDTH: 3900px; HEIGHT: 330px
+}
+#worldFocus_Box UL#show_pic LI {
+	POSITION: relative; FLOAT: left; HEIGHT: 330px
+}
+#worldFocus_Box UL#show_pic LI IMG {
+	DISPLAY: block
+}
+#worldFocus_Box UL#show_pic LI .Bbg {
+	POSITION: absolute; FILTER: alpha(opacity=70); LINE-HEIGHT: 30px; WIDTH: 100%; BOTTOM: 0px; BACKGROUND: #7f7f7f; HEIGHT: 30px; RIGHT: 0px
+}
+#worldFocus_Box UL#show_pic LI .textword {
+	POSITION: absolute; TEXT-ALIGN: left; LINE-HEIGHT: 30px; PADDING-LEFT: 10px; WIDTH: 510px; BOTTOM: 0px; HEIGHT: 30px; COLOR: #fff; FONT-SIZE: 12px; OVERFLOW: hidden; LEFT: 0px
+}
+#worldFocus_Box UL#show_pic LI .textword A {
+	COLOR: #fff; FONT-SIZE: 14px
+}
+.icon_num_bg {
+	Z-INDEX: 10; POSITION: absolute; WIDTH: 110px; BOTTOM: 0px; HEIGHT: 30px; RIGHT: 0px
+}
+#icon_num LI {
+	MARGIN-TOP: 9px; WIDTH: 12px; BACKGROUND: url(../images/picfocusBg.png) no-repeat -22px 0px; FLOAT: left; HEIGHT: 12px; CURSOR: pointer; MARGIN-RIGHT: 10px; _background: #fff
+}
+#icon_num LI:hover {
+	BACKGROUND: url(../images/picfocusBg.png) no-repeat 0px 0px; _background: #4ca1d2
+}
+#icon_num LI.on {
+	BACKGROUND: url(../images/picfocusBg.png) no-repeat 0px 0px; _background: #4ca1d2
+}
+UL.worldNews1 {
+	FONT-SIZE: 14px; OVERFLOW: hidden
+}
+UL.worldNews1 LI {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 0px; WIDTH: 304px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 96px; PADDING-TOP: 3px
+}
+UL.worldNews1 LI.lineLi {
+	BORDER-LEFT: #cccccc 1px dashed; MARGIN: 0px 20px; WIDTH: 0px; DISPLAY: inline
+}
+UL.worldNews1 LI H2 {
+	FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+UL.worldNews1 LI P {
+	LINE-HEIGHT: 24px; MARGIN-TOP: 8px
+}
+.worldOslogin {
+	 BACKGROUND: #FCE37F; BORDER-BOTTOM: #ececec 1px solid; BORDER-LEFT: #ececec 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 15px; WIDTH: 173px; PADDING-RIGHT: 10px; MARGIN-BOTTOM: 0px; HEIGHT: 96px; OVERFLOW: hidden; BORDER-TOP: #ececec 1px solid; BORDER-RIGHT: #ececec 1px solid; PADDING-TOP: 5px
+}
+.worldOslogin H2 {
+	LINE-HEIGHT: 24px; FONT-SIZE: 18px; color: #014099; FONT-FAMILY: "Microsoft YaHei","黑体";FONT-WEIGHT: bold
+}
+.worldOslogin .bigtel {
+	LINE-HEIGHT: 18px; MARGIN: 10px 0px 12px; PADDING-LEFT: 30px; FONT-FAMILY: "Microsoft YaHei","黑体"; BACKGROUND: url(../images/tel.png) no-repeat; HEIGHT: 18px; COLOR: #c00; FONT-SIZE: 18px; FONT-WEIGHT: bold
+}
+.worldOslogin P {
+	LINE-HEIGHT: 22px; HEIGHT: 22px; OVERFLOW: hidden
+}
+.worldOslogin P A.btnstyle {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; MARGIN: 0px 10px 0px 0px; PADDING-LEFT: 0px; WIDTH: 66px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BACKGROUND: url(../images/WnavzsBg.gif) no-repeat; HEIGHT: 22px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+}
+.worldOslogin P A.btnstyle:hover {
+	TEXT-DECORATION: none
+}
+.worldOslogin UL {
+	MARGIN-TOP: 10px; BORDER-TOP: #cccccc 1px dashed; PADDING-TOP: 10px
+}
+.worldOslogin LI {
+	LINE-HEIGHT: 24px; WIDTH: 278px; HEIGHT: 24px; OVERFLOW: hidden
+}
+.worldHotsearch {
+	BORDER-BOTTOM: #ececec 1px solid; BORDER-LEFT: #ececec 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; WIDTH: 188px; PADDING-RIGHT: 0px; HEIGHT: 318px; MARGIN-BOTTOM: 10px; OVERFLOW: hidden; BORDER-TOP: #ececec 1px solid; BORDER-RIGHT: #ececec 1px solid; PADDING-TOP: 10px;
+    font-size: 1.2em;
+}
+.worldHotsearch H2 {
+	LINE-HEIGHT: 24px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.worldHotsearch .hotlinks {
+	WIDTH: 188px; HEIGHT: 318px; OVERFLOW: hidden
+}
+.worldHotsearch A {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; MARGIN-TOP: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: inline-block;  HEIGHT: 18px; OVERFLOW: hidden; MARGIN-RIGHT: 9px; PADDING-TOP: 0px
+}
+.worldHotsearch A:hover {
+	BACKGROUND: #3d6da9; COLOR: #fff; TEXT-DECORATION: none
+}
+.listitem3 {
+	
+}
+.listitem3 LI {
+	WIDTH: 300px; DISPLAY: inline; FLOAT: left; OVERFLOW: hidden; MARGIN-RIGHT: 30px
+}
+.listitem3 LI.last {
+	MARGIN-RIGHT: 0px
+}
+.listitem3 .picItem {
+	MARGIN: 20px 10px 10px
+}
+.listitem3 .picItem LI {
+	WIDTH: 122px; DISPLAY: inline; FLOAT: left; MARGIN-RIGHT: 36px
+}
+.listitem3 .picItem LI.last {
+	MARGIN-RIGHT: 0px
+}
+.listitem3 .picItem .picbox {
+	BORDER-BOTTOM: #cccccc 1px solid; POSITION: relative; BORDER-LEFT: #cccccc 1px solid; WIDTH: 120px; MARGIN-BOTTOM: 5px; HEIGHT: 90px; OVERFLOW: hidden; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid
+}
+.listitem3 .picItem LI .floatDiv {
+	POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 20px; WIDTH: 100%; BOTTOM: 1px; HEIGHT: 20px; RIGHT: 1px
+}
+.listitem3 .picItem LI .bg {
+	FILTER: alpha(opacity=60); BACKGROUND: #000; HEIGHT: 20px
+}
+.listitem3 .picItem LI .bg A {
+	POSITION: relative; WIDTH: 120px; HEIGHT: 20px; COLOR: #fff; FONT-SIZE: 12px; OVERFLOW: hidden
+}
+.listitem3 .picItem LI H3 {
+	LINE-HEIGHT: 20px; WIDTH: 122px; HEIGHT: 20px; OVERFLOW: hidden; FONT-WEIGHT: bold
+}
+.listitem3 .picItem LI P {
+	LINE-HEIGHT: 20px; WIDTH: 122px; HEIGHT: 20px; OVERFLOW: hidden
+}
+.listitem3 .newsItem LI {
+	LINE-HEIGHT: 24px; WIDTH: 300px; HEIGHT: 24px; FONT-SIZE: 12px; OVERFLOW: hidden
+}
+.zyItem { MARGIN-TOP: 10px;
+	
+}
+.zyItem LI {
+	MARGIN-TOP: 0px; WIDTH: 330px; DISPLAY: inline; FLOAT: left; MARGIN-RIGHT: 0px
+}
+.zyItem LI.odd {
+	MARGIN-RIGHT: 0px
+}
+.zyItem LI H3 {
+	LINE-HEIGHT: 34px; HEIGHT: 34px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.zyItem .dPiclist  {
+	HEIGHT: 234px; OVERFLOW: hidden
+}
+
+.zyItem .dPiclist .picbox {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; WIDTH: 120px; DISPLAY: inline; FLOAT: left; HEIGHT: 110px; OVERFLOW: hidden; BORDER-TOP: #cccccc 1px solid; MARGIN-RIGHT: 10px; BORDER-RIGHT: #cccccc 1px solid
+}
+
+.zyItem .dPiclist .picbox2 {
+	 WIDTH: 140px; DISPLAY: inline; FLOAT: center; HEIGHT: 110px; 
+}
+.zyItem .dPiclist .dintrolist {
+	MARGIN-TOP: 0px; WIDTH: 188px; FONT-SIZE: 12px; FLOAT: left; HEIGHT: 110px; OVERFLOW: hidden
+}
+.zyItem .dPiclist .dintrolist P {
+	LINE-HEIGHT: 20px; OVERFLOW: hidden
+}
+.zyItem .dpricelist {
+	MARGIN: 5px 0px 10px; HEIGHT: 72px; OVERFLOW: hidden
+}
+.zyItem .dpricelist LI {
+	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 290px; HEIGHT: 24px; OVERFLOW: hidden
+}
+.zyItem .dpricelist SPAN {
+	LINE-HEIGHT: 24px; DISPLAY: block; FLOAT: left; HEIGHT: 24px; OVERFLOW: hidden
+}
+.zyItem .dpricelist SPAN.listname {
+	WIDTH: 144px
+}
+.zyItem .dpricelist SPAN.listcity {
+	WIDTH: 72px
+}
+.zyItem .dpricelist SPAN.listprice {
+	TEXT-ALIGN: right; WIDTH: 74px
+}
+.zyItem .newsItem LI {
+	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 320px; DISPLAY: block; HEIGHT: 24px; FONT-SIZE: 12px
+}
+
+.zyItem .newsItem2 LI {
+	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 200px; DISPLAY: block; HEIGHT: 24px; FONT-SIZE: 12px
+}
+
+
+
+
+
+
+.zyItem2 {
+	
+}
+.zyItem2 LI {
+	MARGIN-TOP: 10px; WIDTH: 200px; DISPLAY: inline; FLOAT: left; MARGIN-RIGHT: 0px
+}
+.zyItem2 LI.odd {
+	MARGIN-RIGHT: 0px
+}
+.zyItem2 LI H3 {
+	LINE-HEIGHT: 34px; HEIGHT: 34px; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.zyItem2 .dPiclist .picbox {
+	 BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; WIDTH: 140px; DISPLAY: inline; FLOAT: left; HEIGHT: 105px; OVERFLOW: hidden; BORDER-TOP: #cccccc 1px solid; MARGIN-RIGHT: 10px; BORDER-RIGHT: #cccccc 1px solid
+}
+
+.zyItem2 .dPiclist .picbox2 {
+	 FLOAT: center; 
+}
+.zyItem2 .dPiclist .dintrolist {
+	MARGIN-TOP: 5px; WIDTH: 188px; FLOAT: left; HEIGHT: 107px; OVERFLOW: hidden
+}
+.zyItem2 .dPiclist .dintrolist P {
+	LINE-HEIGHT: 20px; OVERFLOW: hidden
+}
+.zyItem2 .dpricelist {
+	MARGIN: 5px 0px 10px; HEIGHT: 72px; OVERFLOW: hidden
+}
+.zyItem2 .dpricelist LI {
+	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 200px; HEIGHT: 24px; OVERFLOW: hidden
+}
+.zyItem2 .dpricelist SPAN {
+	LINE-HEIGHT: 24px; DISPLAY: block; FLOAT: left; HEIGHT: 24px; OVERFLOW: hidden
+}
+.zyItem2 .dpricelist SPAN.listname {
+	WIDTH: 144px
+}
+.zyItem2 .dpricelist SPAN.listcity {
+	WIDTH: 72px
+}
+.zyItem2 .dpricelist SPAN.listprice {
+	TEXT-ALIGN: right; WIDTH: 74px
+}
+.zyItem2 .newsItem LI {
+	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 200px; DISPLAY: block; HEIGHT: 24px; FONT-SIZE: 12px
+}
+
+.zyItem2 .newsItem2 LI {
+	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 200px; DISPLAY: block; HEIGHT: 24px; FONT-SIZE: 12px
+}
+
+
+
+.zyItem7 {
+	
+}
+.zyItem7 LI {
+	MARGIN-TOP: 10px; WIDTH: 285px; DISPLAY: inline; FLOAT: left; MARGIN-RIGHT: 0px
+}
+.zyItem7 LI.odd {
+	MARGIN-RIGHT: 0px
+}
+.zyItem7 LI H3 {
+	LINE-HEIGHT: 34px; HEIGHT: 34px; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.zyItem7 .dPiclist .picbox {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; WIDTH: 140px; DISPLAY: inline; FLOAT: left; HEIGHT: 105px; OVERFLOW: hidden; BORDER-TOP: #cccccc 1px solid; MARGIN-RIGHT: 10px; BORDER-RIGHT: #cccccc 1px solid
+}
+
+.zyItem7 .dPiclist .picbox2 {
+	 FLOAT: center; 
+}
+.zyItem7 .dPiclist .dintrolist {
+	MARGIN-TOP: 5px; WIDTH: 188px; FLOAT: left; HEIGHT: 107px; OVERFLOW: hidden
+}
+.zyItem7 .dPiclist .dintrolist P {
+	LINE-HEIGHT: 20px; OVERFLOW: hidden
+}
+.zyItem7 .dpricelist {
+	MARGIN: 5px 0px 10px; HEIGHT: 72px; OVERFLOW: hidden
+}
+.zyItem7 .dpricelist LI {
+	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 200px; HEIGHT: 24px; OVERFLOW: hidden
+}
+.zyItem7 .dpricelist SPAN {
+	LINE-HEIGHT: 24px; DISPLAY: block; FLOAT: left; HEIGHT: 24px; OVERFLOW: hidden
+}
+.zyItem7 .dpricelist SPAN.listname {
+	WIDTH: 144px
+}
+.zyItem7 .dpricelist SPAN.listcity {
+	WIDTH: 72px
+}
+.zyItem7 .dpricelist SPAN.listprice {
+	TEXT-ALIGN: right; WIDTH: 74px
+}
+.zyItem7 .newsItem LI {
+	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 200px; DISPLAY: block; HEIGHT: 24px; FONT-SIZE: 12px
+}
+
+.zyItem7 .newsItem2 LI {
+	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 200px; DISPLAY: block; HEIGHT: 24px; FONT-SIZE: 12px
+}
+
+
+.zyItem_sflc {
+	
+}
+.zyItem_sflc LI {
+	MARGIN-TOP: 10px; WIDTH: 200px; DISPLAY: inline; FLOAT: left; MARGIN-RIGHT: 0px
+}
+.zyItem_sflc LI.odd {
+	MARGIN-RIGHT: 0px
+}
+.zyItem_sflc LI H3 {
+	LINE-HEIGHT: 34px; HEIGHT: 34px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.zyItem_sflc .dPiclist .picbox {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; WIDTH: 140px; DISPLAY: inline; FLOAT: left; HEIGHT: 105px; OVERFLOW: hidden; BORDER-TOP: #cccccc 1px solid; MARGIN-RIGHT: 10px; BORDER-RIGHT: #cccccc 1px solid
+}
+
+.zyItem_sflc .dPiclist .picbox2 {
+	 FLOAT: center; 
+}
+.zyItem_sflc .dPiclist .dintrolist {
+	MARGIN-TOP: 5px; WIDTH: 188px; FLOAT: left; HEIGHT: 107px; OVERFLOW: hidden
+}
+.zyItem_sflc .dPiclist .dintrolist P {
+	LINE-HEIGHT: 20px; OVERFLOW: hidden
+}
+.zyItem_sflc .dpricelist {
+	MARGIN: 5px 0px 10px; HEIGHT: 72px; OVERFLOW: hidden
+}
+.zyItem_sflc .dpricelist LI {
+	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 200px; HEIGHT: 24px; OVERFLOW: hidden
+}
+.zyItem_sflc .dpricelist SPAN {
+	LINE-HEIGHT: 24px; DISPLAY: block; FLOAT: left; HEIGHT: 24px; OVERFLOW: hidden
+}
+.zyItem_sflc .dpricelist SPAN.listname {
+	WIDTH: 144px
+}
+.zyItem_sflc .dpricelist SPAN.listcity {
+	WIDTH: 72px
+}
+.zyItem_sflc .dpricelist SPAN.listprice {
+	TEXT-ALIGN: right; WIDTH: 74px
+}
+.zyItem_sflc .newsItem LI {
+	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 200px; DISPLAY: block; HEIGHT: 24px; FONT-SIZE: 14px
+}
+
+.zyItem_sflc .newsItem2 LI {
+	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 200px; DISPLAY: block; HEIGHT: 24px; FONT-SIZE: 14px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.worldHotlist {
+	MARGIN: 15px 0px 10px
+}
+.worldHotlist LI {
+	LINE-HEIGHT: 24px; WIDTH: 300px; FLOAT: left; HEIGHT: 24px; OVERFLOW: hidden
+}
+.worldHotlist LI SPAN {
+	TEXT-ALIGN: center; LINE-HEIGHT: 12px; MARGIN-TOP: 6px; WIDTH: 14px; DISPLAY: inline; BACKGROUND: #a4a4a4; FLOAT: left; HEIGHT: 12px; COLOR: #fff; MARGIN-RIGHT: 10px
+}
+.worldHotlist LI SPAN.hotitem {
+	BACKGROUND: #bc2c09
+}
+.worldHothouse {
+	MARGIN-TOP: 5px
+}
+.worldHothouse DT {
+	BORDER-BOTTOM: #cccccc 1px dotted; LINE-HEIGHT: 24px; WIDTH: 300px; HEIGHT: 24px; COLOR: #888888; OVERFLOW: hidden
+}
+.worldHothouse DD {
+	LINE-HEIGHT: 24px; WIDTH: 300px; HEIGHT: 24px; OVERFLOW: hidden
+}
+.worldHothouse SPAN {
+	LINE-HEIGHT: 24px; FLOAT: left; HEIGHT: 24px; OVERFLOW: hidden
+}
+.worldHothouse SPAN.houseName {
+	WIDTH: 158px
+}
+.worldHothouse SPAN.houseCity {
+	WIDTH: 72px
+}
+.worldHothouse SPAN.housePrices {
+	TEXT-ALIGN: right; WIDTH: 68px
+}
+.anlilist {
+	MARGIN-TOP: 20px; HEIGHT: 276px; OVERFLOW: hidden
+}
+.anlilist LI {
+	MARGIN-BOTTOM: 20px; HEIGHT: 77px; OVERFLOW: hidden
+}
+.anlilist .picbox {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; WIDTH: 100px; DISPLAY: inline; FLOAT: left; HEIGHT: 75px; OVERFLOW: hidden; BORDER-TOP: #cccccc 1px solid; MARGIN-RIGHT: 10px; BORDER-RIGHT: #cccccc 1px solid
+}
+.anlilist .aintrolist {
+	WIDTH: 238px; FLOAT: left; FONT-SIZE: 14px; OVERFLOW: hidden
+}
+.anlilist .aintrolist H3 {
+	LINE-HEIGHT: 24px; MARGIN-TOP: 2px; HEIGHT: 24px; FONT-SIZE: 14px; OVERFLOW: hidden; FONT-WEIGHT: bold
+}
+.anlilist .aintrolist P {
+	LINE-HEIGHT: 24px; OVERFLOW: hidden
+}
+.anlilist LI.fristOne {
+	WIDTH: 202px; DISPLAY: inline; FLOAT: left; HEIGHT: auto; MARGIN-RIGHT: 38px
+}
+.anlilist LI.fristOne .picbox {
+	WIDTH: 200px; FLOAT: none; HEIGHT: 150px
+}
+.anlilist LI.fristOne .aintrolist {
+	MARGIN-TOP: 10px; WIDTH: 202px; FLOAT: none
+}
+.newsItem2 {
+	MARGIN-TOP: 10px
+}
+.newsItem2 LI {
+	LINE-HEIGHT: 24px; WIDTH: 280px; HEIGHT: 24px; FONT-SIZE: 12px; OVERFLOW: hidden
+}
+.newsItem2 LI.fristOne {
+	MARGIN-BOTTOM: 10px; HEIGHT: 170px; OVERFLOW: hidden
+}
+.newsItem2 LI.fristOne .picbox {
+	LINE-HEIGHT: 20px; TEXT-ALIGN: center;  BORDER-BOTTOM: #cccccc 0px solid; BORDER-LEFT: #cccccc 0px solid; WIDTH: 70px; DISPLAY: inline; FLOAT: left; HEIGHT: 160px; OVERFLOW: hidden; BORDER-TOP: #cccccc 0px solid; MARGIN-RIGHT: 10px; BORDER-RIGHT: #cccccc 0px solid
+}
+.newsItem2 LI.fristOne .introlist {
+	WIDTH: 200px; FLOAT: left; HEIGHT: 170px; OVERFLOW: hidden
+}
+.newsItem2 LI.fristOne H3 {
+	WIDTH: 190px; HEIGHT: 24px; FONT-SIZE: 12px; OVERFLOW: hidden; FONT-WEIGHT: bold
+}
+
+.newsItem_0 {
+	MARGIN-TOP: 10px
+}
+.newsItem_0 LI {
+	LINE-HEIGHT: 24px; WIDTH: 260px; HEIGHT: 24px; FONT-SIZE: 12px; OVERFLOW: hidden
+}
+.newsItem_0 LI.fristOne {
+	MARGIN-BOTTOM: 20px; HEIGHT: 77px; OVERFLOW: hidden
+}
+.newsItem_0 LI.fristOne .picbox {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; WIDTH: 100px; DISPLAY: inline; FLOAT: left; HEIGHT: 75px; OVERFLOW: hidden; BORDER-TOP: #cccccc 1px solid; MARGIN-RIGHT: 10px; BORDER-RIGHT: #cccccc 1px solid
+}
+.newsItem_0 LI.fristOne .introlist {
+	WIDTH: 188px; FLOAT: left; HEIGHT: 77px; OVERFLOW: hidden
+}
+.newsItem_0 LI.fristOne H3 {
+	WIDTH: 188px; HEIGHT: 24px; FONT-SIZE: 14px; OVERFLOW: hidden; FONT-WEIGHT: bold
+}
+
+
+.askSearch {
+	MARGIN: 20px auto 0px; WIDTH: 630px; ZOOM: 1; OVERFLOW: hidden
+}
+.askSearch .focus LABEL {
+	DISPLAY: none
+}
+.askSearch .focus .st {
+	DISPLAY: none
+}
+.esf_s_box {
+	Z-INDEX: 0; POSITION: relative; ZOOM: 1; DISPLAY: inline; OVERFLOW: hidden
+}
+.search_btn {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 75px; BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/asksearchBtn.gif) no-repeat 0px 0px; FLOAT: left; HEIGHT: 28px; BORDER-TOP: 0px; CURSOR: pointer; MARGIN-RIGHT: 10px; BORDER-RIGHT: 0px
+}
+.ask_btn {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 75px; BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/asksearchBtn.gif) no-repeat 0px 0px; FLOAT: left; HEIGHT: 28px; BORDER-TOP: 0px; CURSOR: pointer; MARGIN-RIGHT: 10px; BORDER-RIGHT: 0px
+}
+.ask_btn {
+	BACKGROUND-POSITION: 0px -28px; MARGIN-RIGHT: 0px
+}
+.esf_s_box .text {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 25px; PADDING-LEFT: 5px; WIDTH: 458px; PADDING-RIGHT: 5px; BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/asksearchBg.gif) #fff repeat-x; FLOAT: left; HEIGHT: 26px; FONT-SIZE: 12px; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px; PADDING-TOP: 0px
+}
+.esf_s_box .st {
+	POSITION: absolute; WIDTH: 16px; DISPLAY: block; BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/asksearchIcon.gif) no-repeat; HEIGHT: 16px; TOP: 7px; LEFT: 6px
+}
+.esf_s_box LABEL {
+	POSITION: absolute; DISPLAY: block; COLOR: #ccc; CURSOR: inherit; TOP: 9px; LEFT: 30px
+}
+.askitem1 {
+	MARGIN-TOP: 25px; WIDTH: 314px; FLOAT: left; BORDER-RIGHT: #cccccc 1px dashed
+}
+.askitem1 .newsItem2 {
+	MARGIN-TOP: 0px
+}
+.askitem2 .newsItem2 {
+	MARGIN-TOP: 0px
+}
+.askitem1 .newsItem2 {
+	WIDTH: 294px
+}
+.askitem2 .newsItem2li {
+	WIDTH: 294px
+}
+.askitem2 {
+	MARGIN-TOP: 25px; WIDTH: 294px; FLOAT: right
+}
+.englishList {
+	MARGIN-TOP: 10px; HEIGHT: 160px; OVERFLOW: hidden
+}
+.englishList LI {
+	LINE-HEIGHT: 18px; PADDING-LEFT: 10px; MARGIN-BOTTOM: 4px; BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/dianIcon.gif) no-repeat left 8px
+}
+.englishCon {
+	BORDER-BOTTOM: #ececec 1px solid; BORDER-LEFT: #ececec 1px solid; PADDING-BOTTOM: 4px; LINE-HEIGHT: 18px; PADDING-LEFT: 0px; WIDTH: 298px; PADDING-RIGHT: 0px; FONT-FAMILY: "Microsoft YaHei",Arial; HEIGHT: 36px; OVERFLOW: hidden; BORDER-TOP: #ececec 1px solid; BORDER-RIGHT: #ececec 1px solid; PADDING-TOP: 4px
+}
+.englishCon DD {
+	WIDTH: 194px; FLOAT: left; HEIGHT: 18px; FONT-SIZE: 14px
+}
+.englishCon DT {
+	TEXT-ALIGN: right; LINE-HEIGHT: 18px; WIDTH: 104px; FLOAT: left; HEIGHT: 18px; FONT-WEIGHT: bold
+}
+.englishCon DD SPAN {
+	COLOR: #cc0000; FONT-WEIGHT: bold
+}
+.liuchengBox {
+	BORDER-BOTTOM: #bfdbec 1px solid; BORDER-LEFT: #bfdbec 1px solid; MARGIN: 0px auto 10px; WIDTH: 958px; BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/worldStepbg.gif) repeat-x; HEIGHT: 150px; BORDER-TOP: #bfdbec 1px solid; BORDER-RIGHT: #bfdbec 1px solid
+}
+.liuchengBox UL {
+	MARGIN: 17px 19px 0px
+}
+.liuchengBox LI {
+	TEXT-ALIGN: center; WIDTH: 184px; FLOAT: left; HEIGHT: 133px
+}
+.liuchengBox LI.step1 {
+	BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/step1.gif) no-repeat center top
+}
+.liuchengBox LI.step2 {
+	BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/step2.gif) no-repeat center top
+}
+.liuchengBox LI.step3 {
+	BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/step3.gif) no-repeat center top
+}
+.liuchengBox LI.step4 {
+	BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/step4.gif) no-repeat center top
+}
+.liuchengBox LI.step5 {
+	BACKGROUND: url(http://js.soufunimg.com/ggcp/world/newimages2012117/step5.gif) no-repeat center top
+}
+.liuchengBox LI SPAN {
+	DISPLAY: block; PADDING-TOP: 100px
+}
+.friendLink {
+	BORDER-BOTTOM: #ececec 1px solid; BORDER-LEFT: #ececec 1px solid; PADDING-BOTTOM: 15px; MARGIN: 0px auto 15px; WIDTH: 958px;  BORDER-TOP: #ececec 1px solid; BORDER-RIGHT: #ececec 1px solid
+}
+.friendLink H2 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 54px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; HEIGHT: 54px; FONT-SIZE: 14px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.friendLink .piclink {
+	MARGIN-BOTTOM: 15px; MARGIN-LEFT: 20px
+}
+.friendLink .piclink LI {
+	 ZOOM: 1; FLOAT: left;  OVERFLOW: hidden;  MARGIN-RIGHT: 18px
+}
+.friendLink .worklink {
+	MARGIN-LEFT: 20px
+}
+.friendLink .worklink LI {
+	LINE-HEIGHT: 20px; WIDTH: 115px; FLOAT: left; HEIGHT: 20px
+}
+
+.friendLink2 {
+	BORDER-BOTTOM: #ececec 1px solid;  MARGIN: 0px auto 15px; WIDTH: 958px;  
+}
+
+.listitem3 .picItem LI .bg H4 {
+	POSITION: relative; WIDTH: 120px; HEIGHT: 20px; COLOR: #fff; FONT-SIZE: 12px; OVERFLOW: hidden
+}
+.zyItem .newsItem LI {
+	OVERFLOW: hidden
+}
+.anlilist LI.fristOne .aintrolist {
+	MARGIN-TOP: 9px
+}

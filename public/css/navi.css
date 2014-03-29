@@ -1,0 +1,57 @@
+DIV#lzy_navi_header {
+/*    background-color: #FA3E0A; */
+/*    background-color: #E2511B; */ /* 深 */
+    background-color: #F5692F; /* 浅 */
+    width: 100%;
+    height: 50px;
+
+    margin-bottom: 20px;
+}
+
+DIV#lzy_navi_header_container A {
+    color: #FFF;
+    font-size: 2em;
+    padding-top: 10px;
+    padding-bottom: 12px;
+
+/*    top: 10px; */
+}
+
+DIV#lzy_navi_header_container A:hover {
+    background-color: #E2511B;
+}
+
+A.lzy_navi_current {
+    background-color: #E2511B;
+}
+
+DIV#lzy_navi_header_container {
+    height: 50px;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+A.lzy_navi_header_ele {
+    float: left;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+
+/* append  */
+DIV.oscrumb DIV.s1 {
+    margin-top: 5px;
+}
+DIV.oscrumb DIV.s1 A {
+    color: #1178CA;
+    font-size: 1.5em;
+}
+
+/* index */
+DIV.worldTitle H2, DIV.title_g{
+    color: rgb(0, 71, 255);
+}
