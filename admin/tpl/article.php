@@ -18,6 +18,8 @@
     <tbody>
         <?php
         foreach ( $article_data as $article ) {
+            $edit_url = '/edit.php?content=article&id='. $article['article_id'];
+
             echo '<tr>';
             echo '<td>'. $article['article_id']. '</td>';
             echo '<td>'. $article['title']. '</td>';
@@ -25,7 +27,7 @@
             echo '<td>'. $article['view_count']. '</td>';
             echo '<td>'. $article['cate_name']. '</td>';
             echo '<td>'. $article['status']. '</td>';
-            echo '<td><a href="#">删除</a> <a href="#">修改</a> </td>';
+            echo '<td><a href="#">删除(un)</a> <a href="'. $edit_url. '">修改</a> </td>';
             echo '</tr>';
         }
         ?>

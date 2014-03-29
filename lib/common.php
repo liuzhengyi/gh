@@ -159,6 +159,7 @@ function get_price_desc( $Level ) {
             $desc = '500万以上';
             break;
         default:
+            $desc = '未知';
             break;
     }
 
@@ -176,6 +177,9 @@ function get_article_type_desc( $Type=1 ) {
             break;
         case 2:
             $desc = '海外租房指南';
+            break;
+        case 3:
+            $desc = '其他';
             break;
         default:
             $desc = 'unknown article type';
@@ -196,6 +200,9 @@ function get_house_type_desc( $Type=1 ) {
             break;
         case 2:
             $desc = '别墅';
+            break;
+        case 3:
+            $desc = '其他';
             break;
         default:
             $desc = 'unknown house type';

@@ -1,6 +1,6 @@
 <?php include('./tpl/uiparts/header.php'); ?>
 
-<div id="main-container">
+<div id="main-container" class="row marketing">
 <h2>广告管理</h2>
 <table id="ad-manage" border="1" >
     <thead>
@@ -18,6 +18,8 @@
         <?php
         foreach ( $ad_data as $ad ) {
             $img_url = './uploads/'. $ad['image_url'];
+            $edit_url = '/edit.php?content=adver&id='. $ad['ad_id'];
+
             echo '<tr>';
             echo '<td>'. $ad['ad_id']. '</td>';
             echo '<td>'. $ad['ad_title']. '</td>';
@@ -25,7 +27,7 @@
             echo '<td>'. get_ad_type_desc($ad['ad_type']). '</td>';
             echo '<td>'. $ad['width']. ' x '. $ad['height']. '</td>';
             echo '<td><a href="'. $ad['link_url']. '" target="_blank">'. $ad['link_url']. '</a></td>';
-            echo '<td><a href="#">修改</a> </td>';
+            echo '<td><a href="'. $edit_url. '">修改</a> </td>';
             echo '</tr>';
         }
         ?>

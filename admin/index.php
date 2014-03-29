@@ -11,6 +11,8 @@ include_once('../config.php');
 require_once("../lib/common.php");
 require_once($_cfg_dbConfFile);
 
+require_once("../lib/access_control.php");
+
 $dbh        = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
 
 $content    = empty($_GET['content']) ? '' : trim($_GET['content']);

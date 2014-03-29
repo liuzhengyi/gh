@@ -21,8 +21,11 @@
     <tbody>
         <?php
         foreach ( $house_data as $house ) {
-            $img_url = './uploads/'. get_single_img_url($house['image_urls']);
-            $link_url = $_cfg_siteRoot. 'house.php?id='. $house['house_id'];
+            $img_url    = './uploads/'. get_single_img_url($house['image_urls']);
+            $link_url   = $_cfg_siteRoot. 'house.php?id='. $house['house_id'];
+            $edit_url   = '/edit.php?content=house&id='. $house['house_id'];
+            $del_url    = 'unfinished';
+
             echo '<tr>';
             echo '<td>'. $house['house_id']. '</td>';
             echo '<td>'. $house['ciname']. '</td>';
@@ -33,7 +36,7 @@
             echo '<td>'. $house['price_desc']. '</td>';
             echo '<td>'. $house['position']. '</td>';
             echo '<td>'. $house['status']. '</td>';
-            echo '<td><a href="#">删除</a> <a href="#">修改</a> </td>';
+            echo '<td><a href="#">删除(un)</a> <a href="'. $edit_url. '">修改</a> </td>';
             echo '</tr>';
         }
         ?>
