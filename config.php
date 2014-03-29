@@ -12,7 +12,7 @@
  **/
 
 // debug or not
-//define( "DEBUG", FALSE);
+// define( "DEBUG", FALSE);
  define( "DEBUG", TRUE);
 
 if(DEBUG) {
@@ -26,9 +26,9 @@ if(DEBUG) {
 // 本地主机名称
 $_cfg_hostName = 'h2';
 // 服务器上的网站根目录
-$_cfg_webRoot = "/var/www/gh/";
+$_cfg_webRoot = "/var/www/gh/public";
 // 网站的http根目录
-$_cfg_siteRoot = "http://63.223.64.106/gh/";
+$_cfg_siteRoot = "http://63.223.64.106/gh/public";
 // 数据库配置文件位置
 $_cfg_dbConfFile = $_cfg_webRoot."dbConf.php";
 */
@@ -37,11 +37,13 @@ $_cfg_dbConfFile = $_cfg_webRoot."dbConf.php";
 // 本地主机名称
 $_cfg_hostName = 'gh';
 // 服务器上的网站根目录
-$_cfg_webRoot = "/var/www/proj/gh/";
+$_cfg_webRoot = "/var/www/proj/gh/public/";
 // 网站的http根目录
 $_cfg_siteRoot = "http://gh/";
 // 数据库配置文件位置
-$_cfg_dbConfFile = $_cfg_webRoot."dbConf.php";
+$_cfg_dbConfFile = $_cfg_webRoot."/../dbConf.php";
+// 图片目录
+$_cfg_base_path     = $_cfg_webRoot. '/image/';
 
 // 页面变量配置
 // logo image's alt

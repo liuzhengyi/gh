@@ -13,7 +13,7 @@ insert into ad (ad_title, image_url, ad_type, width, height, link_url ) values('
 insert into ad (ad_title, image_url, ad_type, width, height, link_url ) values('希腊总理来沪推销希腊', './image/adver/14.jpg', 2, 750, 485, 'http://63.223.64.106/gh/house_list.php?id=23');
 
 -- type 3
-insert into ad (ad_title, image_url, ad_type, width, height, link_url ) values('购房俱乐部', './image/adver/5.jpg', 3, 170, 70, '');
+-- insert into ad (ad_title, image_url, ad_type, width, height, link_url ) values('购房俱乐部', './image/adver/5.jpg', 3, 170, 70, '');
 
 -- type 4
 insert into ad (ad_title, image_url, ad_type, width, height, link_url ) values('2013中国（广州）国际城市地产•投资展览会', './image/adver/4.jpg', 4, 960, 70, 'http://63.223.64.106/gh/house_list.php?id=28');

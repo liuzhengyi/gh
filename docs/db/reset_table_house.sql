@@ -18,6 +18,7 @@ CREATE TABLE `house` (                              -- 房产表
     is_rental TINYINT NOT NULL,                     -- 是否出租
     view_count INT UNSIGNED NOT NULL DEFAULT 0,     -- 浏览次数
 	status TINYINT NOT NULL DEFAULT 0,              -- 状态 0 OK ..
+	remark VARCHAR(600) ,                           -- 备注
 	create_time DATETIME NOT NULL,                  -- 记录创建时间
 	update_time DATETIME NOT NULL,                  -- 记录更新时间
 	PRIMARY KEY(house_id),

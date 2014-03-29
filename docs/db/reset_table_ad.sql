@@ -7,6 +7,8 @@ CREATE TABLE `ad` (                             -- 广告表
     width INT UNSIGNED NOT NULL,                -- 广告位宽
     height INT UNSIGNED NOT NULL,               -- 广告位高
     link_url VARCHAR(300) NOT NULL,             -- 链接URL
+    `desc` VARCHAR(900) NOT NULL,               -- 链接URL
+    remark VARCHAR(900) NOT NULL,               -- 链接URL
 	status TINYINT NOT NULL DEFAULT 0,          -- 状态 0 OK ..
 	create_time DATETIME NOT NULL,              -- 记录创建时间
 	update_time DATETIME NOT NULL,              -- 记录更新时间

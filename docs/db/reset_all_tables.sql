@@ -7,6 +7,8 @@ CREATE TABLE `ad` (                             -- 广告表
     width INT UNSIGNED NOT NULL,                -- 广告位宽
     height INT UNSIGNED NOT NULL,               -- 广告位高
     link_url VARCHAR(300) NOT NULL,             -- 链接URL
+    `desc` VARCHAR(900) NOT NULL,               -- 链接URL
+    remark VARCHAR(900) NOT NULL,               -- 链接URL
 	status TINYINT NOT NULL DEFAULT 0,          -- 状态 0 OK ..
 	create_time DATETIME NOT NULL,              -- 记录创建时间
 	update_time DATETIME NOT NULL,              -- 记录更新时间
@@ -21,10 +23,10 @@ CREATE TABLE `article` (                                -- 文章表
 	article_id INT UNSIGNED AUTO_INCREMENT NOT NULL,    -- 文章ID
 	user_id INT UNSIGNED NOT NULL,                      -- 操作者ID
     cate_id TINYINT NOT NULL,                           -- 文章分类ID
-    type TINYINT NOT NULL,                              -- 1 售 2 租
+    type TINYINT NOT NULL,                              -- 1 售 2 租 3 其他 首页用到
 	title VARCHAR(120) NOT NULL,                        -- 标题
 	subtitle VARCHAR(120) NOT NULL,                     -- 副标题
-	abstract VARCHAR(900) NOT NULL,                     -- 内容
+	abstract VARCHAR(900) NOT NULL,                     -- 摘要
 	content TEXT NOT NULL,                              -- 内容
     view_count INT UNSIGNED DEFAULT 0,                  -- 浏览次数
 	remark VARCHAR(300) NOT NULL,                       -- 备注
@@ -33,7 +35,6 @@ CREATE TABLE `article` (                                -- 文章表
 	update_time DATETIME NOT NULL,                      -- 更新时间
 	PRIMARY KEY(article_id),
 	INDEX(cate_id),
-	INDEX(type),
 	INDEX(title)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 DROP TABLE IF EXISTS `article_cate`;
@@ -96,6 +97,7 @@ CREATE TABLE `house` (                              -- 房产表
     is_rental TINYINT NOT NULL,                     -- 是否出租
     view_count INT UNSIGNED NOT NULL DEFAULT 0,     -- 浏览次数
 	status TINYINT NOT NULL DEFAULT 0,              -- 状态 0 OK ..
+	remark VARCHAR(600) ,                           -- 备注
 	create_time DATETIME NOT NULL,                  -- 记录创建时间
 	update_time DATETIME NOT NULL,                  -- 记录更新时间
 	PRIMARY KEY(house_id),
@@ -125,3 +127,16 @@ CREATE TABLE `link` (                               -- 友链表
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (                               -- 用户表
+	user_id INT UNSIGNED AUTO_INCREMENT NOT NULL,   -- 用户ID
+    email VARCHAR(100),                             -- 登录邮箱
+    password VARCHAR(100),                          -- 登录密码 sha1加密
+    is_admin TINYINT,                               -- 管理员
+    create_time datetime not null,
+    last_login datetime not null,
+    last_ip varchar(20),
+	PRIMARY KEY(user_id),
+	INDEX(email)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+show warnings;
