@@ -24,7 +24,18 @@ $params['user_id']  = '-1';
 
 $params['cate_id']  = intval($_GET['id']);;
 
+// create DB collection
 $dbh    = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
+
+// check articles under cate
+$sql    = 'select count(article_id) num from article where cate_id = '. $params['cate_id'];
+$sth    = $dbh->query($sql);
+$result = $sth->fetch(PDO::FETCH_ASSOC);
+if ( 0 < $result['num'] ) {
+    output_json_error(-10002, '非空分类不允许删除!');
+}
+
+
 $sql    = 'delete from article_cate where cate_id = :id limit 1';
 $sth    = $dbh->prepare($sql);
 

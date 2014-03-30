@@ -79,7 +79,15 @@ switch ( $content ) {
     case 'city':
 
         // city data
-        $sql        = "select city_id, city.name ciname, country.name coname, city.create_time, city.update_time from city, country where city.country_id = country.country_id order by create_time desc";
+        $sql        = 'select
+                            ci.city_id, ci.name ciname, ci.create_time, ci.update_time,
+                            co.name coname,
+                            count(h.house_id) num
+                       from
+                            city ci
+                            left join country co on ci.country_id = co.country_id
+                            left join house h on ci.city_id = h.city_id
+                        group by ci.city_id';
         $sth        = $dbh->prepare($sql);
         $sth->execute();
         $city_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -97,7 +105,12 @@ switch ( $content ) {
     case 'country':
 
         // country data
-        $sql        = "select * from country order by create_time desc";
+        $sql        = 'select
+                            co.country_id , co.name, co.region, co.create_time, co.update_time,
+                            count(ci.city_id) num
+                       from
+                            country co left join city ci on co.country_id = ci.country_id
+                       group by co.country_id;';
         $sth        = $dbh->prepare($sql);
         $sth->execute();
         $country_data  = $sth->fetchAll(PDO::FETCH_ASSOC);

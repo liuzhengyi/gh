@@ -17,12 +17,15 @@
     <input type="submit" name="submit" value="添加国家" class="btn">
 </form>
 
+<p class="warning">注意: 有房产的城市不能直接删除。</p>
+
 <table id="country-manage" border="1" >
     <thead>
         <tr>
             <th id="">ID</th>
             <th id="">国家名称</th>
             <th id="">所属区域</th>
+            <th id="">房产数量</th>
             <th id="">创建时间</th>
             <th id="">更新时间</th>
             <th id="">操作</th>
@@ -31,15 +34,18 @@
     <tbody>
         <?php
         foreach ( $country_data as $country ) {
-            $del_url    = 'unfinished';
+            $edit_url   = $_cfg_siteRootAdmin. 'edit.php?content=country&id='. $country['country_id'];
+            $del_btn    = '<a href="'.$_cfg_siteRootAdmin. 'action/del_country_do.php?id='. $country['country_id'] . '" class="btn btn-warning">删除</a>' ;
+            $del_btn    = ( $country['num'] > 0 ) ? '' : $del_btn ;
 
             echo '<tr>';
             echo '<td>'. $country['country_id']. '</td>';
             echo '<td>'. $country['name']. '</td>';
             echo '<td>'. get_region_name($country['region']). '</td>';
+            echo '<td>'. $country['num']. '</td>';
             echo '<td>'. $country['create_time']. '</td>';
             echo '<td>'. $country['update_time']. '</td>';
-            echo '<td><a href="'. $_cfg_siteRootAdmin. "action/del_country_do.php?id=". $country['country_id']. '" class="btn" >删除</a> </td>';
+            echo '<td><a href="'. $edit_url. '" class="btn" >修改</a><br /><br />'. $del_btn. '  </td>';
             echo '</tr>';
         }
         ?>

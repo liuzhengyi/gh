@@ -31,7 +31,7 @@
                 echo '<td>'. $article['view_count']. '</td>';
                 echo '<td>'. $article['cate_name']. '</td>';
                 echo '<td>'. $article['status']. '</td>';
-                echo '<td><a href="'. $del_url. '" class="btn" >删除</a> <a href="'. $edit_url. '" class="btn" >修改</a> </td>';
+                echo '<td><a href="'. $edit_url. '" class="btn" >修改</a><br /><br /><a href="'. $del_url. '" class="btn btn-warning" >删除</a>  </td>';
                 echo '</tr>';
             }
             ?>

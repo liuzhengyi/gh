@@ -25,7 +25,7 @@
     <tbody>
         <?php
         foreach ( $cate_data as $cate ) {
-            $edit_url   = $_cfg_siteRootAdmin. '/edit.php?content=cate&id='. $cate['cate_id'];
+            $edit_url   = $_cfg_siteRootAdmin. 'edit.php?content=cate&id='. $cate['cate_id'];
             $del_btn    = '<a href="'.$_cfg_siteRootAdmin. 'action/del_cate_do.php?id='. $cate['cate_id'] . '" class="btn btn-warning">删除</a>' ;
             $del_btn    = ( $cate['num'] > 0 ) ? '' : $del_btn ;
 
@@ -36,7 +36,7 @@
             echo '<td>'. $cate['remark']. '</td>';
             echo '<td>'. $cate['create_time']. '</td>';
             echo '<td>'. $cate['update_time']. '</td>';
-            echo '<td>'. $del_btn. ' <a href="'. $edit_url. '" class="btn" >修改</a> </td>';
+            echo '<td><a href="'. $edit_url. '" class="btn" >修改</a><br /><br />'. $del_btn. '  </td>';
             echo '</tr>';
         }
         ?>
