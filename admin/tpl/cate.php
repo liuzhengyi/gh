@@ -9,6 +9,8 @@
             <th id="">ID</th>
             <th id="">分类名称</th>
             <th id="">备注</th>
+            <th id="">创建时间</th>
+            <th id="">更新时间</th>
             <th id="">Operation</th>
         </tr>
     </thead>
@@ -20,9 +22,11 @@
 
             echo '<tr>';
             echo '<td>'. $cate['cate_id']. '</td>';
-            echo '<td>'. $cate['position']. '</td>';
-            echo '<td>'. $cate['status']. '</td>';
-            echo '<td><a href="#">删除(un)</a> <a href="'. $edit_url. '">修改</a> </td>';
+            echo '<td>'. $cate['cate_name']. '</td>';
+            echo '<td>'. $cate['remark']. '</td>';
+            echo '<td>'. $cate['create_time']. '</td>';
+            echo '<td>'. $cate['update_time']. '</td>';
+            echo '<td><a href="#" class="btn" >删除(un)</a> <a href="'. $edit_url. '" class="btn" >修改</a> </td>';
             echo '</tr>';
         }
         ?>

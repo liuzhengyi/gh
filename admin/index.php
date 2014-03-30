@@ -64,10 +64,10 @@ switch ( $content ) {
     case 'city':
 
         // ad data
-        $sql        = "select * from city";
+        $sql        = "select city_id, city.name ciname, country.name coname, city.create_time, city.update_time from city, country where city.country_id = country.country_id";
         $sth        = $dbh->prepare($sql);
         $sth->execute();
-        $ad_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
+        $city_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
         include('./tpl/city.php');
 
         break;
@@ -78,7 +78,7 @@ switch ( $content ) {
         $sql        = "select * from country";
         $sth        = $dbh->prepare($sql);
         $sth->execute();
-        $ad_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
+        $country_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
         include('./tpl/country.php');
 
         break;

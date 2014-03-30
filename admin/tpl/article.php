@@ -27,7 +27,7 @@
             echo '<td>'. $article['view_count']. '</td>';
             echo '<td>'. $article['cate_name']. '</td>';
             echo '<td>'. $article['status']. '</td>';
-            echo '<td><a href="#">删除(un)</a> <a href="'. $edit_url. '">修改</a> </td>';
+            echo '<td><a href="#" class="btn" >删除(un)</a> <a href="'. $edit_url. '" class="btn" >修改</a> </td>';
             echo '</tr>';
         }
         ?>

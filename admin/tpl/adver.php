@@ -27,7 +27,7 @@
             echo '<td>'. get_ad_type_desc($ad['ad_type']). '</td>';
             echo '<td>'. $ad['width']. ' x '. $ad['height']. '</td>';
             echo '<td><a href="'. $ad['link_url']. '" target="_blank">'. $ad['link_url']. '</a></td>';
-            echo '<td><a href="'. $edit_url. '">修改</a> </td>';
+            echo '<td><a href="'. $edit_url. '" class="btn" >修改</a> </td>';
             echo '</tr>';
         }
         ?>
