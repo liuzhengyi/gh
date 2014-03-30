@@ -12,6 +12,7 @@
 <div class="container">
     <div id="head" class="header">
     <h1>平安好房-海外频道-管理后台</h1>
+    <hr />
 
         <div id="navi-side-left">
         <ul class="nav nav-pills">
@@ -20,6 +21,9 @@
                                 'house' => '管理房产',
                                 'article' => '管理文章',
                                 'adver' => '管理广告',
+                                'cate' => '管理文章分类',
+                                'city' => '管理城市列表',
+                                'country' => '管理国家列表',
                          );
             foreach ( $navi_data as $ename => $zname ) {
                 $active = (!empty($_GET['content']) && $_GET['content'] == $ename) ? 'active' : '';

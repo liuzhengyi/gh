@@ -50,6 +50,39 @@ switch ( $content ) {
 
         break;
 
+    case 'cate':
+
+        // ad data
+        $sql        = "select * from article_cate";
+        $sth        = $dbh->prepare($sql);
+        $sth->execute();
+        $cate_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
+        include('./tpl/cate.php');
+
+        break;
+
+    case 'city':
+
+        // ad data
+        $sql        = "select * from city";
+        $sth        = $dbh->prepare($sql);
+        $sth->execute();
+        $ad_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
+        include('./tpl/city.php');
+
+        break;
+
+    case 'country':
+
+        // ad data
+        $sql        = "select * from country";
+        $sth        = $dbh->prepare($sql);
+        $sth->execute();
+        $ad_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
+        include('./tpl/country.php');
+
+        break;
+
     default:
         include('./tpl/index.php');
         break;
