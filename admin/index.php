@@ -25,6 +25,9 @@ switch ( $content ) {
         $sth        = $dbh->prepare($sql);
         $sth->execute();
         $house_data = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+        $add_url    = $_cfg_siteRootAdmin. 'add.php?content=house';
+
         include('./tpl/house.php');
 
         break;
@@ -35,6 +38,9 @@ switch ( $content ) {
         $sth            = $dbh->prepare($sql);
         $sth->execute();
         $article_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+        $add_url    = $_cfg_siteRootAdmin. 'add.php?content=article';
+
         include('./tpl/article.php');
 
         break;

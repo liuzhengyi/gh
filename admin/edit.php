@@ -27,7 +27,7 @@ switch ( $content ) {
         }
         $id = intval($_GET['id']);
 
-        // ad data
+        // house data
         $sql        = "select * from house where house_id = :id";
         $sth        = $dbh->prepare($sql);
         $sth->bindValue(':id', $id, PDO::PARAM_INT);
@@ -36,6 +36,7 @@ switch ( $content ) {
         if ( empty($data) ) {
             output_json_error(-10002, '不存在这个房产!');
         }
+
         // images
         $img_data = get_img_url($data['image_urls']);
 
