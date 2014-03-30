@@ -96,7 +96,7 @@
     for( $index = 0; $index < 4; ++$index ) {
         $class  = (0 == $index) ? 'jiaodian01' : 'jiaodian01 noneBox';
         $id     = 'li0'. $index;
-        $img    = $house_data['images'][$index];
+        $img    = $_cfg_img_baseurl. $house_data['images'][$index];
         $alt    = $house_data['name'];
         echo '<div class="'. $class. '" id="'. $id. '" ><img src="'. $img. '" alt="'. $alt. '" width="360" height="240" ></div>';
     }
@@ -111,7 +111,7 @@
         $class  = (0 == $index) ? 'td1' : 'td';
         $id     = 'f0'. $index;
         $alt    = $house_data['name'];
-        $img    = $house_data['images'][$index];
+        $img    = $_cfg_img_baseurl. $house_data['images'][$index];
         echo    '<div class="'. $class. '" onmouseover="show_menu('. $index. ')" id="'. $id.
                 '"><img src="'. $img. '" alt="'. $alt. '" width="80" height="60"></div>';
     }
@@ -175,7 +175,7 @@
                 <?php
                 foreach( $ad_data[5] as $ad ) {
                     echo '<div class="osr240ad">';
-                    echo '<a href="'. $ad['link_url']. '" target="_blank"><img src="'. $ad['image_url']. '" width="240"></a>';
+                    echo '<a href="'. $ad['link_url']. '" target="_blank"><img src="'. $_cfg_img_baseurl. $ad['image_url']. '" width="240"></a>';
                     echo '</div>';
                 }
                 ?>

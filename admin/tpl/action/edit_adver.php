@@ -9,11 +9,10 @@
     <span class="form-field-name">位置:</span><input type="text" name="ad_type" value="<?php echo get_ad_type_desc($data['ad_type']);?>" readonly="ture" />(不可改)<br />
     <span class="form-field-name">宽:</span><input type="text" name="width" value="<?php echo $data['width'];?>px" readonly="ture" />(不可改)<br />
     <span class="form-field-name">高:</span><input type="text" name="height" value="<?php echo $data['height'];?>px" readonly="ture" />(不可改)<br />
-    <span class="form-field-name">图片:</span><input type="text" name="img_url" class="" value="<?php echo $data['image_url'];?>" /> <br />
 
     <br />
     图:<br />
-    <img src="<?php echo get_admin_image($data['image_url']); ?>" /><br />
+    <img src="<?php echo $_cfg_img_baseurl_admin. $data['image_url']; ?>" /><br />
     更换图片:<input type="file" name="ad_image" /><br />
     <br />
 

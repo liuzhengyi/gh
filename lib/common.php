@@ -339,21 +339,29 @@ function get_ad_type_desc( $Type ) {
  * gipsaliu@gmail.com
  * since: 2014-03-29
  */
-function output_json_info( $Content ) {
-    output_json_error(0, $Content);
+function output_json_info( $Content, $Url='' ) {
+    output_json_error(0, $Content, $Url);
 }
 
-function output_json_error( $Status, $Content ) {
+function output_json_error( $Status, $Content, $Url='' ) {
     if ( !is_numeric($Status) || empty($Content)) {
         exit(false);
     }
+
+    $url = empty($Url) ? $_SERVER['HTTP_REFERER'] : $Url;
 
     $info = array(
                     'status' => $Status,
                     'content' => $Content,
             );
 
-    exit(json_encode($info));
+    //exit(json_encode($info));
+    //echo json_encode($info);
+    echo '<meta http-equiv="content-type" content="charset:utf8">';
+    echo '<h3>'. $Content. '</h3>';
+    echo '<br />2秒后跳转...';
+    echo '<meta http-equiv="refresh" content="2;url='. $url. '">';
+    exit();
 }
 
 /**
@@ -364,6 +372,67 @@ function output_json_error( $Status, $Content ) {
 function get_admin_image( $Url ) {
     global $_cfg_siteRootAdmin;
     return $_cfg_siteRootAdmin. 'uploads/'. $Url;
+}
+
+/**
+ * 处理上传图片
+ * gipsaliu@gmail.com
+ * since: 2014-03-29
+ * param: $p_img -> $_FILES[x]
+ * return: 可以存入DB的图片URL
+ */
+function deal_upload_image( $p_img, $path='house' ) {
+    if ( empty($p_img) ) {
+        return '';
+    }
+
+    global $_cfg_img_path;
+    global $_cfg_img_path_admin;
+
+    $img_path       = $_cfg_img_path. $path. '/';
+    $img_path_admin = $_cfg_img_path_admin. $path. '/';
+
+    $ext            = strrchr($p_img['name'], '.');
+
+    $new_name           = uniqid(). $ext;
+    $new_path_admin     = $img_path_admin. $new_name;
+    $new_path_public    = $img_path. $new_name;
+
+
+    if ( ! move_uploaded_file($p_img['tmp_name'], $new_path_admin) ) {
+        output_json_error(-1001, '上传文件出错!请确认相关文件目录可写!');
+    }
+    copy($new_path_admin, $new_path_public);
+    if ( ! file_exists($new_path_public) ) {
+        output_json_error(-1002, '复制文件出错!请确认相关文件目录可写!');
+    }
+
+    $new_path   =  $path. '/'. $new_name;
+
+    return $new_path;
+}
+
+/**
+ * 根据DB中图片的url 删除图片文件
+ * gipsaliu@gmail.com
+ * since: 2014-03-30
+ * 
+ */
+function delete_image_by_db_url( $Url ) {
+    if ( empty($Url) ) {
+        return ;
+    }
+
+    global $_cfg_img_path;
+    global $_cfg_img_path_admin;
+
+    $img_path       = $_cfg_img_path. $Url;
+    $img_path_admin = $_cfg_img_path_admin. $Url;
+
+    unlink($img_path);
+    unlink($img_path_admin);
+
+    return ;
 }
 
 ?>

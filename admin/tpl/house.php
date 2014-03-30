@@ -23,7 +23,7 @@
         <tbody>
             <?php
             foreach ( $house_data as $house ) {
-                $img_url    = $_cfg_siteRootAdmin. 'uploads/'. get_single_img_url($house['image_urls']);
+                $img_url    = $_cfg_img_baseurl_admin. get_single_img_url($house['image_urls']);
                 $link_url   = $_cfg_siteRoot. 'house.php?id='. $house['house_id'];
                 $edit_url   = $_cfg_siteRootAdmin. 'edit.php?content=house&id='. $house['house_id'];
                 $del_url    = $_cfg_siteRootAdmin. 'action/del_house_do.php?id='. $house['house_id'];

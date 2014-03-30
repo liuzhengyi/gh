@@ -27,9 +27,9 @@
             ?>
         </select> *
         <br />
-        <span class="form-field-name">摘要:</span><input type="text" name="abstract" value="<?php echo $data['abstract'];?>" /> <br />
+        <span class="form-field-name">摘要:</span><textarea cols="10" rows="10" name="abstract" ><?php echo $data['abstract'];?> </textarea> <br />
+        <span class="form-field-name">内容:</span><textarea cols="20" rows="40" name="content" ><?php echo $data['content'];?> </textarea> <br />
         <span class="form-field-name">备注:</span><input type="text" name="remark" value="<?php echo $data['remark'];?>" /> <br />
-        <span class="form-field-name">内容:</span><input type="text" name="content" value="<?php echo $data['content'];?>" /> <br />
         <input type="hidden" name="id" value="<?php echo $data['article_id']; ?>" />
 
         <span class="form-field-name"></span><input type="submit" name="submit" value="保存" class="btn btn-lg btn-success" /> <br />

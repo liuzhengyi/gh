@@ -47,8 +47,8 @@
     <span class="form-field-name">位置:</span><input type="text" name="position" value="<?php echo $data['position'];?>" /> <br />
     <span class="form-field-name">装修情况:</span><input type="text" name="decoration_state" value="<?php echo $data['decoration_state'];?>" /> <br />
     <span class="form-field-name">产权:</span><input type="text" name="property" value="<?php echo $data['property'];?>" /> <br />
-    <span class="form-field-name">项目简介:</span><input type="text" name="project_intro_brief" value="<?php echo $data['project_intro_brief'];?>" /> <br />
-    <span class="form-field-name">项目介绍:</span><input type="text" name="project_intro" value="<?php echo $data['project_intro'];?>" /> <br />
+    <span class="form-field-name">项目简介:</span><textarea cols="10" rows="5" name="project_intro_brief" ><?php echo $data['project_intro_brief'];?> </textarea> <br />
+    <span class="form-field-name">项目介绍:</span><textarea cols="20" rows="30" name="project_intro" ><?php echo $data['project_intro'];?> </textarea> <br />
     <span class="form-field-name">联系电话:</span><input type="text" name="phone_num" value="<?php echo $data['phone_num'];?>" /> <br />
 
     <br />
@@ -62,7 +62,7 @@
                 $show_image     = '暂无';
             } else {
                 $add_or_update  = '修改图片';
-                $img_url        = get_admin_image($img_data[$index]);
+                $img_url        = $_cfg_img_baseurl_admin. $img_data[$index];
                 $show_image     = '<img src="'. $img_url. '" />';
             }
             echo '图'. $show_index. ':<br />'. $show_image ;

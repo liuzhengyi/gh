@@ -26,9 +26,9 @@
             ?>
         </select> *
         <br />
-        <span class="form-field-name">摘要:</span><input type="text" name="abstract" /> <br />
+        <span class="form-field-name">摘要:</span><textarea cols="10" rows="10" name="abstract" > </textarea> <br />
+        <span class="form-field-name">内容:</span><textarea cols="20" rows="40" name="content" > </textarea> <br />
         <span class="form-field-name">备注:</span><input type="text" name="remark" /> <br />
-        <span class="form-field-name">内容:</span><input type="text" name="content" /> <br />
 
         <span class="form-field-name"></span><input type="submit" name="submit" value="添加" class="btn btn-lg btn-success" /> <br />
 

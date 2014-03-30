@@ -17,7 +17,7 @@
             if ( !empty($ad_data) ) {
                 foreach( $ad_data[1] as $ad ) {
                     echo    '<a href="'. $ad['link_url'].
-                            '" target="_blank" >'. "\n". '<img src="'.
+                            '" target="_blank" >'. "\n". '<img src="'. $_cfg_img_baseurl.
                             $ad['image_url']. '" alt="'.
                             $ad['ad_title']. '" width="'.
                             $ad['width']. '" height="'.
@@ -45,7 +45,7 @@
                             if ( !empty($ad_data[2]) ) {
                                 foreach( $ad_data[2] as $ad ) {
                                     echo    '<li><a href="'. $ad['link_url'].
-                                            '" target="_blank" ><img src="'.
+                                            '" target="_blank" ><img src="'. $_cfg_img_baseurl.
                                             $ad['image_url']. '" alt="'.
                                             $ad['ad_title']. '" width="'.
                                             $ad['width']. '"></a>'. "\n";
@@ -113,7 +113,7 @@
         if ( !empty($ad_data[4]) ) {
             foreach( $ad_data[4] as $ad ) {
                 echo    '<li><a href="'. $ad['link_url'].
-                        '" target="_blank" ><img src="'.
+                        '" target="_blank" ><img src="'. $_cfg_img_baseurl.
                         $ad['image_url']. '" alt="'.
                         $ad['ad_title']. '" width="'.
                         $ad['width']. '"></a>'. "\n";
@@ -141,7 +141,7 @@
                             <li class="<?php echo ( 1 == $index ) ? 'last': ''; ?>">
                                 <div class="picbox">
                                     <a id="world_B06_02" href="<?php echo $_cfg_siteRoot;?>house_list.php?id=<?php echo $house['id'];?>" target="_blank">
-                                        <img src="<?php echo get_single_img_url($house['image_urls']);?>" alt="<?php echo $house['name'];?>" />
+                                        <img src="<?php echo $_cfg_img_baseurl. get_single_img_url($house['image_urls']);?>" alt="<?php echo $house['name'];?>" />
                                     </a>
                                     <div class="floatDiv">
                                         <div class="bg">

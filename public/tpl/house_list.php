@@ -78,7 +78,7 @@
 ?>
     <?php foreach( $house_data as $house ) { ?>
     <?php $url = $_cfg_siteRoot. 'house.php?id='. $house['id']; ?>
-    <?php $img_url = get_single_img_url($house['image_urls']); ?>
+    <?php $img_url = $_cfg_img_baseurl. get_single_img_url($house['image_urls']); ?>
         <div class="loop clearfix" pid="/house/475">
         <div class="pic"><a href="<?php echo $url;?>" target="_blank"><img src="<?php echo $img_url;?>" alt="<?php echo $house['name'];?>"></a></div>
         <div class="nav">

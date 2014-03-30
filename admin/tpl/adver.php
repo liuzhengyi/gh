@@ -17,7 +17,7 @@
     <tbody>
         <?php
         foreach ( $ad_data as $ad ) {
-            $img_url    = $_cfg_siteRootAdmin. 'uploads/'. $ad['image_url'];
+            $img_url    = $_cfg_img_baseurl_admin. $ad['image_url'];
             $edit_url   = $_cfg_siteRootAdmin. 'edit.php?content=adver&id='. $ad['ad_id'];
 
             echo '<tr>';

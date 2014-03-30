@@ -17,10 +17,9 @@ require_once($_cfg_dbConfFile);
 
 // get params
 if (    empty($_POST['id']) || empty($_POST['city_id']) ||
-        empty($_POST['name']) || empty($_POST['price_desc']) ||
-        empty($_POST['image_urls'])
+        empty($_POST['name']) || empty($_POST['price_desc'])
    ) {
-    output_json_error(-10001, '必填参数: city_id, name, price_desc, image_urls 不全!');
+    output_json_error(-10001, '必填参数: 城市, 房产名, 价格描述, 不全!');
 }
 
 
@@ -37,15 +36,48 @@ if ( ! empty($_FILES) ) {
     }
 }
 
-// var_dump($new_images); // TODO upload images
+$new_urls = array();
+$i = 0;
+$has_new_image = false;
+foreach ( $new_images as $name => $image ) {
+    $new_urls[$i] = deal_upload_image($image, 'house');
+    if ( !empty($new_urls[$i]) ) {
+        $has_new_image = true;
+    }
+    ++$i;
+}
 
+// 连接数据库
+$dbh    = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
+
+// 处理文件对比
+if ( $has_new_image ) {
+
+    // get old image urls
+    $sql    = 'select image_urls from house where house_id = :id ';
+    $sth    = $dbh->prepare($sql);
+    $sth->bindParam(':id', intval($_POST['id']), PDO::PARAM_INT);
+    $sth->execute();
+    $result = $sth->fetch(PDO::FETCH_ASSOC);
+    $old_urls   = get_img_url($result['image_urls']);
+
+    foreach ( $new_urls as $index => $url ) {
+        if ( $url ) {
+            if ( isset($old_urls[$index]) ) {
+                delete_image_by_db_url($old_urls[$index]);
+            }
+            $old_urls[$index] = $url;
+        }
+    }
+
+    $image_urls = implode(';', $old_urls);
+}
 
 // filter params
 $params['id']                   = intval($_POST['id']);
 $params['city_id']              = strval($_POST['city_id']);
 $params['name']                 = strval($_POST['name']);
 $params['price_desc']           = strval($_POST['price_desc']);
-$params['image']                = strval($_POST['image_urls']);
 $params['type']                 = empty($_POST['type']) ? '' : intval($_POST['type']);
 $params['layout_area']          = empty($_POST['layout_area']) ? '' : strval($_POST['layout_area']);
 $params['price_level']          = empty($_POST['price_level']) ? '' : intval($_POST['price_level']);
@@ -60,12 +92,13 @@ $params['is_rental']            = empty($_POST['is_rental']) ? '' : intval($_POS
 $params['remark']               = empty($_POST['remark']) ? '' : strval($_POST['remark']);
 
 
-$dbh    = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
+$update_image_urls = $has_new_image ? ' image_urls = "'. $image_urls. '", ' : '';
+
 $sql    = ' update house set
                 city_id = :city_id,
                 name = :name,
                 price_desc = :price_desc,
-                image_urls = :image,
+                '. $update_image_urls. '
                 type = :type,
                 layout_area = :layout_area,
                 price_level = :price_level,
@@ -88,7 +121,6 @@ $sth->bindParam(':id', $params['id'], PDO::PARAM_INT);
 $sth->bindParam(':city_id', $params['city_id'], PDO::PARAM_INT);
 $sth->bindParam(':name', $params['name'], PDO::PARAM_STR);
 $sth->bindParam(':price_desc', $params['price_desc'], PDO::PARAM_STR);
-$sth->bindParam(':image', $params['image'], PDO::PARAM_STR);
 $sth->bindParam(':type', $params['type'], PDO::PARAM_INT);
 $sth->bindParam(':layout_area', $params['layout_area'], PDO::PARAM_STR);
 $sth->bindParam(':price_level', $params['price_level'], PDO::PARAM_INT);

@@ -40,6 +40,6 @@ if ( FALSE === $result ) {
     output_json_error(-10002, '修改失败');
 }
 
-output_json_info('修改成功');
+output_json_info('修改成功', $_SERVER['HTTP_REFERER']);
 
 ?>

@@ -50,7 +50,10 @@ $_cfg_dbConfFile = $_cfg_webRoot."/../dbConf.php";
 
 
 // 图片目录
-$_cfg_base_path     = $_cfg_webRoot. '/image/';
+$_cfg_img_path          = $_cfg_webRoot. 'image/';
+$_cfg_img_path_admin    = $_cfg_webRootAdmin. 'uploads/image/';
+$_cfg_img_baseurl       = $_cfg_siteRoot. 'image/';
+$_cfg_img_baseurl_admin = $_cfg_siteRootAdmin. 'uploads/image/';
 
 
 // 页面变量配置
