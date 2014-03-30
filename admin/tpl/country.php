@@ -2,11 +2,21 @@
 
 <div id="main-container">
 <h2>国家列表管理</h2>
-<form>
-<p><a href="#">添加国家</a></p>
-国家: <input type="text" name="name" />
+
+<form action="<?php echo $_cfg_siteRootAdmin. '/action/add_country_do.php';?>" method="POST" role="form" class="" >
+国家名: <input type="text" name="name" />
 所属区域: 
+    <select name="region">
+        <?php
+        for( $index = 1; $index < 5; ++$index ) {
+            echo '<option value="'. $index. '">'. get_region_name($index). '</option>';
+        }
+        ?>
+    </select>
+备注: <input type="text" name="remark" />
+    <input type="submit" name="submit" value="添加国家" class="btn">
 </form>
+
 <table id="country-manage" border="1" >
     <thead>
         <tr>
@@ -29,7 +39,7 @@
             echo '<td>'. get_region_name($country['region']). '</td>';
             echo '<td>'. $country['create_time']. '</td>';
             echo '<td>'. $country['update_time']. '</td>';
-            echo '<td><a href="#" class="btn" >删除(un)</a> </td>';
+            echo '<td><a href="'. $_cfg_siteRootAdmin. "action/del_country_do.php?id=". $country['country_id']. '" class="btn" >删除</a> </td>';
             echo '</tr>';
         }
         ?>

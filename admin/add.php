@@ -37,7 +37,7 @@ switch ( $content ) {
             output_json_error(-10002, '不存在这个房产!');
         }
 
-        include('./tpl/action/add_house.php');
+        include('./tpl/action/edit_house.php');
 
         break;
 
@@ -58,7 +58,7 @@ switch ( $content ) {
             output_json_error(-10002, '不存在这个文章!');
         }
 
-        include('./tpl/action/add_article.php');
+        include('./tpl/action/edit_article.php');
 
         break;
 

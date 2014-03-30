@@ -70,6 +70,9 @@ function get_region_name( $Region_id ) {
         case 3:
             $region_name = '亚太';
             break;
+        case 4:
+            $region_name = '其他';
+            break;
         default:
             $region_name = DEBUG ? 'unknown region' : '';
         

@@ -2,7 +2,21 @@
 
 <div id="main-container">
 <h2>城市列表管理</h2>
-<p><a href="#">添加城市</a></p>
+
+<form action="<?php echo $_cfg_siteRootAdmin. '/action/add_city_do.php';?>" method="POST" role="form" class="" >
+城市名: <input type="text" name="name" />
+所属国家: 
+    <select name="country_id">
+        <?php
+        foreach( $country_data as $country ) {
+            echo '<option value="'. $country['country_id']. '">'. $country['name']. '</option>';
+        }
+        ?>
+    </select>
+备注: <input type="text" name="remark" />
+    <input type="submit" name="submit" value="添加城市" class="btn">
+</form>
+
 <table id="city-manage" border="1" >
     <thead>
         <tr>
@@ -17,7 +31,7 @@
     <tbody>
         <?php
         foreach ( $city_data as $city ) {
-            $del_url    = 'unfinished';
+            $del_url    = $_cfg_siteRootAdmin. 'action/del_city_do.php?id='. $city['city_id'];
 
             echo '<tr>';
             echo '<td>'. $city['city_id']. '</td>';
@@ -25,7 +39,7 @@
             echo '<td>'. $city['coname']. '</td>';
             echo '<td>'. $city['create_time']. '</td>';
             echo '<td>'. $city['update_time']. '</td>';
-            echo '<td><a href="#" class="btn" >删除(un)</a> </td>';
+            echo '<td><a href="'. $del_url. '" class="btn" >删除</a> </td>';
             echo '</tr>';
         }
         ?>

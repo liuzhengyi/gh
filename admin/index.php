@@ -31,7 +31,7 @@ switch ( $content ) {
 
     case 'article':
         // article data
-        $sql            = "select * from article join article_cate where article.cate_id = article_cate.cate_id";
+        $sql            = "select * from article join article_cate where article.cate_id = article_cate.cate_id ";
         $sth            = $dbh->prepare($sql);
         $sth->execute();
         $article_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -53,7 +53,7 @@ switch ( $content ) {
     case 'cate':
 
         // ad data
-        $sql        = "select * from article_cate";
+        $sql        = "select * from article_cate order by create_time desc";
         $sth        = $dbh->prepare($sql);
         $sth->execute();
         $cate_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -63,19 +63,26 @@ switch ( $content ) {
 
     case 'city':
 
-        // ad data
-        $sql        = "select city_id, city.name ciname, country.name coname, city.create_time, city.update_time from city, country where city.country_id = country.country_id";
+        // city data
+        $sql        = "select city_id, city.name ciname, country.name coname, city.create_time, city.update_time from city, country where city.country_id = country.country_id order by create_time desc";
         $sth        = $dbh->prepare($sql);
         $sth->execute();
         $city_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+        // country_data
+        $sql        = "select country_id, name from country";
+        $sth        = $dbh->prepare($sql);
+        $sth->execute();
+        $country_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
+
         include('./tpl/city.php');
 
         break;
 
     case 'country':
 
-        // ad data
-        $sql        = "select * from country";
+        // country data
+        $sql        = "select * from country order by create_time desc";
         $sth        = $dbh->prepare($sql);
         $sth->execute();
         $country_data  = $sth->fetchAll(PDO::FETCH_ASSOC);

@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS `house`;
 CREATE TABLE `house` (                              -- 房产表
 	house_id INT UNSIGNED AUTO_INCREMENT NOT NULL,  -- 房产ID
 	city_id INT UNSIGNED NOT NULL,                  -- 所属城市ID
+	user_id INT NOT NULL,                           -- 所属城市ID
 	name VARCHAR(300) NOT NULL,                     -- 房产名称
 	type TINYINT NOT NULL,	                        -- 物业类型(1 公寓, 2 别墅)
 	layout_area VARCHAR(300) NOT NULL,              -- 户型面积
@@ -17,8 +18,8 @@ CREATE TABLE `house` (                              -- 房产表
     is_on_sale TINYINT NOT NULL,                    -- 是否出售
     is_rental TINYINT NOT NULL,                     -- 是否出租
     view_count INT UNSIGNED NOT NULL DEFAULT 0,     -- 浏览次数
-	status TINYINT NOT NULL DEFAULT 0,              -- 状态 0 OK ..
 	remark VARCHAR(600) ,                           -- 备注
+	status TINYINT NOT NULL DEFAULT 0,              -- 状态 0 OK ..
 	create_time DATETIME NOT NULL,                  -- 记录创建时间
 	update_time DATETIME NOT NULL,                  -- 记录更新时间
 	PRIMARY KEY(house_id),
