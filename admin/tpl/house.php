@@ -38,7 +38,7 @@
                 echo '<td>'. $house['price_desc']. '</td>';
                 echo '<td>'. $house['position']. '</td>';
                 echo '<td>'. $house['status']. '</td>';
-                echo '<td><a href="'. $del_url. '" class="btn" >删除</a> <a href="'. $edit_url. '" class="btn" >修改</a> </td>';
+                echo '<td><a href="'. $del_url. '" class="btn btn-warning" >删除</a> <a href="'. $edit_url. '" class="btn" >修改</a> </td>';
                 echo '</tr>';
             }
             ?>

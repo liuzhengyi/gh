@@ -9,11 +9,13 @@
     <input type="submit" name="submit" value="添加分类" class="btn">
 </form>
 
+<p class="warning">注意: 有文章的分类不能直接删除。</p>
 <table id="cate-manage" border="1" >
     <thead>
         <tr>
             <th id="">ID</th>
             <th id="">分类名称</th>
+            <th id="">文章数目</th>
             <th id="">备注</th>
             <th id="">创建时间</th>
             <th id="">更新时间</th>
@@ -24,15 +26,17 @@
         <?php
         foreach ( $cate_data as $cate ) {
             $edit_url   = $_cfg_siteRootAdmin. '/edit.php?content=cate&id='. $cate['cate_id'];
-            $del_url    = $_cfg_siteRootAdmin. 'action/del_cate_do.php?id='. $cate['cate_id'];
+            $del_btn    = '<a href="'.$_cfg_siteRootAdmin. 'action/del_cate_do.php?id='. $cate['cate_id'] . '" class="btn btn-warning">删除</a>' ;
+            $del_btn    = ( $cate['num'] > 0 ) ? '' : $del_btn ;
 
             echo '<tr>';
             echo '<td>'. $cate['cate_id']. '</td>';
             echo '<td>'. $cate['cate_name']. '</td>';
+            echo '<td>'. $cate['num']. '</td>';
             echo '<td>'. $cate['remark']. '</td>';
             echo '<td>'. $cate['create_time']. '</td>';
             echo '<td>'. $cate['update_time']. '</td>';
-            echo '<td><a href="'. $del_url. '" class="btn" >删除</a> <a href="'. $edit_url. '" class="btn" >修改</a> </td>';
+            echo '<td>'. $del_btn. ' <a href="'. $edit_url. '" class="btn" >修改</a> </td>';
             echo '</tr>';
         }
         ?>

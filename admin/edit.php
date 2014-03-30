@@ -23,7 +23,7 @@ switch ( $content ) {
     case 'house':
         // get params
         if ( empty($_GET['id']) || !intval($_GET['id']) ) {
-            output_json_error(-10001, '编辑房产需指定有效ID!');
+            output_json_error(-10001, '缺少有效ID!');
         }
         $id = intval($_GET['id']);
 
@@ -34,7 +34,7 @@ switch ( $content ) {
         $sth->execute();
         $data  = $sth->fetch(PDO::FETCH_ASSOC);
         if ( empty($data) ) {
-            output_json_error(-10002, '不存在这个房产!');
+            output_json_error(-10002, '房产不存在!');
         }
 
         // images
@@ -54,7 +54,7 @@ switch ( $content ) {
     case 'article':
         // get params
         if ( empty($_GET['id']) || !intval($_GET['id']) ) {
-            output_json_error(-10001, '编辑文章需指定有效ID!');
+            output_json_error(-10001, '缺少有效ID!');
         }
         $id = intval($_GET['id']);
 
@@ -65,7 +65,7 @@ switch ( $content ) {
         $sth->execute();
         $data  = $sth->fetch(PDO::FETCH_ASSOC);
         if ( empty($data) ) {
-            output_json_error(-10002, '不存在这个文章!');
+            output_json_error(-10002, '文章不存在!');
         }
 
         // article cate data
@@ -82,7 +82,7 @@ switch ( $content ) {
 
         // get params
         if ( empty($_GET['id']) || !intval($_GET['id']) ) {
-            output_json_error(-10001, '编辑广告需指定有效ID!');
+            output_json_error(-10001, '缺少有效ID!');
         }
         $id = intval($_GET['id']);
 
@@ -93,10 +93,33 @@ switch ( $content ) {
         $sth->execute();
         $data  = $sth->fetch(PDO::FETCH_ASSOC);
         if ( empty($data) ) {
-            output_json_error(-10002, '不存在这个广告!');
+            output_json_error(-10002, '广告不存在!');
         }
 
         include('./tpl/action/edit_adver.php');
+
+        break;
+
+    case 'cate':
+
+        // get params
+        if ( empty($_GET['id']) || !intval($_GET['id']) ) {
+            output_json_error(-10001, '缺少有效ID!');
+        }
+        $id = intval($_GET['id']);
+
+        // article_cate data
+        $sql        = "select * from article_cate where cate_id = :id";
+
+        $sth        = $dbh->prepare($sql);
+        $sth->bindValue(':id', $id, PDO::PARAM_INT);
+        $sth->execute();
+        $data  = $sth->fetch(PDO::FETCH_ASSOC);
+        if ( empty($data) ) {
+            output_json_error(-10002, '分类不存在!');
+        }
+
+        include('./tpl/action/edit_cate.php');
 
         break;
 

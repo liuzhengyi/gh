@@ -58,8 +58,17 @@ switch ( $content ) {
 
     case 'cate':
 
-        // ad data
+        // cate data
         $sql        = "select * from article_cate order by create_time desc";
+        $sql        = 'select
+                            c.cate_name, c.remark, c.cate_id,
+                            c.create_time, c.update_time,
+                            a.article_id, count(a.article_id) num
+                       from
+                            article_cate c left join article a
+                       on
+                            c.cate_id = a.cate_id
+                       group by cate_id;';
         $sth        = $dbh->prepare($sql);
         $sth->execute();
         $cate_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
