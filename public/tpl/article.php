@@ -26,8 +26,7 @@
         <div id="MainTexBox" class="grid17 first">
             <div class="blkContainerSblk right_bar">
                   
-                    <h1 align="center" id="h1Title">
-                        美国租房tips                    </h1>
+                    <h1 align="center" id="h1Title"><?php echo $article_data['title'];?></h1>
                     <div class="artInfo">
                       <div align="center"><span id="media_name">
                       
