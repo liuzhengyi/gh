@@ -16,9 +16,8 @@ require_once($_cfg_dbConfFile);
 // TODO permission control
 
 // get params
-if (    empty($_POST['id']) || empty($_POST['city_id']) ||
-        empty($_POST['name']) || empty($_POST['price_desc']) ||
-        empty($_POST['image_urls'])
+if (    empty($_POST['city_id']) || empty($_POST['name']) ||
+        empty($_POST['price_desc']) || empty($_POST['image_urls'])
    ) {
     output_json_error(-10001, '必填参数: city_id, name, price_desc, image_urls 不全!');
 }
@@ -41,7 +40,6 @@ if ( ! empty($_FILES) ) {
 
 
 // filter params
-$params['id']                   = intval($_POST['id']);
 $params['city_id']              = strval($_POST['city_id']);
 $params['name']                 = strval($_POST['name']);
 $params['price_desc']           = strval($_POST['price_desc']);
@@ -82,9 +80,9 @@ $sql    = ' update house set
             where
                 house_id = :id
             limit 1';
+$sql    = ' insert into house (city_id, name, price_desc, image_urls, type, layout_area, price_level, position, decoration_state, property, project_intro_brief, project_intro, phone_num, is_on_sale, is_rental, remark, create_time, update_time) values (:city_id, :name, :price_desc, :image, :type, :layout_area, :price_level, :position, :decoration_state, :property, :project_intro_brief, :project_intro, :phone_num, :is_on_sale, :is_rental, :remark, now(), now())';
 $sth    = $dbh->prepare($sql);
 
-$sth->bindParam(':id', $params['id'], PDO::PARAM_INT);
 $sth->bindParam(':city_id', $params['city_id'], PDO::PARAM_INT);
 $sth->bindParam(':name', $params['name'], PDO::PARAM_STR);
 $sth->bindParam(':price_desc', $params['price_desc'], PDO::PARAM_STR);
@@ -105,10 +103,12 @@ $sth->bindParam(':remark', $params['remark'], PDO::PARAM_STR);
 $result = $sth->execute();
 
 if ( FALSE === $result ) {
-    var_dump($sth->errorInfo());
-    output_json_error(-10002, '修改失败');
+    if ( DEBUG ) {
+        var_dump($sth->errorInfo());
+    }
+    output_json_error(-10002, '添加失败');
 }
 
-output_json_info('修改成功');
+output_json_info('添加成功');
 
 ?>

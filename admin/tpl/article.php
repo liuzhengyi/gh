@@ -23,10 +23,11 @@
             foreach ( $article_data as $article ) {
                 $edit_url   = $_cfg_siteRootAdmin. 'edit.php?content=article&id='. $article['article_id'];
                 $del_url    = $_cfg_siteRootAdmin. 'action/del_article_do.php?id='. $article['article_id'];
+                $show_url   = $_cfg_siteRoot. 'article.php?id='. $article['article_id'];
 
                 echo '<tr>';
                 echo '<td>'. $article['article_id']. '</td>';
-                echo '<td>'. $article['title']. '</td>';
+                echo '<td><a href="'. $show_url. '" target="_blank">'. $article['title']. '</a></td>';
                 echo '<td>'. $article['abstract']. '</td>';
                 echo '<td>'. $article['view_count']. '</td>';
                 echo '<td>'. $article['cate_name']. '</td>';

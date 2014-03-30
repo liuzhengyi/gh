@@ -16,6 +16,7 @@ require_once($_cfg_dbConfFile);
 
 // get params
 if ( empty($_POST['name']) || empty($_POST['country_id']) ) {
+    exit('lkjljds');
     output_json_error(-10001, '必填参数不全');
 }
 
@@ -39,9 +40,9 @@ $sth->bindParam(':remark', $params['remark'], PDO::PARAM_STR);
 $result = $sth->execute();
 
 if ( FALSE === $result ) {
-    output_json_error(-10002, '修改失败');
+    output_json_error(-10002, '添加失败');
 }
 
-output_json_info('修改成功');
+output_json_info('添加成功');
 
 ?>

@@ -11,7 +11,7 @@
             $selected = ($data['city_id'] == $city['city_id']) ? 'selected="selected"' : '';
             echo    '<option value="'. $city['city_id'].
                     '" '. $selected. ' title="'. $city['city_id'].
-                    '" >'. $city['coname']. '/'. $city['ciname'].
+                    '" >'. $city['ciname']. '/'. $city['coname'].
                     '</option>';
         }
         ?>

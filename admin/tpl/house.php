@@ -31,7 +31,7 @@
                 echo '<tr>';
                 echo '<td>'. $house['house_id']. '</td>';
                 echo '<td>'. $house['ciname']. '</td>';
-                echo '<td><a href="'. $link_url. '">'. $house['name']. '</a></td>';
+                echo '<td><a href="'. $link_url. '" target="_blank">'. $house['name']. '</a></td>';
                 echo '<td>'. $house['type']. '</td>';
                 echo '<td><a href="'. $img_url. '"><img src="'. $img_url. '" /></a></td>';
                 echo '<td>'. $house['layout_area']. '</td>';

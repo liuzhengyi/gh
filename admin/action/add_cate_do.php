@@ -39,9 +39,9 @@ if ( FALSE === $result ) {
     if (DEBUG) {
         var_dump($sth->errorInfo());
     }
-    output_json_error(-10002, '修改失败');
+    output_json_error(-10002, '添加失败');
 }
 
-output_json_info('修改成功');
+output_json_info('添加成功');
 
 ?>

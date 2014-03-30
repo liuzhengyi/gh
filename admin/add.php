@@ -21,23 +21,6 @@ $content    = empty($_GET['content']) ? '' : trim($_GET['content']);
 switch ( $content ) {
 
     case 'house':
-        /*
-        // get params
-        if ( empty($_GET['id']) || !intval($_GET['id']) ) {
-            output_json_error(-10001, '编辑房产需指定有效ID!');
-        }
-        $id = intval($_GET['id']);
-
-        // ad data
-        $sql        = "select * from house where house_id = :id";
-        $sth        = $dbh->prepare($sql);
-        $sth->bindValue(':id', $id, PDO::PARAM_INT);
-        $sth->execute();
-        $data  = $sth->fetch(PDO::FETCH_ASSOC);
-        if ( empty($data) ) {
-            output_json_error(-10002, '不存在这个房产!');
-        }
-        */
 
         // city data
         $sql        = 'select country.name coname, city_id, city.name ciname from city, country where city.country_id = country.country_id order by country.country_id';
@@ -46,31 +29,43 @@ switch ( $content ) {
         $city_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
         $city_data  = set_array_key($city_data, 'city_id');
 
-
-        include('./tpl/action/edit_house.php');
+        include('./tpl/action/add_house.php');
 
         break;
 
     case 'article':
-        /*
-        // get params
-        if ( empty($_GET['id']) || !intval($_GET['id']) ) {
-            output_json_error(-10001, '编辑文章需指定有效ID!');
-        }
-        $id = intval($_GET['id']);
 
-        // ad data
-        $sql        = "select * from article where article_id = :id";
+        // cate data
+        $sql        = "select cate_id, cate_name from article_cate";
         $sth        = $dbh->prepare($sql);
-        $sth->bindValue(':id', $id, PDO::PARAM_INT);
         $sth->execute();
-        $data  = $sth->fetch(PDO::FETCH_ASSOC);
-        if ( empty($data) ) {
-            output_json_error(-10002, '不存在这个文章!');
-        }
-        */
+        $cate_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-        include('./tpl/action/edit_article.php');
+        include('./tpl/action/add_article.php');
+
+        break;
+
+    case 'cate':
+
+        include('./tpl/action/add_cate.php');
+
+        break;
+
+    case 'city':
+
+        // country data
+        $sql            = "select country_id, name from country";
+        $sth            = $dbh->prepare($sql);
+        $sth->execute();
+        $country_data   = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+        include('./tpl/action/add_city.php');
+
+        break;
+
+    case 'country':
+
+        include('./tpl/action/add_country.php');
 
         break;
 

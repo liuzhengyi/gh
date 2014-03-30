@@ -3,11 +3,7 @@
 <div id="main-container">
 <h2>文章分类管理</h2>
 
-<form action="<?php echo $_cfg_siteRootAdmin. '/action/add_cate_do.php';?>" method="POST" role="form" class="" >
-分类名称: <input type="text" name="cate_name" />
-备注: <input type="text" name="remark" />
-    <input type="submit" name="submit" value="添加分类" class="btn">
-</form>
+<p><a href="<?php echo $add_url; ?>" class="btn" >添加分类</a></p>
 
 <p class="warning">注意: 有文章的分类不能直接删除。</p>
 <table id="cate-manage" border="1" >

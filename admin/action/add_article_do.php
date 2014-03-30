@@ -1,8 +1,8 @@
 <?php
 /**
- * action: update an adver
+ * action: add an article
  * gipsaliu@gmail.com
- * since: 2014-03-29
+ * since: 2014-03-30
  */
 
 include_once('../../config.php');
@@ -14,13 +14,14 @@ require_once($_cfg_dbConfFile);
 
 
 // get params
-if ( empty($_POST['id']) || empty($_POST['title']) || empty($_POST['cate_id']) ) {
-var_dump($_POST);
+if ( empty($_POST['title']) || empty($_POST['cate_id']) ) {
+    if ( DEBUG ) {
+        var_dump($_POST);
+    }
     output_json_error(-10001, '必填参数不全');
 }
 
 $params['title']    = strval($_POST['title']);
-$params['id']       = intval($_POST['id']);
 $params['cate_id']  = intval($_POST['cate_id']);
 $params['type']     = empty($_POST['type'])     ? '' : intval($_POST['type']);
 $params['subtitle'] = empty($_POST['subtitle']) ? '' : strval($_POST['subtitle']);
@@ -42,6 +43,7 @@ $sql    = ' update article set
             where
                 article_id = :id
             limit 1';
+$sql    = 'insert into article (title, cate_id, type, subtitle, abstract, remark, content, create_time, update_time) values (:title, :cate_id, :type, :subtitle, :abstract, :remark, :content, now(), now())';
 $sth    = $dbh->prepare($sql);
 
 $sth->bindParam(':title',       $params['title'],       PDO::PARAM_STR);
@@ -51,14 +53,13 @@ $sth->bindParam(':subtitle',    $params['subtitle'],    PDO::PARAM_STR);
 $sth->bindParam(':abstract',    $params['abstract'],    PDO::PARAM_STR);
 $sth->bindParam(':remark',      $params['remark'],      PDO::PARAM_STR);
 $sth->bindParam(':content',     $params['content'],     PDO::PARAM_STR);
-$sth->bindParam(':id',          $params['id'],          PDO::PARAM_INT);
 
 $result = $sth->execute();
 
 if ( FALSE === $result ) {
-    output_json_error(-10002, '修改失败');
+    output_json_error(-10002, '添加失败');
 }
 
-output_json_info('修改成功');
+output_json_info('添加成功');
 
 ?>

@@ -33,9 +33,9 @@ $sth->bindParam(':id', $params['article_id'], PDO::PARAM_INT);
 $result = $sth->execute();
 
 if ( FALSE === $result ) {
-    output_json_error(-10002, '修改失败');
+    output_json_error(-10002, '删除失败');
 }
 
-output_json_info('修改成功');
+output_json_info('删除成功');
 
 ?>

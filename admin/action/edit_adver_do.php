@@ -25,13 +25,13 @@ if ( empty($_POST['id']) || empty($_POST['title']) || empty($_POST['img_url']) )
 $params['title']    = strval($_POST['title']);
 $params['image']    = strval($_POST['img_url']);
 $params['id']       = intval($_POST['id']);
-$params['url']      = empty($_POST['link_url']) ? 'xx' : strval($_POST['link_url']);
-$params['desc']     = empty($_POST['desc']) ? 'xx' : strval($_POST['desc']);
-$params['remark']   = empty($_POST['remark']) ? 'xx' : strval($_POST['remark']);
+$params['url']      = empty($_POST['link_url']) ? '' : strval($_POST['link_url']);
+$params['desc']     = empty($_POST['desc']) ? '' : strval($_POST['desc']);
+$params['remark']   = empty($_POST['remark']) ? '' : strval($_POST['remark']);
 
 
 $dbh    = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
-$sql    = 'update ad set ad_title = :title, image_url = :image, link_url = :url, `desc` = :desc, remark = :remark where ad_id = :id limit 1';
+$sql    = 'update ad set ad_title = :title, image_url = :image, link_url = :url, `desc` = :desc, remark = :remark, update_time = now() where ad_id = :id limit 1';
 $sth    = $dbh->prepare($sql);
 
 $sth->bindParam(':title', $params['title'], PDO::PARAM_STR);

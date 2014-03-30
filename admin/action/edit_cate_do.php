@@ -28,7 +28,7 @@ $params['remark']   = empty($_POST['remark']) ? '' : strval($_POST['remark']);
 
 
 $dbh    = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
-$sql    = 'update article_cate set cate_name = :name, remark = :remark where cate_id = :id limit 1';
+$sql    = 'update article_cate set cate_name = :name, remark = :remark, update_time = now() where cate_id = :id limit 1';
 $sth    = $dbh->prepare($sql);
 
 $sth->bindParam(':name', $params['name'], PDO::PARAM_STR);
