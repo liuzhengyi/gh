@@ -44,6 +44,6 @@ if ( FALSE === $result ) {
     output_json_error(-10002, '添加失败');
 }
 
-output_json_info('添加成功', '/index.php?content=cate');
+output_json_info('添加成功', $_cfg_siteRootAdmin.'index.php?content=cate');
 
 ?>

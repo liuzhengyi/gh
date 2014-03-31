@@ -150,6 +150,6 @@ if ( FALSE === $result ) {
     output_json_error(-10002, '修改失败');
 }
 
-output_json_info('修改成功', '/index.php?content=house');
+output_json_info('修改成功', $_cfg_siteRootAdmin.'index.php?content=house');
 
 ?>
