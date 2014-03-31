@@ -20,6 +20,26 @@
             <p>使用MySQL数据库。</p>
         </li>
         <li>
+            <h2>部署注意事项</h2>
+            <p>前台和后台共用/lib/目录和/目录下的配置文件。</p>
+            <p>前台的页面文件在/public/目录下，后台的页面文件在/admin/目录下，建议将前台和后台的域名分别指向这两个目录。</p>
+            <p>部署时请注意，务必要根据自己的部署环境调整/config.php 中的:</p>
+            <ul>
+                    <li>// 本地主机名称</li>
+                    <li>$_cfg_hostName = 'gh';</li>
+                    <li></li>
+                    <li>// 服务器上的网站根目录</li>
+                    <li>$_cfg_webRoot = "/var/www/proj/gh/public/";</li>
+                    <li>$_cfg_webRootAdmin = "/var/www/proj/gh/admin/";</li>
+                    <li></li>
+                    <li>// 网站的http根目录</li>
+                    <li>$_cfg_siteRoot = "http://gh/";</li>
+                    <li>$_cfg_siteRootAdmin = "http://gha/";</li>
+            </ul>
+            <p></p>
+
+        </li>
+        <li>
             <h2>前台页面</h2>
             <ol>
                 <li>首页 index.php</li>
@@ -32,11 +52,9 @@
         <li>
             <h2>后台管理功能</h2>
             <ol>
-                <li>管理员登录退出(test00/test00)</li>
-                <li>添加/删除房产</li>
-                <li>添加/删除文章</li>
-                <li>添加/删除广告</li>
-                <li>添加/删除友链</li>
+                <li>
+                    <p>后台测试帐号： test00/00test 。00 到05 都可以用。如 test03/03test。</p>
+                </li>
             </ol>
         </li>
     </ol>
