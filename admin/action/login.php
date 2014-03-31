@@ -37,12 +37,11 @@ if ( FALSE === $result || empty($admin_info) ) {
 }
 
 
-
 // logged in
 $_SESSION['name']       = $params['name'];
 $_SESSION['id']         = $admin_info['user_id'];
 $_SESSION['admin']      = $admin_info['is_admin'];
 
-output_json_info('欢迎回来,'. $_SESSION['name'], '/index.php');
+output_json_info('欢迎回来,'. $_SESSION['name'], $_cfg_siteRootAdmin.'index.php');
 
 ?>
