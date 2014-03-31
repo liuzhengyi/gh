@@ -15,7 +15,7 @@ require_once($_cfg_dbConfFile);
 require_once("../lib/access_control.php");
 
 if ( ! empty($_SESSION['name']) ) {
-    header("Location:/index.php");
+    header('Location:'. $_cfg_siteRootAdmin. 'index.php');
     exit();
 }
 
