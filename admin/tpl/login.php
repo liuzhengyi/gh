@@ -22,7 +22,7 @@
 
     <div class="container">
 
-      <form class="form-signin" role="form" action="action/login.php" method="POST">
+      <form class="form-signin" role="form" action="<?php echo $_cfg_siteRootAdmin;?>action/login.php" method="POST">
         <h2 class="form-signin-heading">Please sign in</h2>
         <input type="text" name="name" class="form-control" placeholder="登录名" required autofocus>
         <input type="password" name="pwd" class="form-control" placeholder="密码" required>
