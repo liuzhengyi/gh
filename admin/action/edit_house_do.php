@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * action: update an house
  * gipsaliu@gmail.com
@@ -13,7 +14,9 @@ include_once('../../config.php');
 require_once("../../lib/common.php");
 require_once($_cfg_dbConfFile);
 
-// TODO permission control
+// permission control
+require_once("../../lib/access_control.php");
+check_login();
 
 // get params
 if (    empty($_POST['id']) || empty($_POST['city_id']) ||
@@ -79,6 +82,8 @@ $params['city_id']              = strval($_POST['city_id']);
 $params['name']                 = strval($_POST['name']);
 $params['price_desc']           = strval($_POST['price_desc']);
 $params['type']                 = empty($_POST['type']) ? '' : intval($_POST['type']);
+$params['display_order']        = empty($_POST['display_order']) ? '' : intval($_POST['display_order']);
+$params['view_count']           = empty($_POST['view_count']) ? '' : intval($_POST['view_count']);
 $params['layout_area']          = empty($_POST['layout_area']) ? '' : strval($_POST['layout_area']);
 $params['price_level']          = empty($_POST['price_level']) ? '' : intval($_POST['price_level']);
 $params['position']             = empty($_POST['position']) ? '' : strval($_POST['position']);
@@ -100,6 +105,8 @@ $sql    = ' update house set
                 price_desc = :price_desc,
                 '. $update_image_urls. '
                 type = :type,
+                display_order = :display_order,
+                view_count = :view_count,
                 layout_area = :layout_area,
                 price_level = :price_level,
                 position = :position,
@@ -122,6 +129,8 @@ $sth->bindParam(':city_id', $params['city_id'], PDO::PARAM_INT);
 $sth->bindParam(':name', $params['name'], PDO::PARAM_STR);
 $sth->bindParam(':price_desc', $params['price_desc'], PDO::PARAM_STR);
 $sth->bindParam(':type', $params['type'], PDO::PARAM_INT);
+$sth->bindParam(':display_order', $params['display_order'], PDO::PARAM_INT);
+$sth->bindParam(':view_count', $params['view_count'], PDO::PARAM_INT);
 $sth->bindParam(':layout_area', $params['layout_area'], PDO::PARAM_STR);
 $sth->bindParam(':price_level', $params['price_level'], PDO::PARAM_INT);
 $sth->bindParam(':position', $params['position'], PDO::PARAM_STR);
@@ -141,6 +150,6 @@ if ( FALSE === $result ) {
     output_json_error(-10002, '修改失败');
 }
 
-output_json_info('修改成功');
+output_json_info('修改成功', '/index.php?content=house');
 
 ?>

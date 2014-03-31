@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * action: update an country
  * gipsaliu@gmail.com
@@ -11,7 +12,9 @@ require_once("../../lib/common.php");
 require_once($_cfg_dbConfFile);
 
 
-// TODO permission control
+// permission control
+require_once("../../lib/access_control.php");
+check_login();
 
 
 // get params
@@ -40,6 +43,6 @@ if ( FALSE === $result ) {
     output_json_error(-10002, '修改失败');
 }
 
-output_json_info('修改成功', $_SERVER['HTTP_REFERER']);
+output_json_info('修改成功', '/index.php?content=country');
 
 ?>

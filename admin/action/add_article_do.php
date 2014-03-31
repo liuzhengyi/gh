@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * action: add an article
  * gipsaliu@gmail.com
@@ -10,8 +11,9 @@ include_once('../../config.php');
 require_once("../../lib/common.php");
 require_once($_cfg_dbConfFile);
 
-// TODO permission control
-
+// permission control
+require_once("../../lib/access_control.php");
+check_login();
 
 // get params
 if ( empty($_POST['title']) || empty($_POST['cate_id']) ) {
@@ -31,18 +33,6 @@ $params['content']  = empty($_POST['content'])  ? '' : strval($_POST['content'])
 
 
 $dbh    = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
-$sql    = ' update article set
-                title = :title,
-                cate_id = :cate_id,
-                type = :type,
-                subtitle = :subtitle,
-                abstract = :abstract,
-                remark = :remark,
-                content=:content,
-                update_time = now()
-            where
-                article_id = :id
-            limit 1';
 $sql    = 'insert into article (title, cate_id, type, subtitle, abstract, remark, content, create_time, update_time) values (:title, :cate_id, :type, :subtitle, :abstract, :remark, :content, now(), now())';
 $sth    = $dbh->prepare($sql);
 
@@ -60,6 +50,6 @@ if ( FALSE === $result ) {
     output_json_error(-10002, '添加失败');
 }
 
-output_json_info('添加成功');
+output_json_info('添加成功', '/index.php?content=article');
 
 ?>

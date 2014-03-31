@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * action: delete a cate
  * gipsaliu@gmail.com
@@ -11,7 +12,9 @@ require_once("../../lib/common.php");
 require_once($_cfg_dbConfFile);
 
 
-// TODO permission control
+// permission control
+require_once("../../lib/access_control.php");
+check_login();
 
 
 // get params
@@ -19,8 +22,8 @@ if ( empty($_GET['id']) ) {
     output_json_error(-10001, '必填参数不全');
 }
 
-// TODO get user_id
-$params['user_id']  = '-1';
+// get user_id
+$params['user_id']  = $_SESSION['id'];
 
 $params['cate_id']  = intval($_GET['id']);;
 

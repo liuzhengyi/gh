@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * index of admin module of the site
  * author:  gipsaliu@gmail.com
@@ -12,6 +13,7 @@ require_once("../lib/common.php");
 require_once($_cfg_dbConfFile);
 
 require_once("../lib/access_control.php");
+check_login();
 
 $dbh        = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
 
@@ -21,7 +23,10 @@ switch ( $content ) {
 
     case 'house':
         // house data
-        $sql        = "select house.*, city.name ciname from house join city where house.city_id = city.city_id order by update_time desc";
+        $sql        = " select
+                                house.*, city.name ciname from house join city where house.city_id = city.city_id
+                        order by
+                                display_order asc, update_time desc";
         $sth        = $dbh->prepare($sql);
         $sth->execute();
         $house_data = $sth->fetchAll(PDO::FETCH_ASSOC);

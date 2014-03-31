@@ -100,6 +100,7 @@ CREATE TABLE `house` (                              -- 房产表
 	image_urls VARCHAR(1000) NOT NULL,              -- 图片地址
     is_on_sale TINYINT NOT NULL,                    -- 是否出售
     is_rental TINYINT NOT NULL,                     -- 是否出租
+    display_order INT NOT NULL DEFAULT 999,         -- 显示顺序
     view_count INT UNSIGNED NOT NULL DEFAULT 0,     -- 浏览次数
 	remark VARCHAR(600) ,                           -- 备注
 	status TINYINT NOT NULL DEFAULT 0,              -- 状态 0 OK ..
@@ -137,7 +138,7 @@ CREATE TABLE `link` (                               -- 友链表
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (                               -- 用户表
 	user_id INT UNSIGNED AUTO_INCREMENT NOT NULL,   -- 用户ID
-    email VARCHAR(100),                             -- 登录邮箱
+    user_name VARCHAR(100),                             -- 登录邮箱
     password VARCHAR(100),                          -- 登录密码 sha1加密
     is_admin TINYINT,                               -- 管理员
     status TINYINT,                                 -- 状态
@@ -146,6 +147,6 @@ CREATE TABLE `user` (                               -- 用户表
     last_login DATETIME NOT NULL,
     last_ip VARCHAR(20),
 	PRIMARY KEY(user_id),
-	INDEX(email)
+	INDEX(user_name, password)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 show warnings;

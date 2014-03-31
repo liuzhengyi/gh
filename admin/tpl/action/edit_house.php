@@ -47,6 +47,8 @@
     <span class="form-field-name">位置:</span><input type="text" name="position" value="<?php echo $data['position'];?>" /> <br />
     <span class="form-field-name">装修情况:</span><input type="text" name="decoration_state" value="<?php echo $data['decoration_state'];?>" /> <br />
     <span class="form-field-name">产权:</span><input type="text" name="property" value="<?php echo $data['property'];?>" /> <br />
+    <span class="form-field-name">排序:</span><input type="text" name="display_order" value="<?php echo $data['display_order'];?>" /> <br />
+    <span class="form-field-name">点击量:</span><input type="text" name="view_count" value="<?php echo $data['view_count'];?>" /> <br />
     <span class="form-field-name">项目简介:</span><textarea cols="10" rows="5" name="project_intro_brief" ><?php echo $data['project_intro_brief'];?> </textarea> <br />
     <span class="form-field-name">项目介绍:</span><textarea cols="20" rows="30" name="project_intro" ><?php echo $data['project_intro'];?> </textarea> <br />
     <span class="form-field-name">联系电话:</span><input type="text" name="phone_num" value="<?php echo $data['phone_num'];?>" /> <br />

@@ -41,6 +41,8 @@ $sql    = ' select
                 city.country_id = country.country_id
                 and
                 country.region = :region
+            order by
+                display_order asc
             limit 6';
 $sth    = $dbh->prepare($sql);
 

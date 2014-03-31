@@ -1,6 +1,7 @@
 <?php
+session_start();
 /**
- * action: update an house
+ * action: add an house
  * gipsaliu@gmail.com
  * since: 2014-03-29
  */
@@ -13,7 +14,9 @@ include_once('../../config.php');
 require_once("../../lib/common.php");
 require_once($_cfg_dbConfFile);
 
-// TODO permission control
+// permission control
+require_once("../../lib/access_control.php");
+check_login();
 
 // get params
 if (    empty($_POST['city_id']) || empty($_POST['name']) || empty($_POST['price_desc']) ) {
@@ -90,6 +93,6 @@ if ( FALSE === $result ) {
     output_json_error(-10003, '添加失败');
 }
 
-output_json_info('添加成功');
+output_json_info('添加成功', '/index.php?content=house');
 
 ?>

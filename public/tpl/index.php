@@ -137,7 +137,7 @@
 
                     <ul class="picItem clearfix">
                         <?php for( $index = 0; $index < 2; ++$index) { ?>
-                        <?php $house = array_pop($houses); ?>
+                        <?php $house = array_shift($houses); ?>
                             <li class="<?php echo ( 1 == $index ) ? 'last': ''; ?>">
                                 <div class="picbox">
                                     <a id="world_B06_02" href="<?php echo $_cfg_siteRoot;?>house_list.php?id=<?php echo $house['id'];?>" target="_blank">

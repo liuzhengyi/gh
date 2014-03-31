@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * action: add a country
  * gipsaliu@gmail.com
@@ -11,7 +12,9 @@ require_once("../../lib/common.php");
 require_once($_cfg_dbConfFile);
 
 
-// TODO permission control
+// permission control
+require_once("../../lib/access_control.php");
+check_login();
 
 
 // get params
@@ -23,8 +26,8 @@ $params['name']     = strval($_POST['name']);
 $params['region']   = intval($_POST['region']);
 $params['remark']   = empty($_POST['remark']) ? '' : strval($_POST['remark']);
 
-// TODO get user_id
-$params['user_id']  = '-1';
+// get user_id
+$params['user_id']  = $_SESSION['id'];
 
 $dbh    = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
 $sql    = 'insert into country (name, region, user_id, remark, update_time, create_time) values(:name, :region, :user_id, :remark, now(), now())';
@@ -41,6 +44,6 @@ if ( FALSE === $result ) {
     output_json_error(-10002, '添加失败');
 }
 
-output_json_info('添加成功');
+output_json_info('添加成功', '/index.php?content=country');
 
 ?>

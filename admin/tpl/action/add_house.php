@@ -16,7 +16,7 @@
         ?>
     </select> *
     <br />
-    <span class="form-field-name">房产名字:</span><input type="text" name="name" />*<br />
+    <span class="form-field-name">房产名字:</span><input type="text" name="name" required />*<br />
     <span class="form-field-name">房产类型:</span>
     <select name="type">
         <?php
@@ -27,7 +27,7 @@
     </select> *
     <br />
     <span class="form-field-name">户型面积:</span><input type="text" name="layout_area" /> <br />
-    <span class="form-field-name">价格描述:</span><input type="text" name="price_desc" />*<br />
+    <span class="form-field-name">价格描述:</span><input type="text" name="price_desc" required />*<br />
     <span class="form-field-name">价位:</span>
     <select name="price_level">
         <?php

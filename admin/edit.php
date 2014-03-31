@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * edit page of admin module of the site
  * author:  gipsaliu@gmail.com
@@ -12,7 +13,7 @@ require_once("../lib/common.php");
 require_once($_cfg_dbConfFile);
 
 require_once("../lib/access_control.php");
-
+check_login();
 
 $dbh        = new PDO($_cfg_db_dsn, $_cfg_db_user, $_cfg_db_pwd);
 

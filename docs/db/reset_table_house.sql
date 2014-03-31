@@ -17,6 +17,7 @@ CREATE TABLE `house` (                              -- 房产表
 	image_urls VARCHAR(1000) NOT NULL,              -- 图片地址
     is_on_sale TINYINT NOT NULL,                    -- 是否出售
     is_rental TINYINT NOT NULL,                     -- 是否出租
+    display_order INT NOT NULL DEFAULT 999,         -- 显示顺序
     view_count INT UNSIGNED NOT NULL DEFAULT 0,     -- 浏览次数
 	remark VARCHAR(600) ,                           -- 备注
 	status TINYINT NOT NULL DEFAULT 0,              -- 状态 0 OK ..

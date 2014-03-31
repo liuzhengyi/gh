@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * action: update an article-cate
  * gipsaliu@gmail.com
@@ -11,7 +12,9 @@ require_once("../../lib/common.php");
 require_once($_cfg_dbConfFile);
 
 
-// TODO permission control
+// permission control
+require_once("../../lib/access_control.php");
+check_login();
 
 
 // get params
@@ -19,8 +22,6 @@ if ( empty($_POST['id']) || empty($_POST['cate_name']) ) {
     output_json_error(-10001, '必填参数不全');
 }
 
-// var_dump($_FILES); exit();
-// TODO upload image
 
 $params['name']     = strval($_POST['cate_name']);
 $params['id']       = intval($_POST['id']);
@@ -41,6 +42,6 @@ if ( FALSE === $result ) {
     output_json_error(-10002, '修改失败');
 }
 
-output_json_info('修改成功');
+output_json_info('修改成功', '/index.php?content=cate');
 
 ?>
