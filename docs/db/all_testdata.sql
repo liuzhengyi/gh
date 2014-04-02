@@ -72,6 +72,7 @@ insert into article (user_id, type, cate_id, title, subtitle, abstract, content,
 
 　　需要提醒的是，一般来说，租金中已经包括了水费和垃圾费，电费和天然气费则要自己出；住楼上的要记得不能有太大动静，如果噪音太大，邻居有可能报警。', now(), now());
 
+/*
 insert into article (user_id, type, cate_id, title, subtitle, abstract, content, create_time, update_time ) values (1, 1, 6, '售在美国申请校内学生公寓', '', '在美国，一般有三种住宿方式供留学生选择：学生宿舍、校外租房或与美国家庭同住。其中，学生宿舍相对安全，但由于租金较贵，所以很多人选择在校外租房。根据我的经验，租房要做到三个字，那就是快、准、细。', '在美国，一般有三种住宿方式供留学生选择：学生宿舍、校外租房或与美国家庭同住。其中，学生宿舍相对安全，但由于租金较贵，所以很多人选择在校外租房。根据我的经验，租房要做到三个字，那就是快、准、细。 
 
 　　快：一到美国，留学生就该开始留意房子的信息。我们一般选择上网查询信息，因为放在网上的房子通常都是有物业管理的，如果想要合租，网站还会帮忙寻找合租伙伴。此外，网上也有一些私人发布的租房信息，这些房子的租金相对便宜。 
@@ -262,6 +263,7 @@ insert into article (user_id, type, cate_id, title, subtitle, abstract, content,
 
 　　需要提醒的是，一般来说，租金中已经包括了水费和垃圾费，电费和天然气费则要自己出；住楼上的要记得不能有太大动静，如果噪音太大，邻居有可能报警。', now(), now());
 
+*/
 -- article_cate
 insert into article_cate (user_id, cate_name, create_time, update_time, remark) values ( 1, '英国', now(), now(), 'test remark');
 insert into article_cate (user_id, cate_name, create_time, update_time, remark) values ( 1, '环球指南', now(), now(), 'test remark');
@@ -331,6 +333,7 @@ insert into house (user_id, city_id, name, type, layout_area, price_desc, price_
 insert into house (user_id, city_id, name, type, layout_area, price_desc, price_level, position, decoration_state, property, project_intro_brief, project_intro, phone_num, image_urls, is_on_sale, is_rental, view_count, status, create_time, update_time) values ( 1, 12, '艾丽西亚公园6', 1, '2居室公寓83.44㎡ ∕ 联排别墅2居室100.60㎡', '305000欧元起 / 396000欧元起', 5, '帕福斯最便利位置', '精装修', '永久产权', '项目简介项目简介项目简介项目简介项目简介项目简介', '艾丽西亚公园可算是处于帕福斯最便利的位置。它坐落于安静、弥漫着平静和休闲气息的城市中。并且，交通非常方便。她不仅能够把您从城市的车水马龙中逃离出来而且还能让您在您愿意的时候回到其中。
 艾丽西亚公园是融合了豪华酒店优势的私人居住度假胜地，它提供的不只是一个家，更是一种生活方式。方便的地理位置让便利设施、景点以及休闲体验就在您家门口。充满休闲度气息的氛围让您孩子可以更加安全和自由地嬉戏。在地中海休闲居所，您只需放松地享受生活，其他的一切有我们为您安排。', '400 627 5955', './house/1.jpg;./house/2.jpg;./house/3.jpg;./house/4.jpg', 1, 0, 1007, 0, now(), now());
 
+/*
 insert into house (user_id, city_id, name, type, layout_area, price_desc, price_level, position, decoration_state, property, project_intro_brief, project_intro, phone_num, image_urls, is_on_sale, is_rental, view_count, status, create_time, update_time) values ( 1, 1, '艾丽西亚公园7', 1, '2居室公寓83.44㎡ ∕ 联排别墅2居室100.60㎡', '305000欧元起 / 396000欧元起', 3, '帕福斯最便利位置', '精装修', '永久产权', '项目简介项目简介项目简介项目简介项目简介项目简介', '艾丽西亚公园可算是处于帕福斯最便利的位置。它坐落于安静、弥漫着平静和休闲气息的城市中。并且，交通非常方便。她不仅能够把您从城市的车水马龙中逃离出来而且还能让您在您愿意的时候回到其中。
 艾丽西亚公园是融合了豪华酒店优势的私人居住度假胜地，它提供的不只是一个家，更是一种生活方式。方便的地理位置让便利设施、景点以及休闲体验就在您家门口。充满休闲度气息的氛围让您孩子可以更加安全和自由地嬉戏。在地中海休闲居所，您只需放松地享受生活，其他的一切有我们为您安排。', '400 627 5955', './house/1.jpg;./house/2.jpg;./house/3.jpg;./house/4.jpg', 1, 0, 1010, 0, now(), now());
 
@@ -375,6 +378,7 @@ insert into house (user_id, city_id, name, type, layout_area, price_desc, price_
 
 insert into house (user_id, city_id, name, type, layout_area, price_desc, price_level, position, decoration_state, property, project_intro_brief, project_intro, phone_num, image_urls, is_on_sale, is_rental, view_count, status, create_time, update_time) values ( 1, 15, '艾丽西亚公园21', 1, '2居室公寓83.44㎡ ∕ 联排别墅2居室100.60㎡', '305000欧元起 / 396000欧元起', 3, '帕福斯最便利位置', '精装修', '永久产权', '项目简介项目简介项目简介项目简介项目简介项目简介', '艾丽西亚公园可算是处于帕福斯最便利的位置。它坐落于安静、弥漫着平静和休闲气息的城市中。并且，交通非常方便。她不仅能够把您从城市的车水马龙中逃离出来而且还能让您在您愿意的时候回到其中。
 艾丽西亚公园是融合了豪华酒店优势的私人居住度假胜地，它提供的不只是一个家，更是一种生活方式。方便的地理位置让便利设施、景点以及休闲体验就在您家门口。充满休闲度气息的氛围让您孩子可以更加安全和自由地嬉戏。在地中海休闲居所，您只需放松地享受生活，其他的一切有我们为您安排。', '400 627 5955', './house/1.jpg;./house/2.jpg;./house/3.jpg;./house/4.jpg', 1, 0, 1000, 0, now(), now());
+*/
 insert into link (user_id, title, image_url, display_order, url, create_time, update_time) values ( 1, '2013中国（广州）国际城市地产•投资展览会（GIPI）', './image/link/201372915293648197.jpg', 1, 'http://www.haiwaiso.com/gipi', now(), now());
 insert into link (user_id, title, image_url, display_order, url, create_time, update_time) values ( 1, '环球时报', './image/link/201331414313056146.jpg', 1, 'http://www.huanqiu.com/', now(), now());
 insert into link (user_id, title, image_url, display_order, url, create_time, update_time) values ( 1, 'bfeducation', './image/link/201331414314218012.jpg', 1, 'http://www.bfeducation.com/', now(), now());
