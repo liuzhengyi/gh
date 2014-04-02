@@ -1,6 +1,7 @@
 
 BODY {
-	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 12px "宋体", Arial; LINE-HEIGHT: 21px; BACKGROUND: #fff; COLOR: #333; PADDING-TOP: 0px
+/*	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 12px "宋体", Arial; LINE-HEIGHT: 21px; BACKGROUND: #fff; COLOR: #333; PADDING-TOP: 0px; */
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 12px "Tahoma,Helvetica,arial,sans-serif", Arial; LINE-HEIGHT: 21px; BACKGROUND: #fff; COLOR: #333; PADDING-TOP: 0px;
 }
 DIV {
 	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
@@ -232,7 +233,8 @@ section {
 	padding: 10px 0px 0px;
 }
 .breadcrumb {
-	color: rgb(102, 102, 102); line-height: 20px; margin-bottom: 10px; font-family: "宋体"; float: left;
+/*	color: rgb(102, 102, 102); line-height: 20px; margin-bottom: 10px; font-family: "宋体"; float: left; */
+	color: rgb(102, 102, 102); line-height: 20px; margin-bottom: 10px; font-family: "Tahoma,Helvetica,arial,sans-serif"; float: left;
 }
 .breadcrumb strong {
 	font-weight: 400;
@@ -466,22 +468,22 @@ aside {
 }
     }
 .inputstyle_out {
-	PADDING-BOTTOM: 0px; LINE-HEIGHT: 43px; PADDING-LEFT: 6px; WIDTH: 510px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 43px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px; _background-attachment: fixed;
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 34px; PADDING-LEFT: 6px; WIDTH: 510px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 34px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px; _background-attachment: fixed;
     border: 3px solid #F96900;
     margin-top: 15px;
 }
 .inputstyle_on {
-	PADDING-BOTTOM: 0px; LINE-HEIGHT: 43px; PADDING-LEFT: 6px; WIDTH: 510px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 43px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px; _background-attachment: fixed;
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 34px; PADDING-LEFT: 6px; WIDTH: 510px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 34px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px; _background-attachment: fixed;
     border: 3px solid #F96900;
     margin-top: 15px;
 }
 .inputstyle_move {
-	PADDING-BOTTOM: 0px; LINE-HEIGHT: 43px; PADDING-LEFT: 6px; WIDTH: 510px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 43px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px; _background-attachment: fixed;
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 34px; PADDING-LEFT: 6px; WIDTH: 510px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 34px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px; _background-attachment: fixed;
     border: 3px solid #F96900;
     margin-top: 15px;
 }
 .inputstyle_off {
-	PADDING-BOTTOM: 0px; LINE-HEIGHT: 43px; PADDING-LEFT: 6px; WIDTH: 510px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 43px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px; _background-attachment: fixed;
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 34px; PADDING-LEFT: 6px; WIDTH: 510px; PADDING-RIGHT: 6px; FLOAT: left; HEIGHT: 34px; COLOR: #888; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 0px; _background-attachment: fixed;
     border: 3px solid #F96900;
     margin-top: 15px;
 }
@@ -615,7 +617,7 @@ TH.tbheadmore {
 .searchZone,.searchbox .menu li { background:url(../images/f_indBG.png) no-repeat 0 0;}
 .searchbox {height:250px; background-position:0 -528px; color:#53633c; padding:8px 0;}
 .searchbox .k { padding:0 10px; text-align:left; line-height:22px;}
-.searchbox .searchZone { height:43px; padding-top:10px; width:584px; margin:0 auto; background-position:0 -191px;}
+.searchbox .searchZone { height:34px; padding-top:10px; width:584px; margin:0 auto; background-position:0 -191px;}
 .searchbox .searchZone label,.searchbox .searchZone .left { float:left;}
 .searchbox .searchZone input.text { font-size:14px; color:#aaa; border:none; height:23px; padding-top:8px; line-height:16px; width:344px; padding-left:4px; margin:0 0 0 12px; vertical-align:middle; background:none;}
 .searchbox .searchZone button { width:115px; height:33px; line-height:33px; font-size:14px; font-weight:bold; color:#fff; background:none; border:none;}
