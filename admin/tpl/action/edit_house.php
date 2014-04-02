@@ -67,9 +67,9 @@
                 $img_url        = $_cfg_img_baseurl_admin. $img_data[$index];
                 $show_image     = '<img src="'. $img_url. '" />';
             }
-            echo '图'. $show_index. ':(宽:360px 高:240px)<br />'. $show_image ;
+            echo '图'. $show_index. ':(宽:360px 高:240px)<br />'. $show_image. '<br />';
             $add_or_update = empty($img_data[$index]) ? '添加图片' : '修改图片';
-            echo $add_or_update. '<input type="file" name="house_img_'. $index . '" /><br /><br />';
+            echo $add_or_update. '<input type="file" name="house_img_'. $index . '" /><br /><br /><br />';
         }
         ?>
     </div>
