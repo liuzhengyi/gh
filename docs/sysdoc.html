@@ -36,8 +36,12 @@
                     <li>$_cfg_siteRoot = "http://gh/";</li>
                     <li>$_cfg_siteRootAdmin = "http://gha/";</li>
             </ul>
+        </li>
+        <li>
+            <h2>关于文件上传</h2>
+            <p>目前系统是将上传的文件直接放到了web目录下。(参见 config.php/ $_cfg_img_path*)</p>
+            <p>如果需要将文件上传到CDN或其他位置，请修改 lib/common.php 中的 deal_upload_image() 方法。该方法接受一个PHP中的 $_FILES[n]参数，对上传文件进行处理，然后返回一个系统可用的图片URL片段(结合 config.php中的 $_cfg_img_path* 配置)。</p>
             <p></p>
-
         </li>
         <li>
             <h2>前台页面</h2>

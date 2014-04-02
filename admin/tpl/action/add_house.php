@@ -51,7 +51,7 @@
 
     <br />
     <div >
-        <span class="form-field-name">图片:</span><input type="text" name="image_urls" />*<br />
+        <span class="form-field-name">图片:</span>*<br />
         <?php
         for ( $index = 0; $index < 4; ++$index ) {
             $show_index = $index + 1;
@@ -63,7 +63,7 @@
                 $img_url        = get_admin_image($img_data[$index]);
                 $show_image     = '<img src="'. $img_url. '" />';
             }
-            echo '图'. $show_index. ':<br />'. $show_image ;
+            echo '图'. $show_index. ':(宽:360px 高:240px)<br />'. $show_image ;
             $add_or_update = empty($img_data[$index]) ? '添加图片' : '修改图片';
             echo $add_or_update. '<input type="file" name="house_img_'. $index . '" /><br /><br />';
         }

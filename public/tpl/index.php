@@ -141,7 +141,7 @@
                             <li class="<?php echo ( 1 == $index ) ? 'last': ''; ?>">
                                 <div class="picbox">
                                     <a id="world_B06_02" href="<?php echo $_cfg_siteRoot;?>house_list.php?id=<?php echo $house['id'];?>" target="_blank">
-                                        <img src="<?php echo $_cfg_img_baseurl. get_single_img_url($house['image_urls']);?>" alt="<?php echo $house['name'];?>" />
+                                        <img width="120" height="90" src="<?php echo $_cfg_img_baseurl. get_single_img_url($house['image_urls']);?>" alt="<?php echo $house['name'];?>" />
                                     </a>
                                     <div class="floatDiv">
                                         <div class="bg">
