@@ -80,7 +80,7 @@
     <?php $url = $_cfg_siteRoot. 'house.php?id='. $house['id']; ?>
     <?php $img_url = $_cfg_img_baseurl. get_single_img_url($house['image_urls']); ?>
         <div class="loop clearfix" pid="/house/475">
-        <div class="pic"><a href="<?php echo $url;?>" target="_blank"><img src="<?php echo $img_url;?>" alt="<?php echo $house['name'];?>"></a></div>
+        <div class="pic"><a href="<?php echo $url;?>" target="_blank"><img src="<?php echo $img_url;?>" width="170px" height="115px" alt="<?php echo $house['name'];?>"></a></div>
         <div class="nav">
           <h5 class="clearfix"><a href="<?php echo $url;?>" title="<?php echo $house['name'];?>" class="sub" target="_blank"><?php echo $house['name'];?></a> <span class="country"><em><?php echo $house['coname'];?>-<?php echo $house['ciname'];?></em></span></h5>
           <p class="p1" title="Genting Highlands,Malaysia">地&nbsp;&nbsp;址：<?php echo $house['position']; ?></p>
