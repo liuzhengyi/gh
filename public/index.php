@@ -21,7 +21,7 @@ $data       = $sth->fetchAll(PDO::FETCH_ASSOC);
 $ad_data    = group_array_key($data, 'ad_type');
 
 // country
-$sql            = "select * from country limit 17";
+$sql            = "select * from country limit 9";
 $sth            = $dbh->prepare($sql);
 $sth->execute();
 $country_data   = $sth->fetchAll(PDO::FETCH_ASSOC);

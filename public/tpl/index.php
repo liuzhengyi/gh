@@ -93,12 +93,17 @@
                     <br>
                     <?php
                     for ( $level = 1; $level < 7; ++$level ) {
+                        if ( 4 == $level ) { continue; }
                         echo '<a href="'. $_cfg_siteRoot. 'house_list.php?pl='. $level. '">'. get_price_desc($level). '</a>';
                     }
                     ?>
                 </div>
             </div>
             <!--购房俱乐部 begin-->
+            <div class="worldOslogin">
+                <h2 ><a href="http://www.oanda.com/currency/converter/" target="_blank" >汇率计算器</a></h2>
+                <h2><a href="http://www.oanda.com/currency/converter/" target="_blank" ><img src="./image/ui/netcalc.png" width="170" height="70"></a></h2>
+            </div>
             <!--购房俱乐部 end-->
         </div>  
         <!--worldright end -->
