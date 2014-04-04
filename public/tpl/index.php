@@ -140,7 +140,7 @@
                         <?php $house = array_shift($houses); ?>
                             <li class="<?php echo ( 1 == $index ) ? 'last': ''; ?>">
                                 <div class="picbox">
-                                    <a id="world_B06_02" href="<?php echo $_cfg_siteRoot;?>house_list.php?id=<?php echo $house['id'];?>" target="_blank">
+                                    <a id="world_B06_02" href="<?php echo $_cfg_siteRoot;?>house.php?id=<?php echo $house['id'];?>" target="_blank">
                                         <img width="120" height="90" src="<?php echo $_cfg_img_baseurl. get_single_img_url($house['image_urls']);?>" alt="<?php echo $house['name'];?>" />
                                     </a>
                                     <div class="floatDiv">
