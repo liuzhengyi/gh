@@ -76,6 +76,16 @@ switch ( $content ) {
 
         break;
 
+    case 'user':
+
+        check_login();
+        if ( empty($_SESSION['admin']) ) {
+            output_json_error(-1001, '权限不足');
+        }
+        include('./tpl/action/add_user.php');
+
+        break;
+
     default:
         // TODO goto admin index
         include('./tpl/index.php');

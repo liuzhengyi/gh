@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>系统部署参考</title>
+</head>
+<body>
+    <h1>系统部署参考</h1>
+    <ol>
+        <li>
+            <h2>Apache 服务器配置</h2>
+            <p>网站前台域名根目录请指向 /public/ ，网站后台域名根目录请指向 /admin/。</p>
+        </li>
+        <li>
+            <h2>数据库配置</h2>
+            <p>在/dbConf.php 文件里配置数据库用户名密码等信息</p>
+            <p>通过 /docs/db/backup/backup.xxx.sql文件，将数据导入数据库。 注意，你可能需要修改该文件中的DB名称，当前是`test`库。</p>
+        </li>
+        <li>
+            <h2>目录权限配置</h2>
+            <p>为了文件能够正常上传，请将如下目录权限设为Apache可写。</p>
+            <ul>
+                    <li>/public/image/adver/</li>
+                    <li>/public/image/house/</li>
+                    <li>/public/image/imgad/</li>
+                    <li>/admin/uploads/image/adver/</li>
+                    <li>/admin/uploads/image/house/</li>
+                    <li>/admin/uploads/image/imgad/</li>
+            </ul>
+        </li>
+        <li>
+            <h2>网站配置文件</h2>
+            <p>部署时请务必要根据自己的部署环境调整/config.php 中的:</p>
+            <ul>
+                    <li>// 本地主机名称</li>
+                    <li>$_cfg_hostName = 'gh';</li>
+                    <li></li>
+                    <li>// 服务器上的前台网站根目录</li>
+                    <li>$_cfg_webRoot = "/var/www/proj/gh/public/";</li>
+                    <li>// 服务器上的后台网站根目录</li>
+                    <li>$_cfg_webRootAdmin = "/var/www/proj/gh/admin/";</li>
+                    <li></li>
+                    <li>// 网站前台的http根目录</li>
+                    <li>$_cfg_siteRoot = "http://abc.abc.abc/";</li>
+                    <li>// 网站后台的http根目录</li>
+                    <li>$_cfg_siteRootAdmin = "http://bcd.bcd.bcd/";</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>

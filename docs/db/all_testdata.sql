@@ -399,10 +399,5 @@ insert into link (user_id, title, image_url, display_order, url, create_time, up
 insert into link (user_id, title, image_url, display_order, url, create_time, update_time) values ( 1, '北京海外置业展', './image/link/201361812253183404.jpg', 1, 'http://www.opiexpo.com/', now(), now());
 
 -- testdata for table user
-insert into user (user_name, password, is_admin, create_time, last_login) values ('test00', sha1('00test'), 1, now(), now());
-insert into user (user_name, password, is_admin, create_time, last_login) values ('test01', sha1('01test'), 0, now(), now());
-insert into user (user_name, password, is_admin, create_time, last_login) values ('test02', sha1('02test'), 0, now(), now());
-insert into user (user_name, password, is_admin, create_time, last_login) values ('test03', sha1('03test'), 0, now(), now());
-insert into user (user_name, password, is_admin, create_time, last_login) values ('test04', sha1('04test'), 0, now(), now());
-insert into user (user_name, password, is_admin, create_time, last_login) values ('test05', sha1('05test'), 0, now(), now());
+insert into user (user_name, password, is_admin, create_time, last_login) values ('wangyaquan', sha1('wangyaquan'), 1, now(), now());
 show warnings

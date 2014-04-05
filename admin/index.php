@@ -150,6 +150,27 @@ switch ( $content ) {
 
         break;
 
+    case 'user':
+
+        check_login();
+        if ( empty($_SESSION['admin']) ) {
+            output_json_error(-10001, '权限不足');
+        }
+        // imgad data
+        $sql        = 'select
+                            *
+                       from
+                            user';
+        $sth        = $dbh->prepare($sql);
+        $sth->execute();
+        $user_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+        $add_url    = $_cfg_siteRootAdmin. 'add.php?content=user';
+
+        include('./tpl/user.php');
+
+        break;
+
     default:
         include('./tpl/index.php');
         break;

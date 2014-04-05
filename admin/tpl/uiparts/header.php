@@ -12,7 +12,7 @@
 <div class="container">
     <div id="head" class="header">
     <h1>平安好房-海外频道-管理后台</h1>
-    <p>你好, <?php echo $_SESSION['name'];?>。您是 <?php echo empty($_SESSION['admin']) ? '管理员' : '超级管理员'; ?>。</p>
+    <p>你好, <a href="<?php echo $_cfg_siteRootAdmin. 'self.php';?>"><?php echo $_SESSION['name'];?></a>。您是 <?php echo empty($_SESSION['admin']) ? '管理员' : '超级管理员( <a href="./index.php?content=user">管理用户</a> )'; ?>。</p>
     <p><a href="<?php echo $_cfg_siteRootAdmin;?>/action/logout.php">退出登录</a></p>
     <hr />
 

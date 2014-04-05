@@ -36,11 +36,21 @@ if ( FALSE === $result || empty($admin_info) ) {
     output_json_error(-10002, '用户名或密码错误.');
 }
 
+// update user info
+$sql    = 'update user set last_login = now(), last_ip = "'. $_SERVER['REMOTE_ADDR']. '" where user_id = '. $admin_info['user_id']. ' limit 1';
+$sth    = $dbh->prepare($sql);
+$result = $sth->execute();
+if ( FALSE === $result ) {
+    var_dump($sth->errorInfo());
+    output_json_error(-10001, '登录出错');
+}
+
 
 // logged in
 $_SESSION['name']       = $params['name'];
 $_SESSION['id']         = $admin_info['user_id'];
 $_SESSION['admin']      = $admin_info['is_admin'];
+
 
 output_json_info('欢迎回来,'. $_SESSION['name'], $_cfg_siteRootAdmin.'index.php');
 
