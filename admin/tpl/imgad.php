@@ -19,7 +19,8 @@
             <?php
             foreach ( $imgad_data as $imgad ) {
                 $img_url    = $_cfg_img_baseurl_admin. $imgad['img_url'];
-                $link_url   = $_cfg_siteRoot. 'ad.php?id='. $imgad['imgad_id'];
+                //$link_url   = $_cfg_siteRoot. 'ad.php?id='. $imgad['imgad_id'];
+                $link_url   = 'http://overseas.pinganfang.com/'. 'ad.php?id='. $imgad['imgad_id'];
                 $edit_url   = $_cfg_siteRootAdmin. 'edit.php?content=imgad&id='. $imgad['imgad_id'];
                 $del_url    = $_cfg_siteRootAdmin. 'action/del_imgad_do.php?id='. $imgad['imgad_id'];
 

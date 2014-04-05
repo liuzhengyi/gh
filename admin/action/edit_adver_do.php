@@ -23,7 +23,7 @@ if ( empty($_POST['id']) || empty($_POST['title']) ) {
 }
 
 // var_dump($_FILES); exit();
-if ( ! empty($_FILES['ad_image'] ) ) {
+if ( ! empty($_FILES['ad_image']['name'] ) ) {
     $new_image = deal_upload_image($_FILES['ad_image'], 'adver');
 }
 
