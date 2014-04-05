@@ -225,7 +225,7 @@
 	  <!--一周热点楼盘排行榜st-->
         <div class="grid6_1">
             <div id="rentGuide_2" class="wrap_b DTL" tid="HAIWAI_HomeIndex_PurseVane">
-                <div class="title_g">一周热点楼盘排行榜 <span class="STYLE4">Top10</span>  <a class="more" >浏览人数</a>
+                <div class="title_g">一周热点楼盘排行榜 <span class="STYLE4">Top10</span>  <!-- <a class="more" >浏览人数</a> -->
                 </div>
                 <div class="con"> 
                     <ul class="zyItem clearfix">
@@ -238,8 +238,8 @@
                                     $courl = $_cfg_siteRoot. 'house.php?coid='. $house['coid'];
                                     echo    '<li><a href="'. $courl. '" target="_blank">['. $house['coname']. '</a>/'.
                                             '<a href="'. $ciurl. '" target="_blank">'. $house['ciname']. ']</a>'.
-                                            '<a href="'. $hourl. '" target="_blank">'. $house['name']. '</a>'.
-                                            '<span class="STYLE5">'. $house['vc']. '</span></li>';
+                                            '<a href="'. $hourl. '" target="_blank">'. $house['name']. '</a>';
+                                            // '<span class="STYLE5">'. $house['vc']. '</span></li>';
                                 }
                                 ?>
                             </ul>

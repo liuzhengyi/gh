@@ -178,7 +178,7 @@ $crumbs = get_crumbs($cmb);
 // crumbs end
 
 
-$title      = $_cfg_logo_alt. '-文章列表';
+$title      = $_cfg_logo_alt. '-置业列表';
 $navi_cur   = 'house';
 
 include('./tpl/house_list.php');

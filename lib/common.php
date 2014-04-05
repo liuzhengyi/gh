@@ -226,6 +226,7 @@ function get_crumbs( $Params ) {
     $params['l0']['name'] = '平安好房-海外频道';
     $params['l0']['link'] = $_cfg_siteRoot;
 
+    $Params['file'] = strrchr($Params['file'], '/');
     switch ( $Params['file'] ) {
         case '/house.php':
         case '/house_list.php':

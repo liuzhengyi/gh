@@ -73,7 +73,7 @@
             
 <?php
     if ( empty($house_data) ) {
-        echo '<p>木有结果.. </p>';
+        echo '<p>抱歉，您搜索的内容不存在，请换一个搜索词。 </p>';
     } else {
 ?>
     <?php foreach( $house_data as $house ) { ?>
