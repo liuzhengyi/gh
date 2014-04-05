@@ -70,6 +70,12 @@ switch ( $content ) {
 
         break;
 
+    case 'imgad':
+
+        include('./tpl/action/add_imgad.php');
+
+        break;
+
     default:
         // TODO goto admin index
         include('./tpl/index.php');

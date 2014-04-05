@@ -26,6 +26,7 @@
                                 'cate' => '管理文章分类',
                                 'city' => '管理城市列表',
                                 'country' => '管理国家列表',
+                                'imgad' => '管理站内图片广告',
                          );
             foreach ( $navi_data as $ename => $zname ) {
                 $active = (!empty($_GET['content']) && $_GET['content'] == $ename) ? 'active' : '';

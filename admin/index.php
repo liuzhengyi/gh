@@ -131,6 +131,25 @@ switch ( $content ) {
 
         break;
 
+    case 'imgad':
+
+        // imgad data
+        $sql        = 'select
+                            *
+                       from
+                            imgad 
+                        order by
+                            update_time desc';
+        $sth        = $dbh->prepare($sql);
+        $sth->execute();
+        $imgad_data  = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+        $add_url    = $_cfg_siteRootAdmin. 'add.php?content=imgad';
+
+        include('./tpl/imgad.php');
+
+        break;
+
     default:
         include('./tpl/index.php');
         break;
