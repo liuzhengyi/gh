@@ -205,7 +205,7 @@
   <!--环球租房贴士st-->
         <div class="grid6_x">
             <div id="rentGuide_2" class="wrap_b DTL" tid="HAIWAI_HomeIndex_PurseVane">
-                <div class="title_g">海外租房贴士<a href="<?php echo $_cfg_siteRoot. 'article_list.php?type=2';?>" target="_blank" class="more">更多&gt;&gt;</a>
+                <div class="title_g">海外生活贴士<a href="<?php echo $_cfg_siteRoot. 'article_list.php?type=2';?>" target="_blank" class="more">更多&gt;&gt;</a>
                 </div>
                 <div class="con">
                     <ul class="newsItem_0" id="world_B06_28">
